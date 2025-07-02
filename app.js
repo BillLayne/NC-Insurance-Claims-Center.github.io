@@ -689,6 +689,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Scroll Reveal Animation
+    const scrollRevealElements = document.querySelectorAll('.step-card, .company-card, .resource-card, .tip-card, .calculator-card, .car-value-card, .faq-item');
+    
+    const revealOnScroll = () => {
+        scrollRevealElements.forEach((element, index) => {
+            const rect = element.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight - 100;
+            
+            if (isVisible && !element.classList.contains('revealed')) {
+                setTimeout(() => {
+                    element.classList.add('scroll-reveal', 'is-visible', 'revealed');
+                }, index * 50);
+            }
+        });
+    };
+    
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+    
     // Initialize page
     console.log('NC Insurance Claims Guide loaded successfully');
     
