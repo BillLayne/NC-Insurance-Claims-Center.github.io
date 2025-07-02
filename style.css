@@ -977,3 +977,347 @@ a:hover {
     text-shadow: none;
   }
 }
+/* Calculator Styles */
+.calculator-card {
+  background: var(--color-surface);
+  border-radius: 12px;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  padding: var(--space-32);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: var(--space-24);
+}
+
+.form-label {
+  display: block;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-8);
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+}
+
+.form-control {
+  width: 100%;
+  padding: var(--space-16);
+  font-size: var(--font-size-base);
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+  font-family: var(--font-family-base);
+  background-color: var(--color-surface);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-focus-ring);
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-prefix {
+  position: absolute;
+  left: var(--space-16);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  pointer-events: none;
+}
+
+.form-control.with-prefix {
+  padding-left: var(--space-48);
+}
+
+.results-section {
+  margin-top: var(--space-32);
+  padding: var(--space-32);
+  background-color: var(--color-background);
+  border-radius: 12px;
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+
+.results-section.show {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.results-header {
+  text-align: center;
+  margin-bottom: var(--space-32);
+}
+
+.results-header h3 {
+  font-size: var(--font-size-2xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-8);
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-24);
+  margin-bottom: var(--space-32);
+}
+
+.result-card {
+  background: var(--color-surface);
+  padding: var(--space-24);
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.result-card.highlight {
+  border-color: var(--color-primary);
+  transform: scale(1.05);
+}
+
+.result-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-4);
+}
+
+.result-value {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+
+.result-value.negative {
+  color: var(--color-error);
+}
+
+.result-value.small {
+  font-size: var(--font-size-xl);
+}
+
+.impact-chart {
+  background: var(--color-surface);
+  padding: var(--space-24);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-top: var(--space-24);
+}
+
+.impact-bar {
+  background: var(--color-border);
+  height: 40px;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  margin: var(--space-16) 0;
+}
+
+.impact-fill {
+  background: linear-gradient(90deg, var(--color-success) 0%, var(--color-warning) 50%, var(--color-error) 100%);
+  height: 100%;
+  width: 0;
+  border-radius: 8px;
+  transition: width 1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: var(--space-16);
+}
+
+.impact-percentage {
+  color: var(--color-surface);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+}
+
+/* Responsive adjustments for calculator */
+@media (max-width: 768px) {
+  .calculator-card {
+    padding: var(--space-24);
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+}
+EOF < /dev/null
+
+/* Car Value Finder Section */
+.car-value-section {
+  padding: var(--space-64) 0;
+  background-color: var(--color-background);
+}
+
+.car-value-card {
+  background: var(--color-surface);
+  border-radius: 12px;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  padding: var(--space-32);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.value-tool-intro {
+  text-align: center;
+  margin-bottom: var(--space-32);
+}
+
+.value-tool-intro h3 {
+  font-size: var(--font-size-2xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-16);
+}
+
+.value-tool-intro p {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-16);
+}
+
+.value-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto var(--space-32);
+  max-width: 600px;
+  text-align: left;
+}
+
+.value-benefits li {
+  padding: var(--space-8) 0;
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+}
+
+.car-value-form {
+  background: var(--color-light-blue);
+  padding: var(--space-24);
+  border-radius: 12px;
+  margin-bottom: var(--space-32);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-16);
+  margin-bottom: var(--space-24);
+}
+
+@media (min-width: 768px) {
+  .form-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.car-value-form .btn {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Value Difference Grid */
+.value-difference-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-24);
+  margin-bottom: var(--space-24);
+}
+
+.value-type-card {
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 12px;
+  padding: var(--space-24);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.value-type-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.value-type-card.retail {
+  border-color: var(--color-warning);
+}
+
+.value-type-card.acv {
+  border-color: var(--color-success);
+}
+
+.value-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-16);
+}
+
+.value-type-card h4 {
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+  margin-bottom: var(--space-8);
+}
+
+.value-type-card p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-16);
+}
+
+.value-type-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.value-type-card li {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  padding: var(--space-4) 0;
+}
+
+.value-tip {
+  background: var(--color-light-blue);
+  border-left: 4px solid var(--color-primary);
+  padding: var(--space-16) var(--space-24);
+  border-radius: 8px;
+  margin-top: var(--space-24);
+}
+
+.value-tip p {
+  margin: 0;
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .car-value-card {
+    padding: var(--space-24);
+  }
+  
+  .value-difference-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+EOFSTYLES < /dev/null

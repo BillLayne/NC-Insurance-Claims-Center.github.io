@@ -435,7 +435,8 @@ document.addEventListener('DOMContentLoaded', function() {
         { title: 'Auto Claims Process', desc: 'Step-by-step guide for filing auto insurance claims', type: 'topic', section: '#auto-claims' },
         { title: 'Home Claims Process', desc: 'Step-by-step guide for filing home insurance claims', type: 'topic', section: '#home-claims' },
         { title: 'NC Minimum Coverage', desc: '50/100/50 - Bodily Injury and Property Damage requirements', type: 'topic', section: '#resources' },
-        { title: 'NC Insurance Points', desc: 'How violations affect your insurance rates', type: 'topic', section: '#points-system' },
+        { title: 'NC Insurance Points Calculator', desc: 'Calculate how violations affect your insurance rates', type: 'topic', section: '#points-system' },
+        { title: 'Car Value Finder', desc: 'Find your car\'s Kelley Blue Book value instantly', type: 'topic', section: '#car-value' },
         { title: 'Emergency Contacts', desc: '911 Emergency Services, NC State Highway Patrol', type: 'topic', section: '#emergency' },
         { title: 'Accident Reports', desc: 'NC State Highway Patrol online accident reports', type: 'topic', section: '#resources' },
         { title: 'Tips and Preparation', desc: 'What to keep in your car and important documents', type: 'topic', section: '.tips-section' },
@@ -532,6 +533,159 @@ document.addEventListener('DOMContentLoaded', function() {
     if (searchBtn) {
         searchBtn.addEventListener('click', () => {
             performSearch(searchInput.value);
+        });
+    }
+    
+    // NC Insurance Points Calculator
+    // NC Insurance Points rate increase percentages
+    const rateIncreases = {
+        0: 0,
+        1: 30,
+        2: 45,
+        3: 60,
+        4: 80,
+        5: 110,
+        6: 135,
+        7: 165,
+        8: 195,
+        9: 225,
+        10: 260,
+        11: 295,
+        12: 340
+    };
+
+    // Points calculator form submission handler
+    const pointsCalcForm = document.getElementById('points-calculator-form');
+    if (pointsCalcForm) {
+        pointsCalcForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            calculatePointsImpact();
+        });
+    }
+
+    // Format currency for points calculator
+    function formatCurrency(amount) {
+        return new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD',
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        }).format(amount);
+    }
+
+    // Calculate impact function
+    function calculatePointsImpact() {
+        // Get input values
+        const currentPremium = parseFloat(document.getElementById('current-premium').value);
+        const violationType = document.getElementById('violation-type');
+        const selectedOption = violationType.options[violationType.selectedIndex];
+        
+        if (!currentPremium || !violationType.value) {
+            return;
+        }
+
+        // Extract points from violation value
+        const points = parseInt(violationType.value);
+        const violationText = selectedOption.text;
+        
+        // Get rate increase percentage
+        const increasePercentage = rateIncreases[points] || 0;
+        
+        // Calculate new premium and increase
+        const increaseAmount = (currentPremium * increasePercentage) / 100;
+        const newPremium = currentPremium + increaseAmount;
+        
+        // Update results
+        document.getElementById('violation-name').textContent = violationText;
+        document.getElementById('points-value').textContent = points;
+        document.getElementById('increase-percentage').textContent = increasePercentage + '%';
+        document.getElementById('annual-increase').textContent = formatCurrency(increaseAmount);
+        document.getElementById('new-premium').textContent = formatCurrency(newPremium);
+        
+        // Update impact bar
+        const impactFill = document.getElementById('impact-fill');
+        const impactPercentageDisplay = document.getElementById('impact-percentage');
+        const fillWidth = Math.min((increasePercentage / 340) * 100, 100);
+        
+        // Show results with animation
+        const resultsSection = document.getElementById('results');
+        resultsSection.classList.add('show');
+        
+        // Animate the bar after a short delay
+        setTimeout(() => {
+            impactFill.style.width = fillWidth + '%';
+            impactPercentageDisplay.textContent = increasePercentage + '%';
+        }, 100);
+        
+        // Scroll to results
+        resultsSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // Add input formatting for premium field
+    const premiumInput = document.getElementById('current-premium');
+    if (premiumInput) {
+        premiumInput.addEventListener('blur', function() {
+            if (this.value) {
+                const value = parseFloat(this.value);
+                if (!isNaN(value)) {
+                    this.value = value.toFixed(2);
+                }
+            }
+        });
+    }
+
+    // Auto-calculate when violation is selected (if premium is already entered)
+    const violationSelect = document.getElementById('violation-type');
+    if (violationSelect) {
+        violationSelect.addEventListener('change', function() {
+            const premium = document.getElementById('current-premium').value;
+            if (premium && this.value) {
+                calculatePointsImpact();
+            }
+        });
+    }
+
+    // Car Value Finder Functionality
+    const carValueForm = document.getElementById('carValueForm');
+    if (carValueForm) {
+        carValueForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const year = document.getElementById('year').value;
+            const make = document.getElementById('make').value;
+            const modelInput = document.getElementById('model').value.trim();
+            
+            // Format the values for KBB URL
+            const makeFormatted = make.toLowerCase().replace(/ /g, '-');
+            const modelFormatted = modelInput.toLowerCase().replace(/ /g, '-');
+            
+            // Construct KBB URL
+            const kbbUrl = `https://www.kbb.com/${makeFormatted}/${modelFormatted}/${year}/`;
+            
+            // Open in new tab
+            window.open(kbbUrl, '_blank', 'noopener,noreferrer');
+            
+            // Show notification
+            showNotification('Opening Kelley Blue Book for your vehicle valuation...', 'success');
+        });
+    }
+    
+    // Model input validation - allow only alphanumeric, spaces, and hyphens
+    const modelInput = document.getElementById('model');
+    if (modelInput) {
+        modelInput.addEventListener('input', function() {
+            this.value = this.value.replace(/[^a-zA-Z0-9\s-]/g, '');
+        });
+    }
+    
+    // ZIP code input validation
+    const zipInput = document.getElementById('zipcode');
+    if (zipInput) {
+        zipInput.addEventListener('input', function() {
+            this.value = this.value.replace(/\D/g, '');
+            if (this.value.length > 5) {
+                this.value = this.value.slice(0, 5);
+            }
         });
     }
     
