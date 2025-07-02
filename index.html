@@ -9,26 +9,36 @@
 </head>
 <body>
     <!-- Navigation Header -->
-    <nav class="navbar">
-        <div class="container flex items-center justify-between">
-            <div class="navbar-brand">
-                <h2>🛡️ NC Claims Guide</h2>
+    <header class="navbar">
+        <div class="container">
+            <div class="navbar-content flex items-center justify-between">
+                <div class="navbar-brand">
+                    <a href="https://billlayne.github.io/Bill-Layne-Insurance.gitbhub.io/" style="text-decoration: none;">
+                        <div style="display: flex; flex-direction: column;">
+                            <h2 style="font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold); color: var(--color-primary); margin: 0;">Bill Layne Insurance</h2>
+                            <span style="font-size: var(--font-size-sm); color: var(--color-text-secondary); font-weight: var(--font-weight-medium);">NC Claims Center</span>
+                        </div>
+                    </a>
+                </div>
+                <nav class="navbar-menu">
+                    <a href="#auto-claims" class="nav-link">Auto Claims</a>
+                    <a href="#home-claims" class="nav-link">Home Claims</a>
+                    <a href="#contacts" class="nav-link">Contacts</a>
+                    <a href="#resources" class="nav-link">NC Resources</a>
+                    <a href="#emergency" class="nav-link">Emergency</a>
+                </nav>
+                <div class="navbar-cta" style="display: flex; align-items: center; gap: var(--space-16);">
+                    <a href="tel:3368351993" class="phone-number" style="font-weight: var(--font-weight-bold); font-size: var(--font-size-lg); color: var(--color-primary); text-decoration: none;">(336) 835-1993</a>
+                    <a href="https://billlayne.github.io/Bill-Layne-Insurance.gitbhub.io/#contact" class="btn btn--primary">Get Insurance Quote</a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-            <div class="navbar-menu">
-                <a href="#auto-claims" class="nav-link">🚗 Auto Claims</a>
-                <a href="#home-claims" class="nav-link">🏠 Home Claims</a>
-                <a href="#contacts" class="nav-link">📞 Contacts</a>
-                <a href="#resources" class="nav-link">📋 NC Resources</a>
-                <a href="#faq" class="nav-link">❓ FAQ</a>
-                <a href="#emergency" class="nav-link">🚨 Emergency</a>
-            </div>
-            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </div>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -777,6 +787,40 @@
     <div id="notification" class="notification">
         <span id="notification-text"></span>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <h3>Bill Layne Insurance Agency</h3>
+                        <p>NC Insurance Claims Center - Your guide to filing claims in North Carolina</p>
+                    </div>
+                    <div class="footer-contact">
+                        <h4>Contact Information</h4>
+                        <p><strong>Phone:</strong> <a href="tel:3368351993">(336) 835-1993</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:Save@BillLayneInsurance.com">Save@BillLayneInsurance.com</a></p>
+                        <p><strong>Address:</strong> PO Box 827, Elkin, NC 28621</p>
+                        <p><strong>Hours:</strong> Monday - Friday: 9:00 AM - 5:00 PM</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="https://billlayne.github.io/Bill-Layne-Insurance.gitbhub.io/">Main Website</a></li>
+                            <li><a href="https://billlayne.github.io/ethereal-blog-landing/">Insurance Blog</a></li>
+                            <li><a href="#auto-claims">Auto Claims Guide</a></li>
+                            <li><a href="#home-claims">Home Claims Guide</a></li>
+                            <li><a href="#emergency">Emergency Contacts</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Bill Layne Insurance Agency. All rights reserved. | Licensed in North Carolina</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="app.js"></script>
 </body>
