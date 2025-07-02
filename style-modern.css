@@ -248,7 +248,7 @@ h4 { font-size: var(--font-size-lg); }
 
 /* Hero Section */
 .hero {
-  padding: var(--space-4xl) 0;
+  padding: 100px 0;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -294,9 +294,10 @@ h4 { font-size: var(--font-size-lg); }
 
 .hero-buttons {
   display: flex;
-  gap: var(--space-md);
+  gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 40px;
 }
 
 /* Modern Section Styles */
@@ -305,13 +306,26 @@ h4 { font-size: var(--font-size-lg); }
   position: relative;
 }
 
+/* Specific section padding for better spacing */
+.claims-section,
+.contacts-section,
+.resources-section,
+.emergency-section,
+.points-section,
+.car-value-section,
+.faq-section,
+.tips-section {
+  padding: 80px 0;
+  text-align: center;
+}
+
 .section:nth-child(even) {
   background-color: var(--color-surface);
 }
 
 .section-header {
   text-align: center;
-  margin-bottom: var(--space-3xl);
+  margin-bottom: 60px;
 }
 
 .section-header h2 {
@@ -326,16 +340,17 @@ h4 { font-size: var(--font-size-lg); }
   margin: 0 auto;
 }
 
-/* Modern Cards */
+/* Modern Cards with better spacing */
 .step-card, .company-card, .resource-card, .tip-card {
   background: var(--color-background);
   border-radius: var(--radius-xl);
-  padding: var(--space-xl);
+  padding: 40px;
   box-shadow: var(--shadow-card);
   border: 1px solid var(--color-border-light);
   transition: var(--transition-base);
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
 
 .step-card::before,
@@ -365,14 +380,17 @@ h4 { font-size: var(--font-size-lg); }
   opacity: 1;
 }
 
-/* Grid Layouts */
+/* Grid Layouts with better spacing */
 .steps-grid,
 .companies-grid,
 .resources-grid,
 .tips-grid {
   display: grid;
-  gap: var(--space-lg);
-  margin-top: var(--space-2xl);
+  gap: 30px;
+  margin-top: 60px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .steps-grid {
@@ -381,6 +399,16 @@ h4 { font-size: var(--font-size-lg); }
 
 .companies-grid {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.resources-grid {
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+}
+
+.tips-grid {
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
 }
 
 /* Calculator and Form Styles */
@@ -450,11 +478,11 @@ h4 { font-size: var(--font-size-lg); }
 
 /* Results Section */
 .results-section {
-  margin-top: var(--space-2xl);
-  padding: var(--space-2xl);
+  margin-top: 50px;
+  padding: 50px;
   background: linear-gradient(135deg, 
-    rgba(var(--color-primary-rgb), 0.05) 0%, 
-    rgba(var(--color-primary-rgb), 0.02) 100%);
+    rgba(30, 58, 138, 0.05) 0%, 
+    rgba(30, 58, 138, 0.02) 100%);
   border-radius: var(--radius-xl);
   display: none;
   animation: slideUp 0.5s ease;
@@ -462,6 +490,17 @@ h4 { font-size: var(--font-size-lg); }
 
 .results-section.show {
   display: block;
+}
+
+/* Center align form rows */
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @keyframes slideUp {
@@ -606,14 +645,8 @@ h4 { font-size: var(--font-size-lg); }
   }
 }
 
-/* Animations */
+/* Remove scroll animations - everything visible on load */
 .scroll-reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.scroll-reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -696,9 +729,10 @@ h4 { font-size: var(--font-size-lg); }
 
 /* Search section */
 .search-section {
-  padding: var(--space-xl) 0;
+  padding: 40px 0;
   background: var(--color-surface);
   border-bottom: 1px solid var(--color-border-light);
+  text-align: center;
 }
 
 .search-wrapper {
@@ -741,3 +775,204 @@ h4 { font-size: var(--font-size-lg); }
   background: var(--color-primary-light);
   transform: translateY(-50%) scale(1.1);
 }
+/* Additional spacing and centering adjustments */
+.step-card h3,
+.company-card h3,
+.resource-card h3,
+.tip-card h3 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.step-card p,
+.company-card p,
+.resource-card p,
+.tip-card p {
+  text-align: center;
+  line-height: 1.8;
+}
+
+.step-card ul,
+.company-card ul,
+.resource-card ul,
+.tip-card ul {
+  text-align: left;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/* Center all content in cards */
+.company-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  text-align: center;
+}
+
+.phone-number {
+  margin-bottom: 15px;
+}
+
+/* Space out value cards */
+.value-type-card {
+  padding: 40px;
+  margin-bottom: 20px;
+}
+
+.value-benefits {
+  text-align: left;
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.value-benefits li {
+  margin-bottom: 15px;
+}
+
+/* Key points spacing */
+.key-points {
+  margin-top: 60px;
+}
+
+.key-point-card {
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  text-align: center;
+}
+
+/* Emergency cards */
+.emergency-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 800px;
+  margin: 40px auto 0;
+}
+
+.emergency-card {
+  padding: 40px;
+  text-align: center;
+}
+
+/* NC requirements box */
+.nc-requirements {
+  background: var(--color-surface);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  margin: 60px auto 0;
+  max-width: 800px;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+
+/* Form elements spacing */
+.input-group {
+  margin-bottom: 20px;
+}
+
+/* Impact chart spacing */
+.impact-chart {
+  margin-top: 40px;
+  padding: 40px;
+}
+
+/* Results grid better spacing */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  margin: 40px 0;
+}
+
+.result-card {
+  padding: 30px;
+}
+
+/* Value difference grid */
+.value-difference-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+}
+
+/* Footer spacing */
+.footer {
+  padding: 80px 0 40px;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-info {
+  margin: 30px 0;
+  line-height: 2;
+}
+
+/* Ensure all buttons have proper spacing */
+.btn {
+  margin: 10px;
+}
+
+/* Step numbers */
+.step-number {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: var(--color-primary);
+  color: white;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Step icons */
+.step-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* Violations section if exists */
+.violations-section {
+  margin-top: 40px;
+}
+
+.violation-group {
+  margin-bottom: 30px;
+  padding: 30px;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+}
+
+/* Mobile responsive spacing */
+@media (max-width: 768px) {
+  .claims-section,
+  .contacts-section,
+  .resources-section,
+  .emergency-section,
+  .points-section,
+  .car-value-section,
+  .faq-section,
+  .tips-section {
+    padding: 60px 20px;
+  }
+  
+  .calculator-card,
+  .car-value-card {
+    padding: 40px 20px;
+  }
+  
+  .hero {
+    padding: 60px 20px;
+  }
+}
+EOFSTYLE < /dev/null
