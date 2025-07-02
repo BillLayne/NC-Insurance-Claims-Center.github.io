@@ -1161,7 +1161,7 @@ EOF < /dev/null
 
 /* Points Section Styles */
 .points-section {
-  padding: var(--space-64) 0;
+  padding: var(--space-32) 0;
   background: var(--color-surface);
 }
 
@@ -1177,13 +1177,13 @@ EOF < /dev/null
 }
 
 .points-section .section-header p {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xl);
   color: var(--color-text-secondary);
 }
 
 /* Car Value Finder Section */
 .car-value-section {
-  padding: var(--space-64) 0;
+  padding: var(--space-32) 0;
   background-color: var(--color-background);
 }
 
@@ -1199,7 +1199,7 @@ EOF < /dev/null
 }
 
 .car-value-section .section-header p {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xl);
   color: var(--color-text-secondary);
 }
 
@@ -1362,7 +1362,7 @@ EOFSTYLES < /dev/null
 
 /* FAQ Section Styles */
 .faq-section {
-  padding: var(--space-64) 0;
+  padding: var(--space-32) 0;
   background: var(--color-surface);
 }
 
@@ -1378,7 +1378,7 @@ EOFSTYLES < /dev/null
 }
 
 .faq-section .section-header p {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xl);
   color: var(--color-text-secondary);
 }
 
@@ -1488,7 +1488,7 @@ EOFFAQ < /dev/null
 
 /* Tips Section Styles */
 .tips-section {
-  padding: var(--space-64) 0;
+  padding: var(--space-32) 0;
   background: var(--color-background);
 }
 
@@ -1504,7 +1504,7 @@ EOFFAQ < /dev/null
 }
 
 .tips-section .section-header p {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xl);
   color: var(--color-text-secondary);
 }
 
@@ -1558,23 +1558,4 @@ EOFFAQ < /dev/null
   font-weight: bold;
 }
 
-/* Ensure all section headers are consistent */
-.section-header {
-  text-align: center;
-  margin-bottom: var(--space-48);
-}
-
-.section-header h2 {
-  font-size: var(--font-size-3xl);
-  color: var(--color-text);
-  margin-bottom: var(--space-16);
-  font-weight: var(--font-weight-bold);
-}
-
-.section-header p {
-  font-size: var(--font-size-lg);
-  color: var(--color-text-secondary);
-  max-width: 700px;
-  margin: 0 auto;
-}
 EOFTIPS < /dev/null
