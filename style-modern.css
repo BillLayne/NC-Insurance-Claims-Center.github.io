@@ -265,6 +265,18 @@ body::before {
   font-size: var(--font-size-sm);
 }
 
+/* Call button in header */
+.navbar-cta .btn--call {
+  padding: var(--space-xs) var(--space-lg);
+  font-size: var(--font-size-sm);
+}
+
+.navbar-cta .btn--call::before {
+  content: '📞 ';
+  margin-right: var(--space-xs);
+  font-size: var(--font-size-base);
+}
+
 /* Hide navigation menu since we don't need it */
 .navbar-menu {
   display: none;
@@ -1040,7 +1052,29 @@ body::before {
   opacity: 1;
 }
 
-/* Responsive */
+/* Resource cards - ensure buttons are properly styled */
+.resource-card .btn--primary {
+  display: inline-block;
+  margin-top: var(--space-md);
+  width: auto;
+}
+
+/* Phone call button styling */
+.btn--call {
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+  color: white;
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
+}
+
+.btn--call::before {
+  content: '📞 ';
+  margin-right: var(--space-xs);
+}
+
+.btn--call:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(16, 185, 129, 0.4);
+}
 @media (max-width: 768px) {
   .navbar-content {
     flex-direction: column;
@@ -1062,6 +1096,13 @@ body::before {
 
   .navbar-cta .btn {
     display: none;
+  }
+  
+  /* Keep call button visible on mobile */
+  .navbar-cta .btn--call {
+    display: inline-flex !important;
+    font-size: var(--font-size-sm);
+    padding: var(--space-xs) var(--space-md);
   }
 
   .hero {
