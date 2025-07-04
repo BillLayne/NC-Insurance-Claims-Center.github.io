@@ -1,0 +1,39 @@
+# Robots.txt for NC Insurance Claims Center
+# https://billlayne.github.io/NC-Insurance-Claims-Center.github.io/
+
+User-agent: *
+Allow: /
+Disallow: /style-backup.css
+Disallow: /*.Zone.Identifier$
+
+# Sitemap location
+Sitemap: https://billlayne.github.io/NC-Insurance-Claims-Center.github.io/sitemap.xml
+
+# Crawl-delay for bots that support it (in seconds)
+Crawl-delay: 1
+
+# Major search engine bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
