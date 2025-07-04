@@ -1170,8 +1170,10 @@ body::before {
   .tips-section {
     background-attachment: scroll;
     background-size: cover;
+    padding: var(--space-2xl) 0;
   }
   
+  /* Mobile Navigation */
   .navbar-content {
     flex-direction: column;
     text-align: center;
@@ -1184,6 +1186,15 @@ body::before {
 
   .navbar-brand span {
     font-size: var(--font-size-xs);
+  }
+
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-cta {
+    flex-direction: column;
+    gap: var(--space-sm) !important;
   }
 
   .navbar-cta .phone-number {
@@ -1201,8 +1212,18 @@ body::before {
     padding: var(--space-xs) var(--space-md);
   }
 
+  /* Mobile Hero Section */
   .hero {
-    padding: 100px 0 60px;
+    padding: 80px 0 40px;
+  }
+
+  .hero-content {
+    padding: 0 var(--space-sm);
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--space-lg);
   }
 
   .hero-buttons {
@@ -1210,25 +1231,105 @@ body::before {
     width: 100%;
     max-width: 300px;
     margin: 0 auto;
+    gap: var(--space-sm);
   }
 
   .btn {
     width: 100%;
+    padding: var(--space-md) var(--space-lg);
+    font-size: var(--font-size-base);
+  }
+
+  .btn--lg {
+    padding: var(--space-md) var(--space-lg);
   }
 
   .gradient-text {
     font-size: 2rem;
+    line-height: 1.2;
   }
 
+  /* Mobile Grids */
   .steps-grid,
   .companies-grid,
   .resources-grid,
-  .tips-grid {
+  .tips-grid,
+  .emergency-grid,
+  .value-difference-grid {
     grid-template-columns: 1fr;
+    gap: var(--space-md);
   }
 
+  /* Mobile Cards */
+  .step-card,
+  .company-card,
+  .resource-card,
+  .tip-card,
+  .emergency-card {
+    padding: var(--space-lg);
+  }
+
+  /* Mobile Sections */
+  .section-header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .section-header h2 {
+    font-size: var(--font-size-xl);
+  }
+
+  .section-header p {
+    font-size: var(--font-size-base);
+  }
+
+  /* Mobile Container */
   .container {
     padding: 0 var(--space-md);
+  }
+
+  /* Mobile FAQ */
+  .faq-item {
+    margin-bottom: var(--space-md);
+  }
+
+  .faq-question {
+    padding: var(--space-md);
+    font-size: var(--font-size-base);
+  }
+
+  .faq-answer {
+    padding: var(--space-md);
+  }
+
+  /* Mobile Forms */
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-group {
+    margin-bottom: var(--space-md);
+  }
+
+  /* Mobile Calculator */
+  .calculator-card {
+    padding: var(--space-lg);
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+
+  /* Mobile Footer */
+  .footer-content {
+    flex-direction: column;
+    gap: var(--space-xl);
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: var(--space-sm);
   }
 }
 
@@ -1293,33 +1394,44 @@ body::before {
 
 /* New Image Styles for Hybrid Approach */
 
-/* Section Image Containers */
+/* Section Image Containers - Enhanced for consistency */
 .section-image-container {
   max-width: 900px;
   margin: var(--space-2xl) auto;
   text-align: center;
   position: relative;
   z-index: 2;
+  padding: 0 var(--space-md);
 }
 
 .section-image-container.small {
   max-width: 600px;
 }
 
-/* Section Infographics */
+/* Section Infographics - Consistent styling for all images */
 .section-infographic {
   width: 100%;
   height: auto;
+  display: block;
+  margin: 0 auto;
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-xl);
   border: 2px solid var(--color-border);
   background: white;
   transition: var(--transition-base);
+  object-fit: contain;
+  max-height: 600px;
 }
 
 .section-infographic:hover {
   transform: scale(1.02);
   box-shadow: var(--shadow-2xl);
+}
+
+/* Ensure all images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Company Logos */
@@ -1340,7 +1452,7 @@ body::before {
   transform: scale(1.05);
 }
 
-/* Emergency Services Image */
+/* Emergency Services Image - Consistent with other images */
 .emergency-services-image {
   width: 100%;
   max-width: 400px;
@@ -1349,6 +1461,9 @@ body::before {
   display: block;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
+  border: 2px solid var(--color-border);
+  background: white;
+  object-fit: contain;
 }
 
 /* Points Chart */
@@ -1380,6 +1495,7 @@ body::before {
   box-shadow: var(--shadow-xl);
   border: 2px solid var(--color-border);
   background: white;
+  object-fit: contain;
 }
 
 .chart-caption {
@@ -1403,13 +1519,27 @@ body::before {
   display: block;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
-  border: 1px solid var(--color-border);
+  border: 2px solid var(--color-border);
+  background: white;
+  object-fit: contain;
 }
 
-/* Responsive Image Adjustments */
+/* Enhanced Mobile Image Adjustments */
 @media (max-width: 768px) {
   .section-image-container {
     margin: var(--space-lg) auto;
+    padding: 0 var(--space-sm);
+  }
+  
+  /* Consistent image styling on mobile */
+  .section-infographic,
+  .emergency-services-image,
+  .points-chart-image,
+  .value-comparison-visual {
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    border-width: 1px;
+    max-height: 400px;
   }
   
   .company-logo {
@@ -1421,10 +1551,31 @@ body::before {
     padding: var(--space-md);
   }
   
+  /* Disable hover effects on mobile */
+  .section-infographic:hover {
+    transform: none;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .section-image-container {
+    margin: var(--space-md) auto;
+  }
+  
   .section-infographic,
+  .emergency-services-image,
   .points-chart-image,
   .value-comparison-visual {
-    border-radius: var(--radius-md);
+    max-height: 300px;
+  }
+  
+  .hero-buttons {
+    max-width: 250px;
+  }
+  
+  .gradient-text {
+    font-size: 1.5rem;
   }
 }
 
@@ -1437,5 +1588,116 @@ body::before {
   .value-comparison-visual {
     max-width: 100%;
     page-break-inside: avoid;
+  }
+}
+
+/* Additional Mobile Optimizations */
+@media (max-width: 768px) {
+  /* Ensure navbar is mobile-friendly */
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  /* Mobile-friendly touch targets */
+  a, button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Improve readability on mobile */
+  body {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Optimize search section for mobile */
+  .search-wrapper {
+    flex-direction: row;
+    gap: var(--space-sm);
+  }
+
+  .search-input {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  /* Mobile-friendly tables (if any) */
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Ensure images don't overflow */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Mobile-friendly spacing */
+  section {
+    padding: var(--space-2xl) 0;
+  }
+
+  /* Prevent horizontal scroll */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* Mobile-friendly lists */
+  ul, ol {
+    padding-left: var(--space-lg);
+  }
+
+  /* Optimize form inputs for mobile */
+  input, select, textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+    width: 100%;
+  }
+
+  /* Mobile-friendly notification */
+  .notification {
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+    max-width: calc(100% - 40px);
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero {
+    padding: 60px 0 40px;
+  }
+
+  .gradient-text {
+    font-size: 1.8rem;
+  }
+
+  section {
+    padding: var(--space-xl) 0;
+  }
+}
+
+/* High resolution mobile displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .section-infographic,
+  .emergency-services-image,
+  .points-chart-image,
+  .value-comparison-visual {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Dark mode support for mobile */
+@media (prefers-color-scheme: dark) {
+  /* Basic dark mode support - can be expanded if needed */
+  .section-infographic,
+  .emergency-services-image,
+  .points-chart-image,
+  .value-comparison-visual {
+    opacity: 0.9;
   }
 }
