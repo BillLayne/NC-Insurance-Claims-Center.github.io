@@ -1,4 +1,4 @@
-/* NC Insurance Claims Center - Ethereal Blog Landing Style */
+/* NC Insurance Claims Center - Ethereal Blog Landing Style with Background Images */
 
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap');
@@ -287,9 +287,11 @@ body::before {
   display: none !important;
 }
 
-/* Hero Section - Matching ethereal style */
+/* Hero Section - With Main Hero Background */
 .hero {
-  background: linear-gradient(135deg, rgba(30, 58, 138, 0.9) 0%, rgba(59, 130, 246, 0.85) 100%);
+  background: 
+    linear-gradient(135deg, rgba(30, 58, 138, 0.92) 0%, rgba(59, 130, 246, 0.88) 100%),
+    url('https://i.imgur.com/SQ3hXhd.png') center/cover no-repeat;
   padding: 120px 0 80px;
   position: relative;
   overflow: hidden;
@@ -485,28 +487,92 @@ body::before {
   transform: translateY(-50%) scale(1.05);
 }
 
-/* Sections */
-.claims-section,
-.contacts-section,
-.resources-section,
-.emergency-section,
-.points-section,
-.car-value-section,
-.faq-section,
+/* Auto Claims Section with Background */
+.claims-section#auto-claims {
+  padding: var(--space-3xl) 0;
+  background: 
+    linear-gradient(rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.95)),
+    url('https://i.imgur.com/FvPLb2k.png') center/cover no-repeat fixed;
+  position: relative;
+}
+
+/* Home Claims Section with Background */
+.claims-section.home-claims {
+  padding: var(--space-3xl) 0;
+  background: 
+    linear-gradient(rgba(248, 250, 252, 0.95), rgba(255, 255, 255, 0.95)),
+    url('https://i.imgur.com/cAYQUXY.png') center/cover no-repeat fixed;
+  position: relative;
+}
+
+/* Emergency Section with Background */
+.emergency-section {
+  padding: var(--space-3xl) 0;
+  background: 
+    linear-gradient(rgba(255, 255, 255, 0.93), rgba(248, 250, 252, 0.93)),
+    url('https://i.imgur.com/mEUScFE.png') center/cover no-repeat fixed;
+  position: relative;
+}
+
+/* Points Section with Background */
+.points-section {
+  padding: var(--space-3xl) 0;
+  background: 
+    linear-gradient(rgba(248, 250, 252, 0.95), rgba(255, 255, 255, 0.95)),
+    url('https://i.imgur.com/Z6hWpFR.png') center/cover no-repeat fixed;
+  position: relative;
+}
+
+/* Car Value Section with Background */
+.car-value-section {
+  padding: var(--space-3xl) 0;
+  background: 
+    linear-gradient(rgba(255, 255, 255, 0.93), rgba(248, 250, 252, 0.93)),
+    url('https://i.imgur.com/etiG7MT.png') center/cover no-repeat fixed;
+  position: relative;
+}
+
+/* Contact/Resources Section with Background */
+.contacts-section {
+  padding: var(--space-3xl) 0;
+  background: 
+    linear-gradient(rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.95)),
+    url('https://i.imgur.com/EMODyoU.png') center/cover no-repeat fixed;
+  position: relative;
+}
+
+.resources-section {
+  padding: var(--space-3xl) 0;
+  background: 
+    linear-gradient(rgba(248, 250, 252, 0.95), rgba(255, 255, 255, 0.95)),
+    url('https://i.imgur.com/EMODyoU.png') center/cover no-repeat fixed;
+  position: relative;
+}
+
+/* FAQ Section with Background */
+.faq-section {
+  padding: var(--space-3xl) 0;
+  background: 
+    linear-gradient(rgba(255, 255, 255, 0.93), rgba(248, 250, 252, 0.93)),
+    url('https://i.imgur.com/n6sKp2D.png') center/cover no-repeat fixed;
+  position: relative;
+}
+
+/* Tips Section with Background */
 .tips-section {
   padding: var(--space-3xl) 0;
+  background: 
+    linear-gradient(rgba(248, 250, 252, 0.95), rgba(255, 255, 255, 0.95)),
+    url('https://i.imgur.com/RKODeDd.png') center/cover no-repeat fixed;
+  position: relative;
 }
 
-.claims-section:nth-child(even),
-.resources-section,
-.points-section,
-.tips-section {
-  background: var(--color-surface);
-}
-
+/* Section Headers - Enhanced visibility over backgrounds */
 .section-header {
   text-align: center;
   margin-bottom: var(--space-2xl);
+  position: relative;
+  z-index: 2;
 }
 
 .section-header h2 {
@@ -518,6 +584,7 @@ body::before {
   line-height: 1.3;
   position: relative;
   display: inline-block;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .section-header h2::after {
@@ -538,6 +605,7 @@ body::before {
   line-height: 1.8;
   max-width: 700px;
   margin: 0 auto;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 /* Grid layouts */
@@ -548,6 +616,8 @@ body::before {
   display: grid;
   gap: var(--space-lg);
   margin-top: var(--space-2xl);
+  position: relative;
+  z-index: 2;
 }
 
 .steps-grid {
@@ -563,21 +633,23 @@ body::before {
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 
-/* Cards - Enhanced with modern effects */
+/* Cards - Enhanced with better contrast for backgrounds */
 .step-card,
 .company-card,
 .resource-card,
 .tip-card {
-  background: var(--color-background);
+  background: rgba(255, 255, 255, 0.98);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
   padding: var(--space-xl);
   transition: var(--transition-base);
-  opacity: 0;
-  transform: translateY(30px) scale(0.95);
+  opacity: 1;
+  transform: translateY(0) scale(1);
   box-shadow: var(--shadow-card);
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .step-card::before,
@@ -596,15 +668,6 @@ body::before {
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 1;
-}
-
-/* Card visible state */
-.step-card,
-.company-card,
-.resource-card,
-.tip-card {
-  opacity: 1;
-  transform: translateY(0) scale(1);
 }
 
 .step-card:hover,
@@ -728,11 +791,13 @@ body::before {
 
 /* NC Requirements */
 .nc-requirements {
-  background: linear-gradient(135deg, var(--color-surface) 0%, rgba(30, 58, 138, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(30, 58, 138, 0.05) 100%);
   padding: var(--space-xl);
   border-radius: var(--radius-lg);
   border-left: 4px solid var(--color-primary);
   margin-top: var(--space-2xl);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 /* Emergency cards */
@@ -742,14 +807,17 @@ body::before {
   gap: var(--space-lg);
   max-width: 800px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .emergency-card {
   text-align: center;
+  background: rgba(255, 255, 255, 0.98);
 }
 
 .emergency-card.urgent {
-  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+  background: linear-gradient(135deg, rgba(254, 226, 226, 0.98) 0%, rgba(254, 202, 202, 0.98) 100%);
   border-color: var(--color-error);
 }
 
@@ -786,7 +854,7 @@ body::before {
 /* Calculator and form styles */
 .calculator-card,
 .car-value-card {
-  background: var(--color-background);
+  background: rgba(255, 255, 255, 0.98);
   border-radius: var(--radius-xl);
   padding: var(--space-2xl);
   box-shadow: var(--shadow-xl);
@@ -794,6 +862,8 @@ body::before {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .calculator-card::before,
@@ -847,10 +917,12 @@ body::before {
 .results-section {
   margin-top: var(--space-2xl);
   padding: var(--space-2xl);
-  background: linear-gradient(135deg, var(--color-surface) 0%, rgba(30, 58, 138, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(248, 250, 252, 0.98) 0%, rgba(30, 58, 138, 0.05) 100%);
   border-radius: var(--radius-xl);
   display: none;
   animation: slideUp 0.5s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .results-section.show {
@@ -874,42 +946,48 @@ body::before {
 }
 
 .key-point-card {
-  background: var(--color-background);
+  background: rgba(255, 255, 255, 0.98);
   border-radius: var(--radius-lg);
   padding: var(--space-xl);
   margin-bottom: var(--space-lg);
   border: 2px solid var(--color-border);
   transition: var(--transition-base);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .key-point-card.error {
   border-color: var(--color-error);
-  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+  background: linear-gradient(135deg, rgba(254, 226, 226, 0.98) 0%, rgba(254, 202, 202, 0.98) 100%);
 }
 
 .key-point-card.warning {
   border-color: var(--color-warning);
-  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  background: linear-gradient(135deg, rgba(254, 243, 199, 0.98) 0%, rgba(253, 230, 138, 0.98) 100%);
 }
 
 .key-point-card.success {
   border-color: var(--color-success);
-  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  background: linear-gradient(135deg, rgba(209, 250, 229, 0.98) 0%, rgba(167, 243, 208, 0.98) 100%);
 }
 
 /* FAQ Section */
 .faq-container {
   max-width: 800px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .faq-item {
-  background: var(--color-background);
+  background: rgba(255, 255, 255, 0.98);
   border: 1px solid var(--color-border-light);
   border-radius: var(--radius-lg);
   margin-bottom: var(--space-md);
   overflow: hidden;
   transition: var(--transition-base);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .faq-item:hover {
@@ -961,9 +1039,11 @@ body::before {
   to { opacity: 1; }
 }
 
-/* Footer */
+/* Footer with Background Pattern */
 .footer {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  background: 
+    linear-gradient(135deg, rgba(30, 58, 138, 0.95) 0%, rgba(59, 130, 246, 0.95) 100%),
+    url('https://i.imgur.com/AOVc7gC.png') center/cover repeat;
   color: white;
   padding: var(--space-3xl) 0 var(--space-2xl);
   position: relative;
@@ -1075,7 +1155,23 @@ body::before {
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(16, 185, 129, 0.4);
 }
+
+/* Mobile Responsive Updates */
 @media (max-width: 768px) {
+  /* Adjust background positioning for mobile */
+  .claims-section#auto-claims,
+  .claims-section.home-claims,
+  .emergency-section,
+  .points-section,
+  .car-value-section,
+  .contacts-section,
+  .resources-section,
+  .faq-section,
+  .tips-section {
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  
   .navbar-content {
     flex-direction: column;
     text-align: center;
@@ -1178,5 +1274,19 @@ body::before {
   .gradient-text {
     -webkit-text-fill-color: var(--color-text);
     background: none;
+  }
+  
+  /* Remove backgrounds for print */
+  .claims-section#auto-claims,
+  .claims-section.home-claims,
+  .emergency-section,
+  .points-section,
+  .car-value-section,
+  .contacts-section,
+  .resources-section,
+  .faq-section,
+  .tips-section,
+  .footer {
+    background: none !important;
   }
 }
