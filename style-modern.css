@@ -1290,3 +1290,152 @@ body::before {
     background: none !important;
   }
 }
+
+/* New Image Styles for Hybrid Approach */
+
+/* Section Image Containers */
+.section-image-container {
+  max-width: 900px;
+  margin: var(--space-2xl) auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.section-image-container.small {
+  max-width: 600px;
+}
+
+/* Section Infographics */
+.section-infographic {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  border: 2px solid var(--color-border);
+  background: white;
+  transition: var(--transition-base);
+}
+
+.section-infographic:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-2xl);
+}
+
+/* Company Logos */
+.company-logo {
+  width: 100%;
+  max-width: 200px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0 auto var(--space-md);
+  display: block;
+  background: white;
+  padding: var(--space-sm);
+  border-radius: var(--radius-md);
+  transition: var(--transition-base);
+}
+
+.company-card:hover .company-logo {
+  transform: scale(1.05);
+}
+
+/* Emergency Services Image */
+.emergency-services-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Points Chart */
+.points-chart-container {
+  margin: var(--space-2xl) 0;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.98);
+  padding: var(--space-xl);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.points-chart-container h3 {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-lg);
+  color: var(--color-text);
+}
+
+.points-chart-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  border: 2px solid var(--color-border);
+  background: white;
+}
+
+.chart-caption {
+  margin-top: var(--space-md);
+  color: var(--color-text-secondary);
+  font-style: italic;
+  font-size: var(--font-size-sm);
+}
+
+/* Car Value Comparison */
+.value-comparison-image {
+  margin-bottom: var(--space-2xl);
+  text-align: center;
+}
+
+.value-comparison-visual {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-border);
+}
+
+/* Responsive Image Adjustments */
+@media (max-width: 768px) {
+  .section-image-container {
+    margin: var(--space-lg) auto;
+  }
+  
+  .company-logo {
+    max-width: 150px;
+    height: 60px;
+  }
+  
+  .points-chart-container {
+    padding: var(--space-md);
+  }
+  
+  .section-infographic,
+  .points-chart-image,
+  .value-comparison-visual {
+    border-radius: var(--radius-md);
+  }
+}
+
+/* Print styles for images */
+@media print {
+  .section-infographic,
+  .company-logo,
+  .emergency-services-image,
+  .points-chart-image,
+  .value-comparison-visual {
+    max-width: 100%;
+    page-break-inside: avoid;
+  }
+}
