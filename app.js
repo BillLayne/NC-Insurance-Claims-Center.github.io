@@ -419,18 +419,216 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Search data - compile all searchable content
     const searchData = [
-        // Insurance companies
-        { title: 'State Farm', desc: '📞 800-732-5246 - 24/7 Claims Support', type: 'company', phone: '8007325246' },
-        { title: 'GEICO', desc: '📞 800-861-8380 - 24/7 Claims Support', type: 'company', phone: '8008618380' },
-        { title: 'Allstate', desc: '📞 800-255-7828 - 24/7 Claims Support', type: 'company', phone: '8002557828' },
-        { title: 'Nationwide', desc: '📞 800-421-3535 - 24/7 Claims Support', type: 'company', phone: '8004213535' },
-        { title: 'Progressive', desc: '📞 800-776-4737 - 24/7 Claims Support', type: 'company', phone: '8007764737' },
-        { title: 'Travelers', desc: '📞 800-252-4633 - 24/7 Claims Support', type: 'company', phone: '8002524633' },
-        { title: 'USAA', desc: '📞 800-531-8722 - 24/7 Claims Support', type: 'company', phone: '8005318722' },
-        { title: 'Farmers', desc: '📞 800-435-7764 - 24/7 Claims Support', type: 'company', phone: '8004357764' },
-        { title: 'Erie Insurance', desc: '📞 800-367-3743 - 24/7 Claims Support', type: 'company', phone: '8003673743' },
-        { title: 'NC Farm Bureau', desc: 'Contact Local Agent - Business Hours', type: 'company' },
-        { title: 'Auto-Owners', desc: 'Contact Local Agent - Business Hours', type: 'company' },
+        // Insurance companies with comprehensive information
+        { 
+            title: 'Alamance Farmers\' Mutual', 
+            desc: 'Regional NC insurance carrier', 
+            type: 'company',
+            generalPhone: '1-336-226-7872',
+            claimsPhone: '1-336-226-7872',
+            website: 'https://alamancefarmers.com',
+            paymentUrl: 'https://alamancefarmers.com/policyholders/',
+            appStore: 'https://apps.apple.com/us/app/afmic-policyholder-portal/id1537256584',
+            googlePlay: 'https://play.google.com/store/apps/details?id=com.afmic.policyholder'
+        },
+        { 
+            title: 'Allstate', 
+            desc: '24/7 Claims Support Available', 
+            type: 'company',
+            generalPhone: '1-800-255-7828',
+            claimsPhone: '1-800-669-2214',
+            website: 'https://www.allstate.com',
+            paymentUrl: 'https://www.allstate.com/myaccount',
+            appStore: 'https://apps.apple.com/us/app/allstate-mobile/id376476389',
+            googlePlay: 'https://play.google.com/store/apps/details?id=com.allstate.view'
+        },
+        { 
+            title: 'American Modern', 
+            desc: 'Specialized property insurance', 
+            type: 'company',
+            generalPhone: '1-800-543-2644',
+            claimsPhone: '1-800-375-2075',
+            website: 'https://www.amig.com',
+            paymentUrl: 'https://policyholders.amig.com/content/munichre/amiggrp/policy-holder/storefront/en/landing-page/make-a-payment.html',
+            appStore: null,
+            googlePlay: null
+        },
+        { 
+            title: 'Chubb', 
+            desc: 'Premium insurance coverage', 
+            type: 'company',
+            generalPhone: 'Contact via local agent',
+            claimsPhone: '1-800-252-4670',
+            website: 'https://www.chubb.com',
+            paymentUrl: 'https://www.chubb.com/securePersonal/login?redirect=true',
+            appStore: 'https://apps.apple.com/us/app/chubb-mobile/id1348381518',
+            googlePlay: 'https://play.google.com/store/apps/details?id=com.chubb.na.prsautocard'
+        },
+        { 
+            title: 'Dairyland', 
+            desc: 'Affordable auto insurance', 
+            type: 'company',
+            generalPhone: '1-800-334-0090',
+            claimsPhone: '1-800-334-0090',
+            website: 'https://www.dairylandinsurance.com',
+            paymentUrl: 'https://www.dairylandinsurance.com/make-a-payment',
+            appStore: 'https://apps.apple.com/us/app/dairyland/id1499324843',
+            googlePlay: 'https://play.google.com/store/apps/details?id=com.dairyland.mobile'
+        },
+        { 
+            title: 'Erie Insurance', 
+            desc: '24/7 Claims Support Available', 
+            type: 'company',
+            generalPhone: '1-800-458-0811',
+            claimsPhone: '1-800-367-3743',
+            website: 'https://www.erieinsurance.com',
+            paymentUrl: 'https://www.erieinsurance.com/support-center/billing-and-payments',
+            appStore: 'https://apps.apple.com/us/app/erie-insurance-mobile/id1447206059',
+            googlePlay: 'https://play.google.com/store/apps/details?id=com.erieinsurance.customermobile'
+        },
+        { 
+            title: 'Foremost', 
+            desc: 'Specialty insurance solutions', 
+            type: 'company',
+            generalPhone: '1-800-527-3905',
+            claimsPhone: '1-800-527-3907',
+            website: 'https://www.foremost.com',
+            paymentUrl: 'https://www.foremost.com/payonline/',
+            appStore: 'https://apps.apple.com/us/app/foremost-insurance-mobile/id1455533198',
+            googlePlay: 'https://play.google.com/store/apps/details?id=com.foremost.app'
+        },
+        { 
+            title: 'GEICO', 
+            desc: '24/7 Claims Support Available', 
+            type: 'company',
+            generalPhone: '1-800-861-8380',
+            claimsPhone: '1-800-861-8380',
+            website: 'https://www.geico.com',
+            paymentUrl: 'https://www.geico.com/information/make-a-payment/',
+            appStore: 'https://apps.apple.com/us/app/geico-mobile-car-insurance/id331763306',
+            googlePlay: 'https://play.google.com/store/apps/details?id=com.geico.mobile'
+        },
+        { 
+            title: 'The Hartford', 
+            desc: 'AARP partner insurance carrier', 
+            type: 'company',
+            generalPhone: '1-800-423-6789',
+            claimsPhone: '1-800-243-5860',
+            website: 'https://www.thehartford.com',
+            paymentUrl: 'https://account.thehartford.com/customer/',
+            appStore: 'https://apps.apple.com/us/app/the-hartford-mobile/id1435233346',
+            googlePlay: 'https://play.google.com/store/apps/details?id=com.thehartford.mobile'
+        },
+        { 
+            title: 'Liberty Mutual', 
+            desc: '24/7 Claims Support Available', 
+            type: 'company',
+            generalPhone: '1-800-290-7933',
+            claimsPhone: '1-800-225-2467',
+            website: 'https://www.libertymutual.com',
+            paymentUrl: 'https://www.libertymutual.com/customer-support/billing-and-payment-options',
+            appStore: 'https://apps.apple.com/us/app/liberty-mutual-mobile/id453676947',
+            googlePlay: 'https://play.google.com/store/apps/details?id=com.libertymutual.lm_android'
+        },
+        { 
+            title: 'National General', 
+            desc: 'Affordable coverage options', 
+            type: 'company',
+            generalPhone: '1-888-293-5108',
+            claimsPhone: '1-800-468-3466',
+            website: 'https://nationalgeneral.com',
+            paymentUrl: 'https://service.nationalgeneral.com/QuickPay/',
+            appStore: 'https://apps.apple.com/us/app/natgen-mobile/id1495393910',
+            googlePlay: 'https://play.google.com/store/apps/details?id=com.nationalgeneral.natgenmobile'
+        },
+        { 
+            title: 'Nationwide', 
+            desc: '24/7 Claims Support Available', 
+            type: 'company',
+            generalPhone: '1-877-669-6877',
+            claimsPhone: '1-800-421-3535',
+            website: 'https://www.nationwide.com',
+            paymentUrl: 'https://www.nationwide.com/personal/contact/pay-bill-details',
+            appStore: 'https://apps.apple.com/us/app/nationwide-mobile/id311627534',
+            googlePlay: 'https://play.google.com/store/apps/details?id=com.nationwide.mobile.android.nwmobile'
+        },
+        { 
+            title: 'NC Grange Mutual', 
+            desc: 'Local NC insurance carrier', 
+            type: 'company',
+            generalPhone: '1-800-394-1236',
+            claimsPhone: '1-800-394-1236 (press 3)',
+            website: 'https://www.ncgrangemutual.com',
+            paymentUrl: 'Contact Agent',
+            appStore: null,
+            googlePlay: null
+        },
+        { 
+            title: 'Progressive', 
+            desc: '24/7 Claims Support Available', 
+            type: 'company',
+            generalPhone: '1-888-671-4405',
+            claimsPhone: '1-800-776-4737',
+            website: 'https://www.progressive.com',
+            paymentUrl: 'https://account.apps.progressive.com/access/ez-payment/policy-info',
+            appStore: 'https://apps.apple.com/us/app/progressive/id357563236',
+            googlePlay: 'https://play.google.com/store/apps/details?id=com.phonevalley.progressive'
+        },
+        { 
+            title: 'Safeco', 
+            desc: 'Liberty Mutual company', 
+            type: 'company',
+            generalPhone: '1-800-332-3226',
+            claimsPhone: '1-800-332-3226',
+            website: 'https://www.safeco.com',
+            paymentUrl: 'https://www.safeco.com/customer-resources/customer-support/billing-payment',
+            appStore: 'https://apps.apple.com/us/app/safeco-mobile/id1162648539',
+            googlePlay: 'https://play.google.com/store/apps/details?id=com.safecoinsurance.consumer'
+        },
+        { 
+            title: 'State Farm', 
+            desc: '24/7 Claims Support Available', 
+            type: 'company',
+            generalPhone: '1-800-782-8332',
+            claimsPhone: '1-800-732-5246',
+            website: 'https://www.statefarm.com',
+            paymentUrl: 'https://www.statefarm.com/customer-care/insurance-bill-pay',
+            appStore: 'https://apps.apple.com/us/app/state-farm/id318211812',
+            googlePlay: 'https://play.google.com/store/apps/details?id=com.statefarm.pocketagent'
+        },
+        { 
+            title: 'Travelers', 
+            desc: '24/7 Claims Support Available', 
+            type: 'company',
+            generalPhone: '1-800-842-5075',
+            claimsPhone: '1-800-252-4633',
+            website: 'https://www.travelers.com',
+            paymentUrl: 'https://www.travelers.com/pay-your-bill',
+            appStore: 'https://apps.apple.com/us/app/travelers-mobile/id441862402',
+            googlePlay: 'https://play.google.com/store/apps/details?id=com.travelers.digitalservice'
+        },
+        { 
+            title: 'Universal Property', 
+            desc: 'Property insurance specialist', 
+            type: 'company',
+            generalPhone: '1-800-425-9113',
+            claimsPhone: '1-800-470-0599',
+            website: 'https://universalproperty.com',
+            paymentUrl: 'https://customer.universalproperty.com/',
+            appStore: 'https://apps.apple.com/us/app/upcic-mobile/id972768393',
+            googlePlay: 'https://play.google.com/store/apps/details?id=com.universalproperty.android'
+        },
+        { 
+            title: 'USAA', 
+            desc: 'Military members and families', 
+            type: 'company',
+            generalPhone: '1-210-531-8722',
+            claimsPhone: '1-800-531-8722',
+            website: 'https://www.usaa.com',
+            paymentUrl: 'https://www.usaa.com/my/logon',
+            appStore: 'https://apps.apple.com/us/app/usaa-mobile/id322383343',
+            googlePlay: 'https://play.google.com/store/apps/details?id=com.usaa.mobile.android.usaa'
+        },
         // Topics
         { title: 'Auto Claims Process', desc: 'Step-by-step guide for filing auto insurance claims', type: 'topic', section: '#auto-claims' },
         { title: 'Home Claims Process', desc: 'Step-by-step guide for filing home insurance claims', type: 'topic', section: '#home-claims' },
@@ -465,34 +663,105 @@ document.addEventListener('DOMContentLoaded', function() {
         searchResults.innerHTML = '';
         results.forEach(result => {
             const resultItem = document.createElement('div');
-            resultItem.className = 'search-result-item';
-            resultItem.innerHTML = `
-                <div class="search-result-title">${result.title}</div>
-                <div class="search-result-desc">${result.desc}</div>
-            `;
             
-            resultItem.addEventListener('click', () => {
-                if (result.type === 'company' && result.phone) {
-                    // Copy phone number
-                    const tempInput = document.createElement('input');
-                    tempInput.value = result.phone;
-                    document.body.appendChild(tempInput);
-                    tempInput.select();
-                    document.execCommand('copy');
-                    document.body.removeChild(tempInput);
-                    showNotification(`${result.title} phone number copied!`);
-                    searchResults.classList.remove('active');
-                    searchInput.value = '';
-                } else if (result.type === 'topic' && result.section) {
-                    // Navigate to section
-                    const targetSection = document.querySelector(result.section);
-                    if (targetSection) {
-                        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        searchResults.classList.remove('active');
-                        searchInput.value = '';
+            if (result.type === 'company') {
+                // Enhanced display for insurance companies
+                resultItem.className = 'search-result-item company-result';
+                resultItem.innerHTML = `
+                    <div class="company-header">
+                        <div class="search-result-title">${result.title}</div>
+                        <div class="search-result-desc">${result.desc}</div>
+                    </div>
+                    <div class="company-details">
+                        <div class="contact-section">
+                            <div class="phone-numbers">
+                                ${result.generalPhone !== 'Contact via local agent' ? `
+                                    <div class="phone-item">
+                                        <span class="phone-label">General:</span>
+                                        <a href="tel:${result.generalPhone.replace(/\D/g,'')}" class="phone-link">
+                                            <svg class="phone-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                            </svg>
+                                            ${result.generalPhone}
+                                        </a>
+                                    </div>
+                                ` : `<div class="phone-item"><span class="phone-label">General:</span> ${result.generalPhone}</div>`}
+                                ${result.claimsPhone ? `
+                                    <div class="phone-item">
+                                        <span class="phone-label">Claims:</span>
+                                        <a href="tel:${result.claimsPhone.replace(/\D/g,'')}" class="phone-link claims-phone">
+                                            <svg class="phone-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                            </svg>
+                                            ${result.claimsPhone}
+                                        </a>
+                                    </div>
+                                ` : ''}
+                            </div>
+                        </div>
+                        <div class="action-buttons">
+                            ${result.website ? `
+                                <a href="${result.website}" target="_blank" class="action-btn website-btn">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                    </svg>
+                                    Website
+                                </a>
+                            ` : ''}
+                            ${result.paymentUrl !== 'Contact Agent' ? `
+                                <a href="${result.paymentUrl}" target="_blank" class="action-btn payment-btn">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                                        <line x1="1" y1="10" x2="23" y2="10"></line>
+                                    </svg>
+                                    Pay Bill
+                                </a>
+                            ` : ''}
+                            ${(result.appStore || result.googlePlay) ? `
+                                <div class="app-links">
+                                    ${result.appStore ? `
+                                        <a href="${result.appStore}" target="_blank" class="action-btn app-btn" title="Download on App Store">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                                            </svg>
+                                            iOS
+                                        </a>
+                                    ` : ''}
+                                    ${result.googlePlay ? `
+                                        <a href="${result.googlePlay}" target="_blank" class="action-btn app-btn" title="Get it on Google Play">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                                            </svg>
+                                            Android
+                                        </a>
+                                    ` : ''}
+                                </div>
+                            ` : ''}
+                        </div>
+                    </div>
+                `;
+            } else {
+                // Regular display for topics
+                resultItem.className = 'search-result-item';
+                resultItem.innerHTML = `
+                    <div class="search-result-title">${result.title}</div>
+                    <div class="search-result-desc">${result.desc}</div>
+                `;
+                
+                resultItem.addEventListener('click', () => {
+                    if (result.type === 'topic' && result.section) {
+                        // Navigate to section
+                        const targetSection = document.querySelector(result.section);
+                        if (targetSection) {
+                            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            searchResults.classList.remove('active');
+                            searchInput.value = '';
+                        }
                     }
-                }
-            });
+                });
+            }
             
             searchResults.appendChild(resultItem);
         });
