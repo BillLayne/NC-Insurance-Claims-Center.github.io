@@ -780,7 +780,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Search event listeners
     if (searchInput) {
+        console.log('Search input found, adding listeners');
         searchInput.addEventListener('input', (e) => {
+            console.log('Search input value:', e.target.value);
             performSearch(e.target.value);
         });
         
@@ -797,6 +799,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 searchResults.classList.remove('active');
             }
         });
+    } else {
+        console.error('Search input not found!')
     }
     
     if (searchBtn) {
