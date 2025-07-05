@@ -748,83 +748,55 @@ body::before {
   }
 }
 
-/* Auto Claims Section with Background */
+/* Auto Claims Section */
 .claims-section#auto-claims {
   padding: var(--space-3xl) 0;
-  background: 
-    linear-gradient(rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.95)),
-    url('https://i.imgur.com/FvPLb2k.png') center/cover no-repeat fixed;
+  background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-background) 100%);
   position: relative;
 }
 
-/* Home Claims Section with Background */
+/* Home Claims Section */
 .claims-section.home-claims {
   padding: var(--space-3xl) 0;
-  background: 
-    linear-gradient(rgba(248, 250, 252, 0.95), rgba(255, 255, 255, 0.95)),
-    url('https://i.imgur.com/cAYQUXY.png') center/cover no-repeat fixed;
+  background: linear-gradient(135deg, var(--color-background) 0%, var(--color-surface) 100%);
   position: relative;
 }
 
-/* Emergency Section with Background */
+/* Section Backgrounds - Subtle gradients instead of duplicate images */
 .emergency-section {
   padding: var(--space-3xl) 0;
-  background: 
-    linear-gradient(rgba(255, 255, 255, 0.93), rgba(248, 250, 252, 0.93)),
-    url('https://i.imgur.com/mEUScFE.png') center/cover no-repeat fixed;
+  background: linear-gradient(135deg, #fef3c7 0%, #fef9e7 100%);
   position: relative;
 }
 
-/* Points Section with Background */
 .points-section {
   padding: var(--space-3xl) 0;
-  background: 
-    linear-gradient(rgba(248, 250, 252, 0.95), rgba(255, 255, 255, 0.95)),
-    url('https://i.imgur.com/Z6hWpFR.png') center/cover no-repeat fixed;
+  background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-background) 100%);
   position: relative;
 }
 
-/* Car Value Section with Background */
 .car-value-section {
   padding: var(--space-3xl) 0;
-  background: 
-    linear-gradient(rgba(255, 255, 255, 0.93), rgba(248, 250, 252, 0.93)),
-    url('https://i.imgur.com/etiG7MT.png') center/cover no-repeat fixed;
+  background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
   position: relative;
 }
 
-/* Contact/Resources Section with Background */
-.contacts-section {
-  padding: var(--space-3xl) 0;
-  background: 
-    linear-gradient(rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.95)),
-    url('https://i.imgur.com/EMODyoU.png') center/cover no-repeat fixed;
-  position: relative;
-}
-
+.contacts-section,
 .resources-section {
   padding: var(--space-3xl) 0;
-  background: 
-    linear-gradient(rgba(248, 250, 252, 0.95), rgba(255, 255, 255, 0.95)),
-    url('https://i.imgur.com/EMODyoU.png') center/cover no-repeat fixed;
+  background: linear-gradient(135deg, var(--color-background) 0%, var(--color-surface) 100%);
   position: relative;
 }
 
-/* FAQ Section with Background */
 .faq-section {
   padding: var(--space-3xl) 0;
-  background: 
-    linear-gradient(rgba(255, 255, 255, 0.93), rgba(248, 250, 252, 0.93)),
-    url('https://i.imgur.com/n6sKp2D.png') center/cover no-repeat fixed;
+  background: linear-gradient(135deg, #f3e8ff 0%, #faf5ff 100%);
   position: relative;
 }
 
-/* Tips Section with Background */
 .tips-section {
   padding: var(--space-3xl) 0;
-  background: 
-    linear-gradient(rgba(248, 250, 252, 0.95), rgba(255, 255, 255, 0.95)),
-    url('https://i.imgur.com/RKODeDd.png') center/cover no-repeat fixed;
+  background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-background) 100%);
   position: relative;
 }
 
@@ -1419,7 +1391,7 @@ body::before {
 
 /* Mobile Responsive Updates */
 @media (max-width: 768px) {
-  /* Adjust background positioning for mobile */
+  /* Simplified sections for mobile - removed background-attachment issues */
   .claims-section#auto-claims,
   .claims-section.home-claims,
   .emergency-section,
@@ -1429,8 +1401,6 @@ body::before {
   .resources-section,
   .faq-section,
   .tips-section {
-    background-attachment: scroll;
-    background-size: cover;
     padding: var(--space-2xl) 0;
   }
   
@@ -1695,6 +1665,43 @@ img {
   height: auto;
 }
 
+/* Image Loading States */
+.image-loading {
+  position: relative;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s ease-in-out infinite;
+  min-height: 300px;
+  border-radius: var(--radius-xl);
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Image Error State */
+.image-error {
+  background: var(--color-surface);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  text-align: center;
+  color: var(--color-text-secondary);
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.image-error::before {
+  content: '🖼️';
+  font-size: 3rem;
+  opacity: 0.3;
+  margin-bottom: var(--space-md);
+}
+
 /* Company Logos */
 .company-logo {
   width: 100%;
@@ -1713,21 +1720,47 @@ img {
   transform: scale(1.05);
 }
 
-/* Emergency Services Image - Consistent with other images */
-.emergency-services-image {
+/* Unified Image Classes - Replace multiple custom classes */
+.emergency-services-image,
+.points-chart-image,
+.value-comparison-visual {
   width: 100%;
-  max-width: 400px;
   height: auto;
   margin: 0 auto;
   display: block;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
   border: 2px solid var(--color-border);
   background: white;
   object-fit: contain;
+  transition: var(--transition-base);
 }
 
-/* Points Chart */
+/* Size variants */
+.emergency-services-image {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.points-chart-image {
+  max-width: 800px;
+  max-height: 500px;
+}
+
+.value-comparison-visual {
+  max-width: 700px;
+  max-height: 450px;
+}
+
+/* Hover effects for all content images */
+.emergency-services-image:hover,
+.points-chart-image:hover,
+.value-comparison-visual:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-2xl);
+}
+
+/* Points Chart Container */
 .points-chart-container {
   margin: var(--space-2xl) 0;
   text-align: center;
@@ -1746,19 +1779,6 @@ img {
   color: var(--color-text);
 }
 
-.points-chart-image {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-  margin: 0 auto;
-  display: block;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-xl);
-  border: 2px solid var(--color-border);
-  background: white;
-  object-fit: contain;
-}
-
 .chart-caption {
   margin-top: var(--space-md);
   color: var(--color-text-secondary);
@@ -1770,19 +1790,6 @@ img {
 .value-comparison-image {
   margin-bottom: var(--space-2xl);
   text-align: center;
-}
-
-.value-comparison-visual {
-  width: 100%;
-  max-width: 700px;
-  height: auto;
-  margin: 0 auto;
-  display: block;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
-  border: 2px solid var(--color-border);
-  background: white;
-  object-fit: contain;
 }
 
 /* Enhanced Mobile Image Adjustments */
