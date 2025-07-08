@@ -159,8 +159,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add animation to step cards on scroll
     const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.05,
+        rootMargin: '0px 0px -20px 0px'
     };
     
     const observer = new IntersectionObserver(function(entries) {
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
     stepCards.forEach((card, index) => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(20px)';
-        card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+        card.style.transition = `opacity 0.4s ease ${index * 0.05}s, transform 0.4s ease ${index * 0.05}s`;
         observer.observe(card);
     });
     
