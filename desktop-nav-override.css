@@ -3,6 +3,7 @@
   /* Hide specific navigation items on desktop only */
   .nav-link[href="#auto-claims"],
   .nav-link[href="#home-claims"],
+  .nav-link[href="#contacts"],
   .nav-link[href="#emergency"] {
     display: none !important;
   }
