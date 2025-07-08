@@ -11,6 +11,23 @@ document.addEventListener('DOMContentLoaded', function() {
             navbarMenu.classList.toggle('active');
             mobileMenuToggle.classList.toggle('active');
         });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.navbar-content')) {
+                navbarMenu.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+            }
+        });
+
+        // Close menu when clicking on a nav link
+        const menuLinks = document.querySelectorAll('.navbar-menu .nav-link');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navbarMenu.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+            });
+        });
     }
     
     // Smooth scrolling for navigation links
