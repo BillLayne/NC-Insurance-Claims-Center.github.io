@@ -293,6 +293,11 @@ body::before {
   border-radius: var(--radius-md);
   position: relative;
   overflow: hidden;
+  line-height: 1.2;
+  text-align: center;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .nav-link::before {
