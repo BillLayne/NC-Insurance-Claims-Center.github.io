@@ -1031,6 +1031,12 @@ body::before {
   z-index: 2;
 }
 
+.resource-card a,
+.tip-card a {
+  position: relative;
+  z-index: 10;
+}
+
 /* Company card specific */
 .company-header {
   display: flex;
@@ -1434,6 +1440,8 @@ body::before {
   display: inline-block;
   margin-top: var(--space-md);
   width: auto;
+  position: relative;
+  z-index: 10;
 }
 
 /* Phone call button styling */
