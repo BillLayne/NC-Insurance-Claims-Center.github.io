@@ -113,6 +113,47 @@
     
     <link rel="stylesheet" href="style-modern.css">
     <link rel="stylesheet" href="desktop-nav-override.css">
+    
+    <style>
+        /* Compact header styles to match other pages */
+        .navbar {
+            padding: 0.75rem 0 !important;
+            min-height: auto !important;
+        }
+        
+        .navbar-content {
+            padding: 0.5rem 0 !important;
+            min-height: auto !important;
+        }
+        
+        .navbar-brand {
+            padding: 0 !important;
+        }
+        
+        .navbar-brand h2 {
+            font-size: 1.5rem !important;
+            margin-bottom: 0.125rem !important;
+        }
+        
+        .navbar-brand span {
+            display: block;
+            margin-top: 0 !important;
+        }
+        
+        .nav-link {
+            padding: 0.5rem 1rem !important;
+        }
+        
+        @media (max-width: 768px) {
+            .navbar-brand h2 {
+                font-size: 1.25rem !important;
+            }
+            
+            .navbar-brand span {
+                font-size: 0.75rem !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation Header -->
@@ -122,8 +163,8 @@
                 <div class="navbar-brand">
                     <a href="https://NCautoandhome.com" style="text-decoration: none;">
                         <div style="display: flex; flex-direction: column;">
-                            <h2 style="font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold); color: var(--color-primary); margin: 0;">Bill Layne Insurance</h2>
-                            <span style="font-size: var(--font-size-sm); color: var(--color-text-secondary); font-weight: var(--font-weight-medium);">Claims<br>Center</span>
+                            <h2 style="font-size: var(--font-size-xl); font-weight: var(--font-weight-bold); color: var(--color-primary); margin: 0; line-height: 1.2;">Bill Layne Insurance</h2>
+                            <span style="font-size: var(--font-size-sm); color: var(--color-text-secondary); font-weight: var(--font-weight-medium); line-height: 1.2;">Claims Center</span>
                         </div>
                     </a>
                 </div>
