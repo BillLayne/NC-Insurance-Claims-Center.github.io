@@ -1582,11 +1582,12 @@ body::before {
   }
 
   .hero-buttons {
-    flex-direction: column;
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: var(--space-sm);
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
   }
 
   .btn {
@@ -1947,6 +1948,38 @@ img {
   .section-infographic:hover {
     transform: none;
   }
+  
+  /* Enhanced mobile typography */
+  .gradient-text {
+    font-size: clamp(1.75rem, 6vw, 2.25rem);
+    line-height: 1.2;
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(0.875rem, 3vw, 1.125rem);
+    margin: var(--space-md) auto;
+    padding: 0 var(--space-md);
+  }
+  
+  /* Mobile-optimized section headers */
+  .section-header h2 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    padding: 0 var(--space-md);
+  }
+  
+  .section-header p {
+    font-size: clamp(0.875rem, 3vw, 1rem);
+    padding: 0 var(--space-md);
+  }
+  
+  /* Better mobile spacing */
+  section {
+    padding: var(--space-xl) 0;
+  }
+  
+  .container {
+    padding: 0 var(--space-md);
+  }
 }
 
 /* Small mobile devices */
@@ -2083,6 +2116,217 @@ img {
   }
 }
 
+/* Enhanced Mobile Optimizations for Better UX */
+@media (max-width: 768px) {
+  /* Mobile-optimized company cards */
+  .company-card {
+    padding: var(--space-md);
+    margin-bottom: var(--space-sm);
+  }
+  
+  .company-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-sm);
+  }
+  
+  .company-header h3 {
+    font-size: 1.125rem;
+  }
+  
+  .availability {
+    font-size: 0.75rem;
+    padding: 0.125rem 0.5rem;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+  
+  .phone-number {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-surface);
+    padding: var(--space-sm);
+    border-radius: var(--radius-md);
+  }
+  
+  /* Mobile-optimized calculator form */
+  .calculator-card {
+    padding: var(--space-md);
+  }
+  
+  .form-group {
+    margin-bottom: var(--space-md);
+  }
+  
+  .form-label {
+    font-size: 0.875rem;
+    margin-bottom: var(--space-xs);
+  }
+  
+  .form-control {
+    font-size: 16px !important; /* Prevent zoom on iOS */
+    padding: var(--space-sm) var(--space-md);
+    height: 48px; /* Touch-friendly height */
+  }
+  
+  /* Mobile-optimized results display */
+  .results-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+  }
+  
+  .result-card {
+    padding: var(--space-sm);
+  }
+  
+  .result-label {
+    font-size: 0.75rem;
+  }
+  
+  .result-value {
+    font-size: 1.25rem;
+  }
+  
+  .result-value.small {
+    font-size: 1rem;
+  }
+  
+  /* Mobile-optimized FAQ */
+  .faq-question {
+    padding: var(--space-md);
+    font-size: 0.875rem;
+    text-align: left;
+  }
+  
+  .faq-answer {
+    padding: var(--space-md);
+    font-size: 0.875rem;
+  }
+  
+  /* Mobile-optimized emergency cards */
+  .emergency-card {
+    padding: var(--space-md);
+  }
+  
+  .emergency-number {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+  
+  .emergency-number span {
+    font-size: 1.25rem;
+  }
+  
+  /* Mobile-optimized step cards */
+  .step-card {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-md);
+  }
+  
+  .step-number {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+  
+  .step-icon {
+    display: none; /* Hide icons on mobile to save space */
+  }
+  
+  .step-card h3 {
+    font-size: 1rem;
+    margin-bottom: var(--space-xs);
+  }
+  
+  .step-card p {
+    font-size: 0.875rem;
+  }
+  
+  /* Mobile-optimized resource cards */
+  .resource-card {
+    padding: var(--space-md);
+  }
+  
+  .resource-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: var(--space-sm);
+  }
+  
+  .resource-card ul {
+    font-size: 0.875rem;
+    padding-left: var(--space-md);
+  }
+  
+  /* Touch-friendly buttons */
+  .btn, .copy-btn, .emergency-call-btn {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Better search experience on mobile */
+  .search-input {
+    height: 48px;
+    font-size: 16px !important;
+  }
+  
+  .search-btn {
+    width: 48px;
+    height: 48px;
+  }
+  
+  /* Mobile-optimized footer */
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-xl);
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+  
+  /* Improved mobile tables */
+  table {
+    font-size: 0.875rem;
+  }
+  
+  th, td {
+    padding: var(--space-xs);
+  }
+}
+
+/* Extra small devices (phones in portrait) */
+@media (max-width: 375px) {
+  /* Even more compact for very small screens */
+  .gradient-text {
+    font-size: 1.375rem;
+  }
+  
+  .hero-buttons {
+    grid-template-columns: 1fr;
+  }
+  
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .container {
+    padding: 0 var(--space-sm);
+  }
+}
+
 /* Dark mode support for mobile */
 @media (prefers-color-scheme: dark) {
   /* Basic dark mode support - can be expanded if needed */
@@ -2091,5 +2335,69 @@ img {
   .points-chart-image,
   .value-comparison-visual {
     opacity: 0.9;
+  }
+}
+
+/* Touch-friendly enhancements */
+@media (hover: none) and (pointer: coarse) {
+  /* Remove hover effects on touch devices */
+  .btn:hover,
+  .nav-link:hover,
+  .company-card:hover,
+  .step-card:hover,
+  .resource-card:hover,
+  .faq-item:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  
+  /* Larger tap targets */
+  a, button, .btn, .nav-link {
+    min-height: 48px;
+    min-width: 48px;
+  }
+  
+  /* Remove focus outlines on touch */
+  *:focus {
+    outline: none;
+  }
+  
+  /* Add active states for better feedback */
+  .btn:active,
+  .nav-link:active,
+  .copy-btn:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+}
+
+/* Smooth scrolling with reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* iOS-specific fixes */
+@supports (-webkit-touch-callout: none) {
+  /* Fix for iOS Safari bottom bar */
+  .navbar {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .footer {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  /* Prevent text selection on buttons */
+  .btn, .nav-link, button {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
   }
 }
