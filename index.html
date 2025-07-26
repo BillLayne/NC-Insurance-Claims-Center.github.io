@@ -113,89 +113,41 @@
     
     <link rel="stylesheet" href="style-modern.css">
     <link rel="stylesheet" href="desktop-nav-override.css">
-    
-    <style>
-        /* Compact header styles to match other pages */
-        .navbar {
-            padding: 0.75rem 0 !important;
-            min-height: auto !important;
-        }
-        
-        .navbar-content {
-            padding: 0.5rem 0 !important;
-            min-height: auto !important;
-        }
-        
-        .navbar-brand {
-            padding: 0 !important;
-        }
-        
-        .navbar-brand h2 {
-            font-size: 1.5rem !important;
-            margin-bottom: 0.125rem !important;
-        }
-        
-        .navbar-brand span {
-            display: block;
-            margin-top: 0 !important;
-        }
-        
-        .nav-link {
-            padding: 0.5rem 1rem !important;
-        }
-        
-        @media (max-width: 768px) {
-            .navbar-brand h2 {
-                font-size: 1.25rem !important;
-            }
-            
-            .navbar-brand span {
-                font-size: 0.75rem !important;
-            }
-            
-            /* Show phone number on mobile instead of button */
-            .navbar-cta .phone-number {
-                display: block !important;
-                font-size: 0.875rem !important;
-            }
-            
-            .navbar-cta .btn {
-                display: none !important;
-            }
-        }
-    </style>
 </head>
 <body>
-    <!-- Navigation Header -->
-    <header class="navbar">
-        <div class="container">
-            <div class="navbar-content flex items-center justify-between">
-                <div class="navbar-brand">
-                    <a href="https://billlayneinsurance.com" style="text-decoration: none;">
-                        <div style="display: flex; flex-direction: column;">
-                            <h2 style="font-size: var(--font-size-xl); font-weight: var(--font-weight-bold); color: var(--color-primary); margin: 0; line-height: 1.2;">Bill Layne Insurance</h2>
-                            <span style="font-size: var(--font-size-sm); color: var(--color-text-secondary); font-weight: var(--font-weight-medium); line-height: 1.2;">Claims Center</span>
-                        </div>
-                    </a>
-                </div>
-                <nav class="navbar-menu">
-                    <a href="https://billlayneinsurance.com" class="nav-link">Home</a>
-                    <a href="https://BillLayne.github.io/NC-Home-Insurance.github.io/" class="nav-link">Home<br><span style="font-size: 0.9em;">Insurance</span></a>
-                    <a href="https://BillLayne.github.io/Auto-Insurance-Center/" class="nav-link">Auto<br><span style="font-size: 0.9em;">Insurance</span></a>
-                    <a href="index.html" class="nav-link">Claims<br><span style="font-size: 0.9em;">Center</span></a>
-                    <a href="https://billlayneinsurance.com/blog" class="nav-link">Blog</a>
-                </nav>
-                <div class="navbar-cta" style="display: flex; align-items: center; gap: var(--space-16);">
-                    <a href="tel:3368351993" class="phone-number" style="font-weight: var(--font-weight-bold); font-size: var(--font-size-lg); color: var(--color-primary); text-decoration: none;">(336) 835-1993</a>
-                    <a href="https://billlayneinsurance.com#contact" class="btn btn--primary">Get Quote</a>
-                </div>
-                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+    <!-- Unified Header -->
+    <header class="unified-header">
+      <div class="header-container">
+        <div class="header-logo">
+          <a href="https://billlayneinsurance.com/" class="logo-link">
+            Bill Layne Insurance
+          </a>
         </div>
+        
+        <nav class="header-nav">
+          <ul class="nav-menu">
+            <li><a href="https://billlayne.github.io/Auto-Insurance-Center/" class="nav-link">Auto</a></li>
+            <li><a href="https://billlayne.github.io/NC-Home-Insurance.github.io/" class="nav-link">Home</a></li>
+            <li><a href="https://billlayneinsurance.com/areas-we-serve.html" class="nav-link">Services</a></li>
+            <li><a href="https://billlayne.github.io/NC-Insurance-Claims-Center.github.io/" class="nav-link active">Claims</a></li>
+            <li><a href="https://billlayne.github.io/Resources/" class="nav-link">Resources</a></li>
+            <li><a href="https://billlayneinsurance.com/blog" class="nav-link">Blog</a></li>
+            <li><a href="https://billlayneinsurance.com/contact-us.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <div class="header-cta">
+          <a href="tel:3368351993" class="phone-button">
+            <span class="phone-icon">📞</span> (336) 835-1993
+          </a>
+        </div>
+        
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </header>
 
     <!-- Hero Section -->
@@ -1197,5 +1149,40 @@
     </footer>
 
     <script src="app.js"></script>
+    
+    <!-- Mobile Menu JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const headerNav = document.querySelector('.header-nav');
+
+            if (mobileMenuToggle && headerNav) {
+                // Simple toggle functionality
+                mobileMenuToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    headerNav.classList.toggle('active');
+                    mobileMenuToggle.classList.toggle('active');
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!event.target.closest('.header-container')) {
+                        headerNav.classList.remove('active');
+                        mobileMenuToggle.classList.remove('active');
+                    }
+                });
+
+                // Close menu when clicking on a nav link
+                const menuLinks = document.querySelectorAll('.header-nav .nav-link');
+                menuLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        headerNav.classList.remove('active');
+                        mobileMenuToggle.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
