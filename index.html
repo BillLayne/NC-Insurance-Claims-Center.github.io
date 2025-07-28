@@ -6,1182 +6,824 @@
     <title>NC Insurance Claims Guide 2025 | Auto & Home Claims Help | Bill Layne Insurance</title>
     <meta name="description" content="File insurance claims in North Carolina with confidence. Get 24/7 claims contacts for all major insurers, NC points calculator, car value finder, and step-by-step guides. Call (336) 835-1993 for help.">
     <meta name="keywords" content="NC insurance claims, North Carolina auto claims, home insurance claims NC, insurance points calculator, car value finder, Bill Layne Insurance, Elkin NC insurance">
-    <meta name="author" content="Bill Layne Insurance Agency">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="English">
-    <meta name="geo.region" content="US-NC">
-    <meta name="geo.placename" content="Elkin, North Carolina">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="NC Insurance Claims Guide | File Claims with Confidence">
     <meta property="og:description" content="Complete guide to filing auto and home insurance claims in North Carolina. 24/7 claims contacts, points calculator, and expert guidance.">
     <meta property="og:url" content="https://billlayne.github.io/NC-Insurance-Claims-Center.github.io/">
-    <meta property="og:site_name" content="NC Insurance Claims Center">
-    <meta property="og:image" content="https://i.imgur.com/FvPLb2k.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="NC Insurance Claims Guide | Bill Layne Insurance">
-    <meta name="twitter:description" content="File insurance claims in NC with confidence. 24/7 contacts, points calculator, and expert guides.">
-    <meta name="twitter:image" content="https://i.imgur.com/FvPLb2k.png">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://billlayne.github.io/NC-Insurance-Claims-Center.github.io/">
-    
-    <!-- Sitemap -->
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="/NC-Insurance-Claims-Center.github.io/sitemap.xml">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
-    <!-- Preconnect to external domains -->
+    <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://i.imgur.com">
     
-    <!-- Structured Data - Local Business -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "InsuranceAgency",
-        "name": "Bill Layne Insurance Agency",
-        "description": "North Carolina Insurance Claims Center - Your guide to filing auto and home insurance claims",
-        "url": "https://billlayne.github.io/NC-Insurance-Claims-Center.github.io/",
-        "logo": "https://i.imgur.com/FvPLb2k.png",
-        "telephone": "+13368351993",
-        "email": "Save@BillLayneInsurance.com",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "PO Box 827",
-            "addressLocality": "Elkin",
-            "addressRegion": "NC",
-            "postalCode": "28621",
-            "addressCountry": "US"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "36.2444",
-            "longitude": "-80.8453"
-        },
-        "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            "opens": "09:00",
-            "closes": "17:00"
-        },
-        "areaServed": {
-            "@type": "State",
-            "name": "North Carolina"
-        },
-        "priceRange": "$$"
-    }
-    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Structured Data - FAQ -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [{
-            "@type": "Question",
-            "name": "What if the other driver doesn't have insurance in NC?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "If the at-fault driver is uninsured in North Carolina, you can file a claim with your uninsured motorist coverage, use your collision coverage, or pursue legal action through small claims court for damages under $10,000."
-            }
-        },{
-            "@type": "Question",
-            "name": "How do NC insurance points affect my rates?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "NC insurance points can increase your rates significantly. For example, 1 point = 30% increase, 2 points = 45% increase, 4 points = 80% increase. Points stay on your record for 3 years from your policy renewal date."
-            }
-        },{
-            "@type": "Question",
-            "name": "Should I accept the first settlement offer from insurance?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Generally no. First offers are typically lower than what you may be entitled to. Get multiple repair estimates, document all expenses, and consider future costs before accepting any settlement."
-            }
-        }]
-    }
-    </script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     
-    <link rel="stylesheet" href="style-modern.css">
-    <link rel="stylesheet" href="desktop-nav-override.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        /* Header scroll effect */
+        .header-scrolled {
+            background-color: white !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-scrolled .nav-link {
+            color: #1f2937 !important;
+        }
+        
+        .header-scrolled .nav-link:hover {
+            color: #2563eb !important;
+        }
+        
+        /* Mobile menu styles */
+        @media (max-width: 768px) {
+            .mobile-menu-container {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                background-color: white;
+                z-index: 50;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        /* Impact bar animation */
+        .impact-fill {
+            transition: width 0.8s ease-out;
+        }
+        
+        /* FAQ animations */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .faq-answer.open {
+            max-height: 1000px;
+            transition: max-height 0.5s ease-in;
+        }
+        
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-question[aria-expanded="true"] .faq-icon {
+            transform: rotate(180deg);
+        }
+    </style>
 </head>
-<body>
-    <!-- Unified Header -->
-    <header class="unified-header">
-      <div class="header-container">
-        <div class="header-logo">
-          <a href="https://billlayneinsurance.com/" class="logo-link">
-            Bill Layne Insurance
-          </a>
-        </div>
-        
-        <nav class="header-nav">
-          <ul class="nav-menu">
-            <li><a href="https://billlayne.github.io/Auto-Insurance-Center/" class="nav-link">Auto</a></li>
-            <li><a href="https://billlayne.github.io/NC-Home-Insurance.github.io/" class="nav-link">Home</a></li>
-            <li><a href="https://billlayneinsurance.com/areas-we-serve.html" class="nav-link">Services</a></li>
-            <li><a href="https://billlayne.github.io/NC-Insurance-Claims-Center.github.io/" class="nav-link active">Claims</a></li>
-            <li><a href="https://billlayne.github.io/Resources/" class="nav-link">Resources</a></li>
-            <li><a href="https://billlayneinsurance.com/blog" class="nav-link">Blog</a></li>
-            <li><a href="https://billlayneinsurance.com/contact-us.html" class="nav-link">Contact</a></li>
-          </ul>
-        </nav>
-        
-        <div class="header-cta">
-          <a href="tel:3368351993" class="phone-button">
-            <span class="phone-icon">📞</span> (336) 835-1993
-          </a>
-        </div>
-        
-        <button class="mobile-menu-toggle" id="mobileMenuToggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="gradient-text">North Carolina Insurance Claims Guide</h1>
-                <p class="hero-subtitle">Your complete resource for insurance claims, points calculations, and vehicle valuations in North Carolina</p>
-                <div class="hero-buttons">
-                    <a href="#auto-claims" class="btn btn--primary btn--lg">🚗 Auto Claims</a>
-                    <a href="#home-claims" class="btn btn--secondary btn--lg">🏠 Home Claims</a>
-                    <a href="#points-system" class="btn btn--primary btn--lg">🧮 Points Calculator</a>
-                    <a href="#car-value" class="btn btn--secondary btn--lg">💰 Car Value</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Search Bar Section -->
-    <section id="search-section" class="search-section">
-        <div class="container">
-            <div class="search-header">
-                <h2>Quick Insurance Company Lookup</h2>
-                <p>Search for any insurance company to instantly access their contact information, claims numbers, payment portals, and mobile apps</p>
-            </div>
-            <div class="search-wrapper">
-                <input type="text" id="searchInput" class="search-input" placeholder="Search for insurance companies, phone numbers, or topics...">
-                <button class="search-btn" aria-label="Search">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <path d="m21 21-4.35-4.35"></path>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="https://billlayneinsurance.com/" class="text-2xl font-bold text-white md:text-gray-900">
+                    Bill Layne Insurance
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="https://billlayne.github.io/Auto-Insurance-Center/" class="nav-link text-gray-900 hover:text-blue-600 transition">Auto</a>
+                    <a href="https://billlayne.github.io/NC-Home-Insurance.github.io/" class="nav-link text-gray-900 hover:text-blue-600 transition">Home</a>
+                    <a href="https://billlayneinsurance.com/areas-we-serve.html" class="nav-link text-gray-900 hover:text-blue-600 transition">Services</a>
+                    <a href="#" class="nav-link text-blue-600 font-semibold">Claims</a>
+                    <a href="https://billlayne.github.io/Resources/" class="nav-link text-gray-900 hover:text-blue-600 transition">Resources</a>
+                    <a href="https://billlayneinsurance.com/blog" class="nav-link text-gray-900 hover:text-blue-600 transition">Blog</a>
+                    <a href="https://billlayneinsurance.com/contact-us.html" class="nav-link text-gray-900 hover:text-blue-600 transition">Contact</a>
+                </nav>
+                
+                <!-- CTA Button -->
+                <a href="tel:3368351993" class="hidden md:flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                    <span class="mr-2">📞</span> (336) 835-1993
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden bg-white/90 p-2 rounded-lg">
+                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
-                <div id="searchResults" class="search-results"></div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <nav class="container mx-auto px-4 py-4">
+                <a href="https://billlayne.github.io/Auto-Insurance-Center/" class="block py-2 text-gray-700 hover:text-blue-600">Auto</a>
+                <a href="https://billlayne.github.io/NC-Home-Insurance.github.io/" class="block py-2 text-gray-700 hover:text-blue-600">Home</a>
+                <a href="https://billlayneinsurance.com/areas-we-serve.html" class="block py-2 text-gray-700 hover:text-blue-600">Services</a>
+                <a href="#" class="block py-2 text-blue-600 font-semibold">Claims</a>
+                <a href="https://billlayne.github.io/Resources/" class="block py-2 text-gray-700 hover:text-blue-600">Resources</a>
+                <a href="https://billlayneinsurance.com/blog" class="block py-2 text-gray-700 hover:text-blue-600">Blog</a>
+                <a href="https://billlayneinsurance.com/contact-us.html" class="block py-2 text-gray-700 hover:text-blue-600">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Sticky Mobile Call Button -->
+    <a href="tel:3368351993" class="md:hidden fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+        </svg>
+    </a>
+    
+    <!-- Hero Section -->
+    <section class="relative pt-20 pb-16 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        <div class="container relative mx-auto px-4 py-16">
+            <div class="text-center max-w-4xl mx-auto fade-in">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                    North Carolina Insurance Claims Guide
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90">
+                    Your complete resource for insurance claims, points calculations, and vehicle valuations in North Carolina
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#auto-claims" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                        🚗 Auto Claims
+                    </a>
+                    <a href="#home-claims" class="bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition">
+                        🏠 Home Claims
+                    </a>
+                    <a href="#points-calculator" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                        🧮 Points Calculator
+                    </a>
+                    <a href="#car-value" class="bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition">
+                        💰 Car Value
+                    </a>
+                </div>
             </div>
         </div>
     </section>
-
+    
+    <!-- Quick Tools Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Quick Claims Tools</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="#contacts" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition group">
+                    <div class="text-4xl mb-4">📞</div>
+                    <h3 class="text-xl font-semibold mb-2 group-hover:text-blue-600 transition">Claims Contacts</h3>
+                    <p class="text-gray-600">24/7 phone numbers for all major insurance companies</p>
+                </a>
+                <a href="#points-calculator" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition group">
+                    <div class="text-4xl mb-4">🧮</div>
+                    <h3 class="text-xl font-semibold mb-2 group-hover:text-blue-600 transition">Points Calculator</h3>
+                    <p class="text-gray-600">Calculate NC insurance rate increases from violations</p>
+                </a>
+                <a href="#car-value" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition group">
+                    <div class="text-4xl mb-4">💰</div>
+                    <h3 class="text-xl font-semibold mb-2 group-hover:text-blue-600 transition">Car Value Finder</h3>
+                    <p class="text-gray-600">Get Kelley Blue Book values for total loss claims</p>
+                </a>
+                <a href="#emergency" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition group">
+                    <div class="text-4xl mb-4">🚨</div>
+                    <h3 class="text-xl font-semibold mb-2 group-hover:text-blue-600 transition">Emergency Info</h3>
+                    <p class="text-gray-600">Important numbers and resources for emergencies</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    
     <!-- Auto Claims Section -->
-    <section id="auto-claims" class="claims-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>🚗 Auto Insurance Claims Process</h2>
-                <p>Follow these steps when filing an auto insurance claim in North Carolina</p>
+    <section id="auto-claims" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">🚗 Auto Insurance Claims Process</h2>
+                <p class="text-xl text-gray-600">Follow these steps when filing an auto insurance claim in North Carolina</p>
             </div>
             
-            <!-- Auto Claims Infographic -->
-            <div class="section-image-container">
-                <img src="https://i.imgur.com/FvPLb2k.png" 
-                     alt="North Carolina Auto Insurance Claims Process infographic - 6 steps to file a claim after a car accident including safety, police report, documentation, and working with adjusters" 
-                     title="NC Auto Insurance Claims Process Guide"
-                     class="section-infographic"
-                     width="900"
-                     height="600"
-                     loading="eager"
-                     decoding="async"
-                     fetchpriority="high">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4">1</div>
+                        <h3 class="text-xl font-semibold">Ensure Safety</h3>
+                    </div>
+                    <p class="text-gray-600">Check for injuries and call 911 if needed. Move to a safe location if possible.</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4">2</div>
+                        <h3 class="text-xl font-semibold">Call Police</h3>
+                    </div>
+                    <p class="text-gray-600">Report the accident to police even for minor crashes. Get the report number.</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4">3</div>
+                        <h3 class="text-xl font-semibold">Exchange Information</h3>
+                    </div>
+                    <p class="text-gray-600">Get driver info, insurance details, and witness contact information.</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4">4</div>
+                        <h3 class="text-xl font-semibold">Document Scene</h3>
+                    </div>
+                    <p class="text-gray-600">Take photos of vehicles, damage, scene, and write down what happened.</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4">5</div>
+                        <h3 class="text-xl font-semibold">Contact Insurance</h3>
+                    </div>
+                    <p class="text-gray-600">Call your insurance company to report the claim as soon as possible.</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4">6</div>
+                        <h3 class="text-xl font-semibold">Work with Adjuster</h3>
+                    </div>
+                    <p class="text-gray-600">Schedule inspection and work with adjuster to assess damage and coverage.</p>
+                </div>
             </div>
             
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <div class="step-icon">🚨</div>
-                    <h3>Ensure Safety</h3>
-                    <p>Check for injuries and call 911 if needed. Move to a safe location if possible.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <div class="step-icon">👮</div>
-                    <h3>Call Police</h3>
-                    <p>Report the accident to police even for minor crashes. Get the report number.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <div class="step-icon">📝</div>
-                    <h3>Exchange Information</h3>
-                    <p>Get driver info, insurance details, and witness contact information.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">4</div>
-                    <div class="step-icon">📸</div>
-                    <h3>Document Scene</h3>
-                    <p>Take photos of vehicles, damage, scene, and write down what happened.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">5</div>
-                    <div class="step-icon">📞</div>
-                    <h3>Contact Insurance</h3>
-                    <p>Call your insurance company to report the claim as soon as possible.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">6</div>
-                    <div class="step-icon">🔍</div>
-                    <h3>Work with Adjuster</h3>
-                    <p>Schedule inspection and work with adjuster to assess damage and coverage.</p>
-                </div>
-            </div>
-            <div class="nc-requirements">
-                <h3>📋 NC Minimum Insurance Requirements</h3>
-                <p>North Carolina requires minimum coverage of 50/100/50 (Bodily Injury per person/per accident, Property Damage)</p>
+            <div class="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-2">📋 NC Minimum Insurance Requirements</h3>
+                <p class="text-gray-700">North Carolina requires minimum coverage of 50/100/50 (Bodily Injury per person/per accident, Property Damage)</p>
             </div>
         </div>
     </section>
-
+    
     <!-- Home Claims Section -->
-    <section id="home-claims" class="claims-section home-claims">
-        <div class="container">
-            <div class="section-header">
-                <h2>🏠 Home Insurance Claims Process</h2>
-                <p>Step-by-step guide for filing home insurance claims in North Carolina</p>
+    <section id="home-claims" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">🏠 Home Insurance Claims Process</h2>
+                <p class="text-xl text-gray-600">Step-by-step guide for filing home insurance claims in North Carolina</p>
             </div>
             
-            <!-- Home Claims Types Visual -->
-            <div class="section-image-container">
-                <img src="https://i.imgur.com/cAYQUXY.png" 
-                     alt="Common Home Insurance Claims in North Carolina - Water damage, roof damage, fire damage, and theft claims" 
-                     class="section-infographic"
-                     loading="lazy">
-            </div>
-            
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <div class="step-icon">⚠️</div>
-                    <h3>Ensure Safety</h3>
-                    <p>Make sure everyone is safe. Don't enter damaged areas until cleared by officials.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 text-green-600 w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4">1</div>
+                        <h3 class="text-xl font-semibold">Ensure Safety</h3>
+                    </div>
+                    <p class="text-gray-600">Make sure everyone is safe. Don't enter damaged areas until cleared by officials.</p>
                 </div>
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <div class="step-icon">📹</div>
-                    <h3>Document Damage</h3>
-                    <p>Take photos and videos of all damage before making any temporary repairs.</p>
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 text-green-600 w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4">2</div>
+                        <h3 class="text-xl font-semibold">Document Damage</h3>
+                    </div>
+                    <p class="text-gray-600">Take photos and videos of all damage before making any temporary repairs.</p>
                 </div>
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <div class="step-icon">📱</div>
-                    <h3>Contact Insurance</h3>
-                    <p>Report the claim to your insurance company immediately.</p>
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 text-green-600 w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4">3</div>
+                        <h3 class="text-xl font-semibold">Contact Insurance</h3>
+                    </div>
+                    <p class="text-gray-600">Report the claim to your insurance company immediately.</p>
                 </div>
-                <div class="step-card">
-                    <div class="step-number">4</div>
-                    <div class="step-icon">🔧</div>
-                    <h3>Mitigate Damage</h3>
-                    <p>Make reasonable temporary repairs to prevent further damage. Save receipts.</p>
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 text-green-600 w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4">4</div>
+                        <h3 class="text-xl font-semibold">Mitigate Damage</h3>
+                    </div>
+                    <p class="text-gray-600">Make reasonable temporary repairs to prevent further damage. Save receipts.</p>
                 </div>
-                <div class="step-card">
-                    <div class="step-number">5</div>
-                    <div class="step-icon">👨‍💼</div>
-                    <h3>Work with Adjuster</h3>
-                    <p>Schedule inspection and provide documentation of losses.</p>
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 text-green-600 w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4">5</div>
+                        <h3 class="text-xl font-semibold">Work with Adjuster</h3>
+                    </div>
+                    <p class="text-gray-600">Schedule inspection and provide documentation of losses.</p>
                 </div>
-                <div class="step-card">
-                    <div class="step-number">6</div>
-                    <div class="step-icon">🏠</div>
-                    <h3>Complete Repairs</h3>
-                    <p>Get estimates, complete repairs, and submit receipts for reimbursement.</p>
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 text-green-600 w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4">6</div>
+                        <h3 class="text-xl font-semibold">Complete Repairs</h3>
+                    </div>
+                    <p class="text-gray-600">Get estimates, complete repairs, and submit receipts for reimbursement.</p>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- Insurance Companies Contact Section -->
-    <section id="contacts" class="contacts-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>📞 Major Insurance Companies Claims Contacts</h2>
-                <p>Quick access to claims phone numbers and websites for major insurers in North Carolina</p>
+    <section id="contacts" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">📞 Major Insurance Companies Claims Contacts</h2>
+                <p class="text-xl text-gray-600">Quick access to claims phone numbers and websites for major insurers in North Carolina</p>
             </div>
-            <div class="companies-grid">
-                <div class="company-card">
-                    <div class="company-header">
-                        <h3>Allstate</h3>
-                        <span class="availability">24/7</span>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-semibold">Allstate</h3>
+                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
                     </div>
-                    <div class="contact-info">
-                        <div class="phone-number">
-                            <span>📞 800-255-7828</span>
-                            <button class="copy-btn" data-phone="8002557828">Copy</button>
-                        </div>
-                        <a href="https://allstate.com" target="_blank" class="btn btn--outline">Visit Website</a>
-                    </div>
+                    <p class="text-2xl font-bold text-blue-600 mb-4">800-255-7828</p>
+                    <a href="https://allstate.com" target="_blank" class="block w-full bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition">Visit Website</a>
                 </div>
-                <div class="company-card">
-                    <div class="company-header">
-                        <h3>Auto-Owners</h3>
-                        <span class="availability">Business Hours</span>
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-semibold">GEICO</h3>
+                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
                     </div>
-                    <div class="contact-info">
-                        <div class="phone-number">
-                            <span>📞 Contact Local Agent</span>
-                        </div>
-                        <a href="https://auto-owners.com" target="_blank" class="btn btn--outline">Visit Website</a>
-                    </div>
+                    <p class="text-2xl font-bold text-blue-600 mb-4">800-861-8380</p>
+                    <a href="https://geico.com" target="_blank" class="block w-full bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition">Visit Website</a>
                 </div>
-                <div class="company-card">
-                    <div class="company-header">
-                        <h3>Erie Insurance</h3>
-                        <span class="availability">24/7</span>
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-semibold">Progressive</h3>
+                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
                     </div>
-                    <div class="contact-info">
-                        <div class="phone-number">
-                            <span>📞 800-367-3743</span>
-                            <button class="copy-btn" data-phone="8003673743">Copy</button>
-                        </div>
-                        <a href="https://erieinsurance.com" target="_blank" class="btn btn--outline">Visit Website</a>
-                    </div>
+                    <p class="text-2xl font-bold text-blue-600 mb-4">800-776-4737</p>
+                    <a href="https://progressive.com" target="_blank" class="block w-full bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition">Visit Website</a>
                 </div>
-                <div class="company-card">
-                    <div class="company-header">
-                        <h3>Farmers</h3>
-                        <span class="availability">24/7</span>
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-semibold">State Farm</h3>
+                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
                     </div>
-                    <div class="contact-info">
-                        <div class="phone-number">
-                            <span>📞 800-435-7764</span>
-                            <button class="copy-btn" data-phone="8004357764">Copy</button>
-                        </div>
-                        <a href="https://farmers.com" target="_blank" class="btn btn--outline">Visit Website</a>
-                    </div>
+                    <p class="text-2xl font-bold text-blue-600 mb-4">800-732-5246</p>
+                    <a href="https://statefarm.com" target="_blank" class="block w-full bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition">Visit Website</a>
                 </div>
-                <div class="company-card">
-                    <div class="company-header">
-                        <h3>GEICO</h3>
-                        <span class="availability">24/7</span>
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-semibold">Nationwide</h3>
+                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
                     </div>
-                    <div class="contact-info">
-                        <div class="phone-number">
-                            <span>📞 800-861-8380</span>
-                            <button class="copy-btn" data-phone="8008618380">Copy</button>
-                        </div>
-                        <a href="https://geico.com" target="_blank" class="btn btn--outline">Visit Website</a>
-                    </div>
+                    <p class="text-2xl font-bold text-blue-600 mb-4">800-421-3535</p>
+                    <a href="https://nationwide.com" target="_blank" class="block w-full bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition">Visit Website</a>
                 </div>
-                <div class="company-card">
-                    <div class="company-header">
-                        <h3>Nationwide</h3>
-                        <span class="availability">24/7</span>
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-semibold">Travelers</h3>
+                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
                     </div>
-                    <div class="contact-info">
-                        <div class="phone-number">
-                            <span>📞 800-421-3535</span>
-                            <button class="copy-btn" data-phone="8004213535">Copy</button>
-                        </div>
-                        <a href="https://nationwide.com" target="_blank" class="btn btn--outline">Visit Website</a>
-                    </div>
-                </div>
-                <div class="company-card">
-                    <div class="company-header">
-                        <h3>NC Farm Bureau</h3>
-                        <span class="availability">Business Hours</span>
-                    </div>
-                    <div class="contact-info">
-                        <div class="phone-number">
-                            <span>📞 Contact Local Agent</span>
-                        </div>
-                        <a href="https://ncfb.org" target="_blank" class="btn btn--outline">Visit Website</a>
-                    </div>
-                </div>
-                <div class="company-card">
-                    <div class="company-header">
-                        <h3>Progressive</h3>
-                        <span class="availability">24/7</span>
-                    </div>
-                    <div class="contact-info">
-                        <div class="phone-number">
-                            <span>📞 800-776-4737</span>
-                            <button class="copy-btn" data-phone="8007764737">Copy</button>
-                        </div>
-                        <a href="https://progressive.com" target="_blank" class="btn btn--outline">Visit Website</a>
-                    </div>
-                </div>
-                <div class="company-card">
-                    <div class="company-header">
-                        <h3>State Farm</h3>
-                        <span class="availability">24/7</span>
-                    </div>
-                    <div class="contact-info">
-                        <div class="phone-number">
-                            <span>📞 800-732-5246</span>
-                            <button class="copy-btn" data-phone="8007325246">Copy</button>
-                        </div>
-                        <a href="https://statefarm.com" target="_blank" class="btn btn--outline">Visit Website</a>
-                    </div>
-                </div>
-                <div class="company-card">
-                    <div class="company-header">
-                        <h3>Travelers</h3>
-                        <span class="availability">24/7</span>
-                    </div>
-                    <div class="contact-info">
-                        <div class="phone-number">
-                            <span>📞 800-252-4633</span>
-                            <button class="copy-btn" data-phone="8002524633">Copy</button>
-                        </div>
-                        <a href="https://travelers.com" target="_blank" class="btn btn--outline">Visit Website</a>
-                    </div>
-                </div>
-                <div class="company-card">
-                    <div class="company-header">
-                        <h3>USAA</h3>
-                        <span class="availability">24/7</span>
-                    </div>
-                    <div class="contact-info">
-                        <div class="phone-number">
-                            <span>📞 800-531-8722</span>
-                            <button class="copy-btn" data-phone="8005318722">Copy</button>
-                        </div>
-                        <a href="https://usaa.com" target="_blank" class="btn btn--outline">Visit Website</a>
-                    </div>
+                    <p class="text-2xl font-bold text-blue-600 mb-4">800-252-4633</p>
+                    <a href="https://travelers.com" target="_blank" class="block w-full bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition">Visit Website</a>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- NC Resources Section -->
-    <section id="resources" class="resources-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>📋 North Carolina Resources</h2>
-                <p>Important NC-specific resources and requirements for insurance claims</p>
+    
+    <!-- NC Insurance Points Calculator -->
+    <section id="points-calculator" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">🚨 NC Insurance Points Calculator</h2>
+                <p class="text-xl text-gray-600">Calculate how traffic violations affect your insurance rates</p>
             </div>
             
-            <!-- Resources Section Image -->
-            <div class="section-image-container">
-                <img src="https://i.imgur.com/EMODyoU.png" 
-                     alt="North Carolina Insurance Resources and Requirements" 
-                     class="section-infographic"
-                     loading="lazy">
-            </div>
-            
-            <div class="resources-grid">
-                <div class="resource-card">
-                    <h3>🚔 NC State Highway Patrol Reports</h3>
-                    <p>Access accident reports online. Reports are typically available 5-7 business days after the incident.</p>
-                    <a href="https://vehicle-search.ncshp.org/accidents" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Get Accident Report</a>
-                </div>
-                <div class="resource-card">
-                    <h3>📜 NC Insurance Laws</h3>
-                    <p>North Carolina follows contributory negligence law. Minimum coverage required: 30/60/25.</p>
-                    <ul>
-                        <li>$50,000 bodily injury per person</li>
-                        <li>$100,000 bodily injury per accident</li>
-                        <li>$50,000 property damage</li>
-                    </ul>
-                </div>
-                <div class="resource-card">
-                    <h3>⏰ Important Deadlines</h3>
-                    <p>Key time limits to remember for insurance claims in North Carolina:</p>
-                    <ul>
-                        <li>Report claims promptly (within 24-48 hours)</li>
-                        <li>Property damage claims: 3 years statute of limitations</li>
-                        <li>Personal injury claims: 3 years statute of limitations</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Emergency Section -->
-    <section id="emergency" class="emergency-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>🚨 Emergency Contacts</h2>
-                <p>Important numbers to have ready in case of emergency</p>
-            </div>
-            
-            <!-- Emergency Services Visual -->
-            <div class="section-image-container small">
-                <img src="https://i.imgur.com/mEUScFE.png" 
-                     alt="Emergency Services in North Carolina - Police, Fire, Medical, and Highway Patrol" 
-                     class="emergency-services-image"
-                     loading="lazy">
-            </div>
-            
-            <div class="emergency-grid">
-                <div class="emergency-card urgent">
-                    <div class="emergency-icon">🚨</div>
-                    <h3>Emergency Services</h3>
-                    <div class="emergency-number">
-                        <span>911</span>
-                        <button class="emergency-call-btn" data-phone="911">Call Now</button>
-                    </div>
-                    <p>For immediate medical, fire, or police assistance</p>
-                </div>
-                <div class="emergency-card">
-                    <div class="emergency-icon">🚔</div>
-                    <h3>NC State Highway Patrol</h3>
-                    <div class="emergency-number">
-                        <span>919-733-7952</span>
-                        <button class="copy-btn" data-phone="9197337952">Copy</button>
-                    </div>
-                    <p>Non-emergency number for accident reports</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Insurance Points Section -->
-    <section id="points-system" class="points-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>🚨 NC Insurance Points Calculator</h2>
-                <p>Calculate how traffic violations affect your insurance rates</p>
-            </div>
-            
-            <!-- Calculator Card -->
-            <div class="calculator-card">
-                <form id="points-calculator-form">
-                    <div class="form-group">
-                        <label class="form-label" for="current-premium">Your Current Annual Premium</label>
-                        <div class="input-group">
-                            <span class="input-prefix">$</span>
-                            <input 
-                                type="number" 
-                                id="current-premium" 
-                                class="form-control with-prefix" 
-                                placeholder="1,500.00" 
-                                step="0.01" 
-                                min="0"
-                                required
-                            >
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label" for="violation-type">Select Traffic Violation</label>
-                        <select id="violation-type" class="form-control" required>
-                            <option value="">Choose a violation...</option>
-                            <optgroup label="Speeding Violations">
-                                <option value="1">Speeding 10 mph or less (under 55 mph limit) - 1 point</option>
-                                <option value="2">Speeding 10+ mph (under 55 mph limit) - 2 points</option>
-                                <option value="3">Speeding 10+ mph (over 55 mph limit) - 3 points</option>
-                                <option value="4">Speeding over 75 mph (under 70 mph limit) - 4 points</option>
-                                <option value="4">Speeding over 80 mph (70 mph limit or higher) - 4 points</option>
-                            </optgroup>
-                            <optgroup label="Moving Violations">
-                                <option value="2">Following too closely - 2 points</option>
-                                <option value="3">Running through stop sign - 3 points</option>
-                                <option value="3">Running through red light - 3 points</option>
-                                <option value="3">Failure to yield right-of-way - 3 points</option>
-                                <option value="4">Illegal passing - 4 points</option>
-                                <option value="2">Driving on wrong side of road - 2 points</option>
-                                <option value="4">Reckless driving - 4 points</option>
-                            </optgroup>
-                            <optgroup label="Accidents">
-                                <option value="1">At-fault accident (property damage only, under $1,801) - 1 point</option>
-                                <option value="2">At-fault accident (property damage $1,801-$3,000) - 2 points</option>
-                                <option value="3">At-fault accident (property damage over $3,000 or bodily injury) - 3 points</option>
-                            </optgroup>
-                            <optgroup label="Serious Violations">
-                                <option value="12">DWI/DUI - 12 points</option>
-                                <option value="8">Driving with license suspended/revoked - 8 points</option>
-                                <option value="10">Highway racing - 10 points</option>
-                                <option value="4">Hit and run (property damage only) - 4 points</option>
-                                <option value="12">Hit and run (bodily injury) - 12 points</option>
-                                <option value="10">Manslaughter or negligent homicide - 10 points</option>
-                                <option value="3">Failure to report accident - 3 points</option>
-                                <option value="4">Driving without insurance - 4 points</option>
-                            </optgroup>
-                            <optgroup label="Other">
-                                <option value="0">Comprehensive claim under $1,001 - 0 points</option>
-                                <option value="1">Two or more comprehensive claims over $1,000 in 3 years - 1 point</option>
-                                <option value="1">Expired registration/inspection - 1 point</option>
-                            </optgroup>
-                        </select>
-                    </div>
-
-                    <button type="submit" class="btn btn--primary">Calculate Impact</button>
-                </form>
-
-                <!-- Results Section -->
-                <div id="results" class="results-section">
-                    <div class="results-header">
-                        <h3>Your Insurance Rate Impact</h3>
-                        <p id="violation-name"></p>
-                    </div>
-
-                    <div class="results-grid">
-                        <div class="result-card">
-                            <div class="result-label">Insurance Points</div>
-                            <div class="result-value" id="points-value">0</div>
-                        </div>
-                        <div class="result-card highlight">
-                            <div class="result-label">Rate Increase</div>
-                            <div class="result-value negative" id="increase-percentage">0%</div>
-                        </div>
-                        <div class="result-card">
-                            <div class="result-label">Annual Cost</div>
-                            <div class="result-value negative small" id="annual-increase">$0</div>
-                        </div>
-                        <div class="result-card">
-                            <div class="result-label">New Premium</div>
-                            <div class="result-value small" id="new-premium">$0</div>
-                        </div>
-                    </div>
-
-                    <div class="impact-chart">
-                        <h4>Rate Impact Visualization</h4>
-                        <div class="impact-bar">
-                            <div class="impact-fill" id="impact-fill">
-                                <span class="impact-percentage" id="impact-percentage">0%</span>
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <form id="pointsForm">
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-semibold mb-2">Your Current Annual Premium</label>
+                            <div class="relative">
+                                <span class="absolute left-3 top-3 text-gray-500">$</span>
+                                <input type="number" id="premium" class="w-full pl-8 pr-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="1,500.00" required>
                             </div>
                         </div>
-                        <p style="text-align: center; color: var(--color-text-secondary); margin-top: var(--space-16);">
-                            Impact shown on scale from 0% to 340% increase
-                        </p>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-semibold mb-2">Select Traffic Violation</label>
+                            <select id="violation" class="w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                                <option value="">Choose a violation...</option>
+                                <optgroup label="Speeding Violations">
+                                    <option value="1">Speeding 10 mph or less (under 55 mph limit) - 1 point</option>
+                                    <option value="2">Speeding 10+ mph (under 55 mph limit) - 2 points</option>
+                                    <option value="3">Speeding 10+ mph (over 55 mph limit) - 3 points</option>
+                                    <option value="4">Speeding over 75 mph (under 70 mph limit) - 4 points</option>
+                                </optgroup>
+                                <optgroup label="Moving Violations">
+                                    <option value="2">Following too closely - 2 points</option>
+                                    <option value="3">Running through stop sign - 3 points</option>
+                                    <option value="3">Running through red light - 3 points</option>
+                                    <option value="4">Reckless driving - 4 points</option>
+                                </optgroup>
+                                <optgroup label="Serious Violations">
+                                    <option value="12">DWI/DUI - 12 points</option>
+                                    <option value="8">Driving with license suspended/revoked - 8 points</option>
+                                    <option value="10">Highway racing - 10 points</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                            Calculate Impact
+                        </button>
+                    </form>
+                    
+                    <div id="results" class="hidden mt-8">
+                        <h3 class="text-2xl font-bold mb-6 text-center">Your Insurance Rate Impact</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                            <div class="bg-gray-50 p-4 rounded-lg text-center">
+                                <p class="text-gray-600 text-sm">Insurance Points</p>
+                                <p id="points" class="text-3xl font-bold text-gray-800">0</p>
+                            </div>
+                            <div class="bg-red-50 p-4 rounded-lg text-center">
+                                <p class="text-gray-600 text-sm">Rate Increase</p>
+                                <p id="increase" class="text-3xl font-bold text-red-600">0%</p>
+                            </div>
+                            <div class="bg-red-50 p-4 rounded-lg text-center">
+                                <p class="text-gray-600 text-sm">Annual Cost</p>
+                                <p id="cost" class="text-3xl font-bold text-red-600">$0</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg text-center">
+                                <p class="text-gray-600 text-sm">New Premium</p>
+                                <p id="newPremium" class="text-3xl font-bold text-gray-800">$0</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-100 rounded-lg p-4">
+                            <p class="text-sm text-gray-600 mb-2">Impact Visualization</p>
+                            <div class="bg-gray-300 rounded-full h-8 overflow-hidden">
+                                <div id="impactBar" class="impact-fill bg-red-600 h-full flex items-center justify-center text-white font-semibold" style="width: 0%">
+                                    <span id="impactText">0%</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <!-- NC DMV Points Chart -->
-            <div class="points-chart-container">
-                <h3>📊 North Carolina Insurance Points Chart</h3>
-                <img src="https://i.imgur.com/Z6hWpFR.png" 
-                     alt="North Carolina DMV Insurance Points Chart - Complete guide showing points and rate increases for traffic violations" 
-                     class="points-chart-image"
-                     loading="lazy">
-                <p class="chart-caption">Official NC insurance points and their impact on your premiums</p>
-            </div>
-            
-            <!-- Key Information Section -->
-            <div class="key-points" style="margin-top: var(--space-48);">
-                <h3>🎯 Key Things to Remember</h3>
-                <div class="key-point-card error">
-                    <h4>❌ Driver Clinics DON'T Help Insurance</h4>
-                    <p>That 8-hour class? It keeps your license but your insurance stays HIGH for 3 full years!</p>
-                </div>
-                <div class="key-point-card warning">
-                    <h4>⏰ 3-Year Countdown</h4>
-                    <p>Insurance companies look back 3 years from your renewal date. Mark your calendar!</p>
-                </div>
-                <div class="key-point-card success">
-                    <h4>🙏 Prayer for Judgment (PJC)</h4>
-                    <p>Your ONLY way to avoid insurance points! One per household every 3 years. Use it wisely - second PJC = BOTH violations count!</p>
+                
+                <!-- Key Information -->
+                <div class="mt-12 space-y-4">
+                    <div class="bg-red-50 border-l-4 border-red-600 p-6 rounded-lg">
+                        <h4 class="text-xl font-semibold mb-2">❌ Driver Clinics DON'T Help Insurance</h4>
+                        <p class="text-gray-700">That 8-hour class? It keeps your license but your insurance stays HIGH for 3 full years!</p>
+                    </div>
+                    <div class="bg-yellow-50 border-l-4 border-yellow-600 p-6 rounded-lg">
+                        <h4 class="text-xl font-semibold mb-2">⏰ 3-Year Countdown</h4>
+                        <p class="text-gray-700">Insurance companies look back 3 years from your renewal date. Mark your calendar!</p>
+                    </div>
+                    <div class="bg-green-50 border-l-4 border-green-600 p-6 rounded-lg">
+                        <h4 class="text-xl font-semibold mb-2">🙏 Prayer for Judgment (PJC)</h4>
+                        <p class="text-gray-700">Your ONLY way to avoid insurance points! One per household every 3 years. Use it wisely - second PJC = BOTH violations count!</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- Car Value Finder Section -->
-    <section id="car-value" class="car-value-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>🚗 Find Your Car's True Value</h2>
-                <p>Know your car's Kelley Blue Book value before filing a total loss claim</p>
+    <section id="car-value" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">🚗 Find Your Car's True Value</h2>
+                <p class="text-xl text-gray-600">Know your car's Kelley Blue Book value before filing a total loss claim</p>
             </div>
             
-            <!-- Car Value Tool Card -->
-            <div class="car-value-card">
-                <!-- Car Value Comparison Visual -->
-                <div class="value-comparison-image">
-                    <img src="https://i.imgur.com/etiG7MT.png" 
-                         alt="Car Value Comparison - Retail vs Insurance ACV (Actual Cash Value) explained" 
-                         class="value-comparison-visual"
-                         loading="lazy">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-semibold mb-4">Why Knowing Your Car's Value Matters</h3>
+                        <p class="text-gray-600 mb-4">When your car is totaled, insurance companies offer the Actual Cash Value (ACV) - not the dealer retail price. Use this tool to:</p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>✅ Get your car's official Kelley Blue Book value instantly</li>
+                            <li>✅ Understand the difference between retail and insurance values</li>
+                            <li>✅ Negotiate confidently with solid data</li>
+                            <li>✅ Ensure you receive a fair settlement</li>
+                        </ul>
+                    </div>
+                    
+                    <form id="carValueForm">
+                        <div class="grid md:grid-cols-2 gap-4 mb-6">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Year</label>
+                                <select id="year" class="w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                                    <option value="">Select Year</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2015">2015</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Make</label>
+                                <select id="make" class="w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                                    <option value="">Select Make</option>
+                                    <option value="chevrolet">Chevrolet</option>
+                                    <option value="ford">Ford</option>
+                                    <option value="honda">Honda</option>
+                                    <option value="toyota">Toyota</option>
+                                    <option value="nissan">Nissan</option>
+                                    <option value="jeep">Jeep</option>
+                                    <option value="ram">Ram</option>
+                                    <option value="gmc">GMC</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Model</label>
+                                <input type="text" id="model" class="w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g. Camry, F-150" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">ZIP Code</label>
+                                <input type="text" id="zipcode" class="w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g. 28621" pattern="[0-9]{5}" required>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                            Get My Vehicle Value
+                        </button>
+                    </form>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mt-8">
+                        <div class="bg-blue-50 p-6 rounded-lg">
+                            <h4 class="text-xl font-semibold mb-3">🏷️ Dealer Retail Value</h4>
+                            <p class="text-gray-700">The price at a car lot - always higher because it includes:</p>
+                            <ul class="mt-2 space-y-1 text-sm text-gray-600">
+                                <li>• Dealer profit margin</li>
+                                <li>• Reconditioning costs</li>
+                                <li>• Sales commissions</li>
+                                <li>• Warranties & overhead</li>
+                            </ul>
+                        </div>
+                        <div class="bg-green-50 p-6 rounded-lg">
+                            <h4 class="text-xl font-semibold mb-3">⚖️ Insurance ACV</h4>
+                            <p class="text-gray-700">What your car was worth before damage - based on:</p>
+                            <ul class="mt-2 space-y-1 text-sm text-gray-600">
+                                <li>• Private-party values</li>
+                                <li>• Recent sales data</li>
+                                <li>• Your car's condition</li>
+                                <li>• NO dealer profit</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 mt-6 rounded">
+                        <p class="text-gray-700"><strong>💡 Pro Tip:</strong> Insurance pays the Actual Cash Value (ACV), not retail. KBB gives you both values so you understand the full picture and can negotiate effectively.</p>
+                    </div>
                 </div>
-                
-                <div class="value-tool-intro">
-                    <h3>Why Knowing Your Car's Value Matters</h3>
-                    <p>When your car is totaled, insurance companies offer the Actual Cash Value (ACV) - not the dealer retail price. Use this tool to:</p>
-                    <ul class="value-benefits">
-                        <li>✅ Get your car's official Kelley Blue Book value instantly</li>
-                        <li>✅ Understand the difference between retail and insurance values</li>
-                        <li>✅ Negotiate confidently with solid data</li>
-                        <li>✅ Ensure you receive a fair settlement</li>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Emergency Section -->
+    <section id="emergency" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">🚨 Emergency Contacts</h2>
+                <p class="text-xl text-gray-600">Important numbers to have ready in case of emergency</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+                <div class="bg-red-600 text-white rounded-lg p-8 text-center">
+                    <div class="text-5xl mb-4">🚨</div>
+                    <h3 class="text-2xl font-bold mb-2">Emergency Services</h3>
+                    <p class="text-4xl font-bold mb-2">911</p>
+                    <p class="opacity-90">For immediate medical, fire, or police assistance</p>
+                </div>
+                <div class="bg-blue-600 text-white rounded-lg p-8 text-center">
+                    <div class="text-5xl mb-4">🚔</div>
+                    <h3 class="text-2xl font-bold mb-2">NC State Highway Patrol</h3>
+                    <p class="text-2xl font-bold mb-2">919-733-7952</p>
+                    <p class="opacity-90">Non-emergency number for accident reports</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- NC Resources Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">📋 North Carolina Resources</h2>
+                <p class="text-xl text-gray-600">Important NC-specific resources and requirements for insurance claims</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">🚔 NC State Highway Patrol Reports</h3>
+                    <p class="text-gray-600 mb-4">Access accident reports online. Reports are typically available 5-7 business days after the incident.</p>
+                    <a href="https://vehicle-search.ncshp.org/accidents" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition inline-block">Get Accident Report</a>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">📜 NC Insurance Laws</h3>
+                    <p class="text-gray-600 mb-2">North Carolina follows contributory negligence law. Minimum coverage required:</p>
+                    <ul class="text-gray-600 space-y-1">
+                        <li>• $50,000 bodily injury per person</li>
+                        <li>• $100,000 bodily injury per accident</li>
+                        <li>• $50,000 property damage</li>
                     </ul>
                 </div>
-                
-                <form id="carValueForm" class="car-value-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label class="form-label" for="year">Year</label>
-                            <select id="year" name="year" class="form-control" required>
-                                <option value="">Select Year</option>
-                                <option value="2025">2025</option>
-                                <option value="2024">2024</option>
-                                <option value="2023">2023</option>
-                                <option value="2022">2022</option>
-                                <option value="2021">2021</option>
-                                <option value="2020">2020</option>
-                                <option value="2019">2019</option>
-                                <option value="2018">2018</option>
-                                <option value="2017">2017</option>
-                                <option value="2016">2016</option>
-                                <option value="2015">2015</option>
-                                <option value="2014">2014</option>
-                                <option value="2013">2013</option>
-                                <option value="2012">2012</option>
-                                <option value="2011">2011</option>
-                                <option value="2010">2010</option>
-                                <option value="2009">2009</option>
-                                <option value="2008">2008</option>
-                                <option value="2007">2007</option>
-                                <option value="2006">2006</option>
-                                <option value="2005">2005</option>
-                                <option value="2004">2004</option>
-                                <option value="2003">2003</option>
-                                <option value="2002">2002</option>
-                                <option value="2001">2001</option>
-                                <option value="2000">2000</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label" for="make">Make</label>
-                            <select id="make" name="make" class="form-control" required>
-                                <option value="">Select Make</option>
-                                <option value="acura">Acura</option>
-                                <option value="audi">Audi</option>
-                                <option value="bmw">BMW</option>
-                                <option value="buick">Buick</option>
-                                <option value="cadillac">Cadillac</option>
-                                <option value="chevrolet">Chevrolet</option>
-                                <option value="chrysler">Chrysler</option>
-                                <option value="dodge">Dodge</option>
-                                <option value="ford">Ford</option>
-                                <option value="genesis">Genesis</option>
-                                <option value="gmc">GMC</option>
-                                <option value="honda">Honda</option>
-                                <option value="hyundai">Hyundai</option>
-                                <option value="infiniti">Infiniti</option>
-                                <option value="jaguar">Jaguar</option>
-                                <option value="jeep">Jeep</option>
-                                <option value="kia">Kia</option>
-                                <option value="land-rover">Land Rover</option>
-                                <option value="lexus">Lexus</option>
-                                <option value="lincoln">Lincoln</option>
-                                <option value="mazda">Mazda</option>
-                                <option value="mercedes-benz">Mercedes-Benz</option>
-                                <option value="mini">MINI</option>
-                                <option value="mitsubishi">Mitsubishi</option>
-                                <option value="nissan">Nissan</option>
-                                <option value="porsche">Porsche</option>
-                                <option value="ram">Ram</option>
-                                <option value="subaru">Subaru</option>
-                                <option value="tesla">Tesla</option>
-                                <option value="toyota">Toyota</option>
-                                <option value="volkswagen">Volkswagen</option>
-                                <option value="volvo">Volvo</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label" for="model">Model</label>
-                            <input 
-                                type="text" 
-                                id="model" 
-                                name="model" 
-                                class="form-control" 
-                                placeholder="e.g. Camry, F-150" 
-                                required
-                            >
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label" for="zipcode">ZIP Code</label>
-                            <input 
-                                type="text" 
-                                id="zipcode" 
-                                name="zipcode" 
-                                class="form-control" 
-                                placeholder="e.g. 28621" 
-                                pattern="[0-9]{5}" 
-                                inputmode="numeric" 
-                                required
-                            >
-                        </div>
-                    </div>
-                    
-                    <button type="submit" class="btn btn--primary btn--lg">Get My Vehicle Value</button>
-                </form>
-                
-                <!-- Value Difference Explanation -->
-                <div class="value-difference-grid">
-                    <div class="value-type-card retail">
-                        <div class="value-icon">🏷️</div>
-                        <h4>Dealer Retail Value</h4>
-                        <p>The price at a car lot - always higher because it includes:</p>
-                        <ul>
-                            <li>Dealer profit margin</li>
-                            <li>Reconditioning costs</li>
-                            <li>Sales commissions</li>
-                            <li>Warranties & overhead</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="value-type-card acv">
-                        <div class="value-icon">⚖️</div>
-                        <h4>Insurance ACV</h4>
-                        <p>What your car was worth before damage - based on:</p>
-                        <ul>
-                            <li>Private-party values</li>
-                            <li>Recent sales data</li>
-                            <li>Your car's condition</li>
-                            <li>NO dealer profit</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="value-tip">
-                    <p><strong>💡 Pro Tip:</strong> Insurance pays the Actual Cash Value (ACV), not retail. KBB gives you both values so you understand the full picture and can negotiate effectively.</p>
+                <div class="bg-white rounded-lg p-6 shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">⏰ Important Deadlines</h3>
+                    <p class="text-gray-600 mb-2">Key time limits to remember:</p>
+                    <ul class="text-gray-600 space-y-1">
+                        <li>• Report claims promptly (24-48 hours)</li>
+                        <li>• Property damage claims: 3 years</li>
+                        <li>• Personal injury claims: 3 years</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- FAQ Section -->
-    <section id="faq" class="faq-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>❓ Frequently Asked Questions</h2>
-                <p>Common questions about insurance claims in North Carolina</p>
+    <section id="faq" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">❓ Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600">Common questions about insurance claims in North Carolina</p>
             </div>
             
-            <!-- FAQ Section Image -->
-            <div class="section-image-container small">
-                <img src="https://i.imgur.com/n6sKp2D.png" 
-                     alt="Frequently Asked Questions about NC Insurance Claims" 
-                     class="section-infographic"
-                     loading="lazy">
-            </div>
-            
-            <div class="faq-container">
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>What if the other driver doesn't have insurance?</span>
-                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"></polyline>
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="bg-white rounded-lg shadow-md">
+                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition" aria-expanded="false">
+                        <span class="font-semibold">What if the other driver doesn't have insurance?</span>
+                        <svg class="faq-icon w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
-                    <div class="faq-answer">
-                        <p>If the at-fault driver is uninsured, you have several options:</p>
-                        <ul>
+                    <div class="faq-answer px-6 pb-4">
+                        <p class="text-gray-600 mb-3">If the at-fault driver is uninsured, you have several options:</p>
+                        <ul class="space-y-2 text-gray-600">
                             <li><strong>Uninsured Motorist Coverage:</strong> File a claim with your own insurance if you have UM coverage</li>
                             <li><strong>Collision Coverage:</strong> Use your collision coverage and pay your deductible</li>
                             <li><strong>Small Claims Court:</strong> Sue the driver directly for damages under $10,000</li>
-                            <li><strong>Personal Lawsuit:</strong> For larger damages, consult an attorney about filing suit</li>
                         </ul>
-                        <p class="faq-tip">💡 NC requires uninsured motorist coverage unless you reject it in writing!</p>
+                        <p class="mt-3 bg-blue-50 p-3 rounded text-sm">💡 NC requires uninsured motorist coverage unless you reject it in writing!</p>
                     </div>
                 </div>
-
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>Should I accept the first settlement offer?</span>
-                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"></polyline>
+                
+                <div class="bg-white rounded-lg shadow-md">
+                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition" aria-expanded="false">
+                        <span class="font-semibold">Should I accept the first settlement offer?</span>
+                        <svg class="faq-icon w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
-                    <div class="faq-answer">
-                        <p>Generally, NO. First offers are typically lower than what you may be entitled to. Consider:</p>
-                        <ul>
-                            <li>Get repair estimates from multiple shops</li>
-                            <li>Document all medical expenses and lost wages</li>
-                            <li>Account for future medical needs</li>
-                            <li>Consider diminished value of your vehicle</li>
-                            <li>Don't sign anything that releases future claims</li>
+                    <div class="faq-answer px-6 pb-4">
+                        <p class="text-gray-600 mb-3">Generally, NO. First offers are typically lower than what you may be entitled to. Consider:</p>
+                        <ul class="space-y-1 text-gray-600">
+                            <li>• Get repair estimates from multiple shops</li>
+                            <li>• Document all medical expenses and lost wages</li>
+                            <li>• Account for future medical needs</li>
+                            <li>• Consider diminished value of your vehicle</li>
                         </ul>
-                        <p class="faq-tip">⚠️ Once you accept and sign, you cannot ask for more money later!</p>
+                        <p class="mt-3 bg-red-50 p-3 rounded text-sm">⚠️ Once you accept and sign, you cannot ask for more money later!</p>
                     </div>
                 </div>
-
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>When should I hire an attorney?</span>
-                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"></polyline>
+                
+                <div class="bg-white rounded-lg shadow-md">
+                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition" aria-expanded="false">
+                        <span class="font-semibold">Will my rates go up if I file a claim?</span>
+                        <svg class="faq-icon w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
-                    <div class="faq-answer">
-                        <p>Consider hiring an attorney if:</p>
-                        <ul>
-                            <li>You suffered serious injuries requiring ongoing treatment</li>
-                            <li>Fault is being disputed or you're being blamed</li>
-                            <li>Multiple parties are involved</li>
-                            <li>The insurance company is acting in bad faith</li>
-                            <li>You're asked to give a recorded statement</li>
-                            <li>The settlement offer seems unreasonably low</li>
-                        </ul>
-                        <p class="faq-tip">📋 Most attorneys offer free consultations for injury cases and work on contingency (no upfront fees).</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>What if I disagree with the fault determination?</span>
-                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>If you disagree with fault determination:</p>
-                        <ul>
-                            <li>Request a copy of the police report and review for errors</li>
-                            <li>Gather additional evidence (witnesses, photos, video)</li>
-                            <li>File an appeal with your insurance company</li>
-                            <li>Request arbitration if available in your policy</li>
-                            <li>Contact the NC Department of Insurance for assistance</li>
-                            <li>Consider hiring an attorney to dispute the determination</li>
-                        </ul>
-                        <p class="faq-tip">⚖️ Remember: NC's contributory negligence law means if you're even 1% at fault, you may receive nothing!</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>How long do I have to file a claim?</span>
-                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Time limits vary by type of claim:</p>
-                        <ul>
-                            <li><strong>Report to Insurance:</strong> As soon as possible (usually within 24-72 hours)</li>
-                            <li><strong>Property Damage Lawsuit:</strong> 3 years from date of accident</li>
-                            <li><strong>Personal Injury Lawsuit:</strong> 3 years from date of accident</li>
-                            <li><strong>Uninsured Motorist:</strong> Check your policy (typically 2-3 years)</li>
-                            <li><strong>Hit and Run:</strong> Report to police within 24 hours</li>
-                        </ul>
-                        <p class="faq-tip">📅 Don't wait! Evidence disappears, witnesses forget, and delays can hurt your claim.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>What should I NOT say to the insurance adjuster?</span>
-                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Avoid these common mistakes when talking to adjusters:</p>
-                        <ul>
-                            <li>❌ "I'm fine" or "I'm not hurt" (injuries may appear later)</li>
-                            <li>❌ "It was my fault" or accepting any blame</li>
-                            <li>❌ Guessing about details you don't remember</li>
-                            <li>❌ Agreeing to a recorded statement without legal advice</li>
-                            <li>❌ Discussing previous accidents or injuries</li>
-                            <li>❌ Accepting quick settlement offers</li>
-                        </ul>
-                        <p class="faq-tip">✅ Stick to facts only: date, time, location, and basic details. Let the investigation determine fault.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>Will my rates go up if I file a claim?</span>
-                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Rate increases depend on several factors:</p>
-                        <ul>
-                            <li><strong>At-Fault Accidents:</strong> Yes, typically 40%+ increase (see our points chart above)</li>
+                    <div class="faq-answer px-6 pb-4">
+                        <p class="text-gray-600 mb-3">Rate increases depend on several factors:</p>
+                        <ul class="space-y-1 text-gray-600">
+                            <li><strong>At-Fault Accidents:</strong> Yes, typically 40%+ increase</li>
                             <li><strong>Not-At-Fault:</strong> Usually no increase, but some insurers may still raise rates</li>
-                            <li><strong>Comprehensive Claims:</strong> Minor increase or none (theft, vandalism, weather)</li>
+                            <li><strong>Comprehensive Claims:</strong> Minor increase or none</li>
                             <li><strong>Multiple Claims:</strong> Significant increases regardless of fault</li>
-                            <li><strong>Claim-Free Discount:</strong> You may lose this discount even if not at fault</li>
                         </ul>
-                        <p class="faq-tip">💰 Shop around! Different insurers treat claims history differently.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>What is diminished value and can I claim it?</span>
-                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Diminished value is the loss in your car's resale value after an accident, even when properly repaired.</p>
-                        <ul>
-                            <li><strong>In NC:</strong> You CAN claim diminished value from the at-fault party's insurance</li>
-                            <li><strong>Your Own Insurance:</strong> Most policies exclude diminished value claims</li>
-                            <li><strong>How Much:</strong> Typically 10-30% of the car's value, depending on damage</li>
-                            <li><strong>Documentation:</strong> Get an independent appraisal to support your claim</li>
-                            <li><strong>Time Limit:</strong> Include in your initial claim; harder to add later</li>
-                        </ul>
-                        <p class="faq-tip">📈 Newer cars with significant damage have the strongest diminished value claims.</p>
+                        <p class="mt-3 bg-yellow-50 p-3 rounded text-sm">💰 Shop around! Different insurers treat claims history differently.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Tips Section -->
-    <section class="tips-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>💡 Helpful Tips</h2>
-                <p>Be prepared and know what to do before you need to file a claim</p>
-            </div>
-            
-            <!-- Tips Section Image -->
-            <div class="section-image-container">
-                <img src="https://i.imgur.com/RKODeDd.png" 
-                     alt="Insurance Claims Tips and Preparation Guide" 
-                     class="section-infographic"
-                     loading="lazy">
-            </div>
-            
-            <div class="tips-grid">
-                <div class="tip-card">
-                    <h3>🚗 Keep in Your Car</h3>
-                    <ul>
-                        <li>Insurance card and policy information</li>
-                        <li>Emergency contact numbers</li>
-                        <li>Pen and paper for notes</li>
-                        <li>Phone charger</li>
-                        <li>First aid kit</li>
-                    </ul>
-                </div>
-                <div class="tip-card">
-                    <h3>📄 Important Documents</h3>
-                    <ul>
-                        <li>Current insurance policy</li>
-                        <li>Vehicle registration and title</li>
-                        <li>Driver's license</li>
-                        <li>Home inventory for property claims</li>
-                        <li>Receipts for valuable items</li>
-                    </ul>
-                </div>
-                <div class="tip-card">
-                    <h3>📱 Preparation Tips</h3>
-                    <ul>
-                        <li>Take photos regularly of your property</li>
-                        <li>Know your policy limits and deductibles</li>
-                        <li>Have your agent's contact information saved</li>
-                        <li>Review coverage annually</li>
-                        <li>Consider umbrella insurance</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>🛡️ NC Claims Guide</h3>
-                    <p>Your trusted resource for North Carolina insurance claims information</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#auto-claims">Auto Claims</a>
-                    <a href="#home-claims">Home Claims</a>
-                    <a href="#contacts">Contacts</a>
-                    <a href="#resources">Resources</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p><strong>Disclaimer:</strong> This information is for reference only and should not be considered legal advice. Always consult with your insurance provider for specific policy details and coverage information.</p>
-                <p>Last updated: June 2025</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Notification for copy actions -->
-    <div id="notification" class="notification">
-        <span id="notification-text"></span>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-main">
-                    <div class="footer-brand">
-                        <h3>Bill Layne Insurance Agency</h3>
-                        <p>NC Insurance Claims Center - Your guide to filing claims in North Carolina</p>
-                    </div>
-                    <div class="footer-contact">
-                        <h4>Contact Information</h4>
-                        <p><strong>Phone:</strong> <a href="tel:3368351993">(336) 835-1993</a></p>
-                        <p><strong>Email:</strong> <a href="mailto:Save@BillLayneInsurance.com">Save@BillLayneInsurance.com</a></p>
-                        <p><strong>Address:</strong> PO Box 827, Elkin, NC 28621</p>
-                        <p><strong>Hours:</strong> Monday - Friday: 9:00 AM - 5:00 PM</p>
-                    </div>
-                    <div class="footer-links">
-                        <h4>Quick Links</h4>
-                        <ul>
-                            <li><a href="https://billlayneinsurance.com">Main Website</a></li>
-                            <li><a href="https://billlayne.github.io/ethereal-blog-landing/">Insurance Blog</a></li>
-                            <li><a href="#auto-claims">Auto Claims Guide</a></li>
-                            <li><a href="#home-claims">Home Claims Guide</a></li>
-                            <li><a href="#emergency">Emergency Contacts</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2025 Bill Layne Insurance Agency. All rights reserved. | Licensed in North Carolina</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="app.js"></script>
     
-    <!-- Mobile Menu JavaScript -->
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Bill Layne Insurance</h3>
+                    <p class="text-gray-400">NC Insurance Claims Center - Your guide to filing claims in North Carolina</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact Info</h4>
+                    <p class="text-gray-400">Phone: <a href="tel:3368351993" class="hover:text-white">(336) 835-1993</a></p>
+                    <p class="text-gray-400">Email: <a href="mailto:Save@BillLayneInsurance.com" class="hover:text-white">Save@BillLayneInsurance.com</a></p>
+                    <p class="text-gray-400">PO Box 827, Elkin, NC 28621</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="https://billlayneinsurance.com" class="hover:text-white">Main Website</a></li>
+                        <li><a href="#auto-claims" class="hover:text-white">Auto Claims Guide</a></li>
+                        <li><a href="#home-claims" class="hover:text-white">Home Claims Guide</a></li>
+                        <li><a href="#points-calculator" class="hover:text-white">Points Calculator</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Hours</h4>
+                    <p class="text-gray-400">Monday - Friday</p>
+                    <p class="text-gray-400">9:00 AM - 5:00 PM</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Bill Layne Insurance Agency. All rights reserved. | Licensed in North Carolina</p>
+            </div>
+        </div>
+    </footer>
+    
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-            const headerNav = document.querySelector('.header-nav');
-
-            if (mobileMenuToggle && headerNav) {
-                // Simple toggle functionality
-                mobileMenuToggle.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    headerNav.classList.toggle('active');
-                    mobileMenuToggle.classList.toggle('active');
-                });
-
-                // Close menu when clicking outside
-                document.addEventListener('click', function(event) {
-                    if (!event.target.closest('.header-container')) {
-                        headerNav.classList.remove('active');
-                        mobileMenuToggle.classList.remove('active');
-                    }
-                });
-
-                // Close menu when clicking on a nav link
-                const menuLinks = document.querySelectorAll('.header-nav .nav-link');
-                menuLinks.forEach(link => {
-                    link.addEventListener('click', function() {
-                        headerNav.classList.remove('active');
-                        mobileMenuToggle.classList.remove('active');
-                    });
-                });
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
             }
+        });
+        
+        // Points Calculator
+        const pointsForm = document.getElementById('pointsForm');
+        const results = document.getElementById('results');
+        
+        const pointsToIncrease = {
+            1: 30, 2: 45, 3: 65, 4: 80, 5: 100, 6: 120, 7: 145, 8: 170,
+            9: 195, 10: 220, 11: 250, 12: 340
+        };
+        
+        pointsForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const premium = parseFloat(document.getElementById('premium').value);
+            const points = parseInt(document.getElementById('violation').value);
+            const increasePercent = pointsToIncrease[points] || 0;
+            const increaseDollars = (premium * increasePercent) / 100;
+            const newPremium = premium + increaseDollars;
+            
+            document.getElementById('points').textContent = points;
+            document.getElementById('increase').textContent = increasePercent + '%';
+            document.getElementById('cost').textContent = '$' + increaseDollars.toFixed(2);
+            document.getElementById('newPremium').textContent = '$' + newPremium.toFixed(2);
+            
+            const impactBar = document.getElementById('impactBar');
+            const impactWidth = Math.min((increasePercent / 340) * 100, 100);
+            impactBar.style.width = impactWidth + '%';
+            document.getElementById('impactText').textContent = increasePercent + '%';
+            
+            results.classList.remove('hidden');
+            results.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+        
+        // Car Value Form
+        const carValueForm = document.getElementById('carValueForm');
+        carValueForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const year = document.getElementById('year').value;
+            const make = document.getElementById('make').value;
+            const model = document.getElementById('model').value;
+            const zipcode = document.getElementById('zipcode').value;
+            
+            const kbbUrl = `https://www.kbb.com/${make}/${model}/${year}/?vehicleclass=usedcar&intent=buy-used&mileage=60000&pricetype=private-party&condition=good`;
+            window.open(kbbUrl, '_blank');
+        });
+        
+        // FAQ Toggle
+        const faqButtons = document.querySelectorAll('.faq-question');
+        faqButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const expanded = button.getAttribute('aria-expanded') === 'true';
+                const answer = button.nextElementSibling;
+                
+                button.setAttribute('aria-expanded', !expanded);
+                answer.classList.toggle('open');
+            });
         });
     </script>
 </body>
