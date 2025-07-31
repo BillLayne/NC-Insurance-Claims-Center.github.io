@@ -365,365 +365,59 @@
     <section id="contacts" class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">📞 Insurance Company Claims Contacts</h2>
-                <p class="text-xl text-gray-600">Search for your insurance company's claims contact information</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">📞 Major Insurance Companies Claims Contacts</h2>
+                <p class="text-xl text-gray-600">Quick access to claims phone numbers and websites for major insurers in North Carolina</p>
             </div>
             
-            <!-- Search Box -->
-            <div class="max-w-2xl mx-auto mb-12">
-                <div class="relative">
-                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
-                    </div>
-                    <input type="text" 
-                           id="company-search" 
-                           class="block w-full pl-10 pr-3 py-4 text-lg border border-gray-300 rounded-lg leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
-                           placeholder="Search insurance company (e.g., Progressive, Nationwide, Allstate)">
-                </div>
-                <p class="text-sm text-gray-500 mt-2 text-center">Start typing to find claims phone numbers, websites, and mobile apps</p>
-            </div>
-            
-            <!-- Results Counter -->
-            <div class="text-center mb-6">
-                <p id="results-counter" class="text-gray-600">Showing <span id="results-count">20</span> insurance companies</p>
-            </div>
-            
-            <!-- Insurance Companies Grid -->
-            <div id="companies-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <!-- Alamance Farmers Mutual Insurance -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="alamance farmers mutual insurance">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg p-6 shadow-md">
                     <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Alamance Farmers' Mutual</h3>
+                        <h3 class="text-xl font-semibold">Allstate</h3>
                         <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
                     </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-336-226-7872" class="text-blue-600 hover:underline">336-226-7872</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-336-226-7872" class="text-blue-600 hover:underline">336-226-7872</a></p>
-                        <p><strong>Payment:</strong> <a href="https://alamancefarmers.com/policyholders/" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://alamancefarmers.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/afmic-policyholder-portal/id1537256584" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
+                    <p class="text-2xl font-bold text-blue-600 mb-4">800-255-7828</p>
+                    <a href="https://allstate.com" target="_blank" class="block w-full bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition">Visit Website</a>
                 </div>
-
-                <!-- Allstate -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="allstate">
+                <div class="bg-white rounded-lg p-6 shadow-md">
                     <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Allstate</h3>
+                        <h3 class="text-xl font-semibold">GEICO</h3>
                         <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
                     </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-669-2214" class="text-blue-600 hover:underline">800-669-2214</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-800-255-7828" class="text-blue-600 hover:underline">800-255-7828</a></p>
-                        <p><strong>Payment:</strong> <a href="https://www.allstate.com/myaccount" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.allstate.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/allstate-mobile/id376476389" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
+                    <p class="text-2xl font-bold text-blue-600 mb-4">800-861-8380</p>
+                    <a href="https://geico.com" target="_blank" class="block w-full bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition">Visit Website</a>
                 </div>
-
-                <!-- American Modern -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="american modern amig">
+                <div class="bg-white rounded-lg p-6 shadow-md">
                     <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">American Modern</h3>
+                        <h3 class="text-xl font-semibold">Progressive</h3>
                         <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
                     </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-375-2075" class="text-blue-600 hover:underline">800-375-2075</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-800-543-2644" class="text-blue-600 hover:underline">800-543-2644</a></p>
-                        <p><strong>Payment:</strong> <a href="https://policyholders.amig.com/content/munichre/amiggrp/policy-holder/storefront/en/landing-page/make-a-payment.html" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.amig.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <span class="bg-gray-400 text-white px-3 py-2 rounded text-sm">Web Only</span>
-                    </div>
+                    <p class="text-2xl font-bold text-blue-600 mb-4">800-776-4737</p>
+                    <a href="https://progressive.com" target="_blank" class="block w-full bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition">Visit Website</a>
                 </div>
-
-                <!-- Chubb -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="chubb">
+                <div class="bg-white rounded-lg p-6 shadow-md">
                     <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Chubb</h3>
+                        <h3 class="text-xl font-semibold">State Farm</h3>
                         <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
                     </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-252-4670" class="text-blue-600 hover:underline">800-252-4670</a></p>
-                        <p><strong>General:</strong> Contact via agent</p>
-                        <p><strong>Payment:</strong> <a href="https://www.chubb.com/securePersonal/login?redirect=true" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.chubb.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/chubb-mobile/id1348381518" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
+                    <p class="text-2xl font-bold text-blue-600 mb-4">800-732-5246</p>
+                    <a href="https://statefarm.com" target="_blank" class="block w-full bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition">Visit Website</a>
                 </div>
-
-                <!-- Dairyland -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="dairyland">
+                <div class="bg-white rounded-lg p-6 shadow-md">
                     <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Dairyland</h3>
+                        <h3 class="text-xl font-semibold">Nationwide</h3>
                         <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
                     </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-334-0090" class="text-blue-600 hover:underline">800-334-0090</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-800-334-0090" class="text-blue-600 hover:underline">800-334-0090</a></p>
-                        <p><strong>Payment:</strong> <a href="https://www.dairylandinsurance.com/make-a-payment" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.dairylandinsurance.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/dairyland/id1499324843" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
+                    <p class="text-2xl font-bold text-blue-600 mb-4">800-421-3535</p>
+                    <a href="https://nationwide.com" target="_blank" class="block w-full bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition">Visit Website</a>
                 </div>
-
-                <!-- Erie Insurance -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="erie insurance">
+                <div class="bg-white rounded-lg p-6 shadow-md">
                     <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Erie Insurance</h3>
+                        <h3 class="text-xl font-semibold">Travelers</h3>
                         <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
                     </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-367-3743" class="text-blue-600 hover:underline">800-367-3743</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-800-458-0811" class="text-blue-600 hover:underline">800-458-0811</a></p>
-                        <p><strong>Payment:</strong> <a href="https://www.erieinsurance.com/support-center/billing-and-payments" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.erieinsurance.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/erie-insurance-mobile/id1447206059" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
+                    <p class="text-2xl font-bold text-blue-600 mb-4">800-252-4633</p>
+                    <a href="https://travelers.com" target="_blank" class="block w-full bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition">Visit Website</a>
                 </div>
-
-                <!-- Foremost Insurance -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="foremost insurance">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Foremost</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-527-3907" class="text-blue-600 hover:underline">800-527-3907</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-800-527-3905" class="text-blue-600 hover:underline">800-527-3905</a></p>
-                        <p><strong>Payment:</strong> <a href="https://www.foremost.com/payonline/" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.foremost.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/foremost-insurance-mobile/id1455533198" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
-                </div>
-
-                <!-- GEICO -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="geico">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">GEICO</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-861-8380" class="text-blue-600 hover:underline">800-861-8380</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-800-861-8380" class="text-blue-600 hover:underline">800-861-8380</a></p>
-                        <p><strong>Payment:</strong> <a href="https://www.geico.com/information/make-a-payment/" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.geico.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/geico-mobile-car-insurance/id331763306" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
-                </div>
-
-                <!-- The Hartford -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="hartford insurance">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">The Hartford</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-243-5860" class="text-blue-600 hover:underline">800-243-5860</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-800-423-6789" class="text-blue-600 hover:underline">800-423-6789</a></p>
-                        <p><strong>Payment:</strong> <a href="https://account.thehartford.com/customer/" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.thehartford.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/the-hartford-mobile/id1435233346" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
-                </div>
-
-                <!-- Liberty Mutual -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="liberty mutual">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Liberty Mutual</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-225-2467" class="text-blue-600 hover:underline">800-225-2467</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-800-290-7933" class="text-blue-600 hover:underline">800-290-7933</a></p>
-                        <p><strong>Payment:</strong> <a href="https://www.libertymutual.com/customer-support/billing-and-payment-options" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.libertymutual.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/liberty-mutual-mobile/id453676947" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
-                </div>
-
-                <!-- National General -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="national general natgen">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">National General</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-468-3466" class="text-blue-600 hover:underline">800-468-3466</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-888-293-5108" class="text-blue-600 hover:underline">888-293-5108</a></p>
-                        <p><strong>Payment:</strong> <a href="https://service.nationalgeneral.com/QuickPay/" target="_blank" class="text-blue-600 hover:underline text-sm">Quick Pay</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://nationalgeneral.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/natgen-mobile/id1495393910" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
-                </div>
-
-                <!-- Nationwide -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="nationwide">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Nationwide</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-421-3535" class="text-blue-600 hover:underline">800-421-3535</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-877-669-6877" class="text-blue-600 hover:underline">877-669-6877</a></p>
-                        <p><strong>Payment:</strong> <a href="https://www.nationwide.com/personal/contact/pay-bill-details" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.nationwide.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/nationwide-mobile/id311627534" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
-                </div>
-
-                <!-- NC Grange Mutual Insurance -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="nc grange mutual north carolina">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">NC Grange Mutual</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-394-1236" class="text-blue-600 hover:underline">800-394-1236</a> (press 3)</p>
-                        <p><strong>General:</strong> <a href="tel:1-800-394-1236" class="text-blue-600 hover:underline">800-394-1236</a></p>
-                        <p><strong>Payment:</strong> Contact Agent</p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.ncgrangemutual.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <span class="bg-gray-400 text-white px-3 py-2 rounded text-sm">No App</span>
-                    </div>
-                </div>
-
-                <!-- Progressive -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="progressive">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Progressive</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-776-4737" class="text-blue-600 hover:underline">800-776-4737</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-888-671-4405" class="text-blue-600 hover:underline">888-671-4405</a></p>
-                        <p><strong>Payment:</strong> <a href="https://account.apps.progressive.com/access/ez-payment/policy-info" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.progressive.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/progressive/id357563236" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
-                </div>
-
-                <!-- Safeco -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="safeco">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Safeco</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-332-3226" class="text-blue-600 hover:underline">800-332-3226</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-800-332-3226" class="text-blue-600 hover:underline">800-332-3226</a></p>
-                        <p><strong>Payment:</strong> <a href="https://www.safeco.com/customer-resources/customer-support/billing-payment" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.safeco.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/safeco-mobile/id1162648539" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
-                </div>
-
-                <!-- State Farm -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="state farm">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">State Farm</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-732-5246" class="text-blue-600 hover:underline">800-732-5246</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-800-782-8332" class="text-blue-600 hover:underline">800-782-8332</a></p>
-                        <p><strong>Payment:</strong> <a href="https://www.statefarm.com/customer-care/insurance-bill-pay" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.statefarm.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/state-farm/id318211812" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
-                </div>
-
-                <!-- Travelers -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="travelers">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Travelers</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-252-4633" class="text-blue-600 hover:underline">800-252-4633</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-800-842-5075" class="text-blue-600 hover:underline">800-842-5075</a></p>
-                        <p><strong>Payment:</strong> <a href="https://www.travelers.com/pay-your-bill" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.travelers.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/travelers-mobile/id1448675439" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
-                </div>
-
-                <!-- Universal Property -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="universal property upcic">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Universal Property</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-470-0599" class="text-blue-600 hover:underline">800-470-0599</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-800-425-9113" class="text-blue-600 hover:underline">800-425-9113</a></p>
-                        <p><strong>Payment:</strong> <a href="https://customer.universalproperty.com/" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://universalproperty.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/upcic-mobile/id972768393" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
-                </div>
-
-                <!-- USAA -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="usaa">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">USAA</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-531-8722" class="text-blue-600 hover:underline">800-531-8722</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-210-531-8722" class="text-blue-600 hover:underline">210-531-8722</a></p>
-                        <p><strong>Payment:</strong> <a href="https://www.usaa.com/my/logon" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.usaa.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/usaa-mobile/id322383343" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
-                </div>
-
-            </div>
-            
-            <!-- No Results Message -->
-            <div id="no-results" class="hidden text-center py-12">
-                <div class="text-6xl mb-4">🔍</div>
-                <h3 class="text-2xl font-semibold mb-2">No insurance companies found</h3>
-                <p class="text-gray-600 mb-4">Try searching for a different company name or check the spelling</p>
-                <button onclick="clearSearch()" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Show All Companies</button>
             </div>
         </div>
     </section>
@@ -1118,62 +812,6 @@
                     }
                 });
             }
-        });
-        
-        // Enhanced search functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const searchInput = document.getElementById('company-search');
-            const companiesGrid = document.getElementById('companies-grid');
-            const noResults = document.getElementById('no-results');
-            const resultsCount = document.getElementById('results-count');
-            const companyCards = document.querySelectorAll('.company-card');
-            
-            function updateResultsCount(count) {
-                resultsCount.textContent = count;
-            }
-            
-            function performSearch() {
-                const searchTerm = searchInput.value.toLowerCase().trim();
-                let visibleCount = 0;
-                
-                companyCards.forEach(card => {
-                    const companyName = card.getAttribute('data-company').toLowerCase();
-                    const companyText = card.textContent.toLowerCase();
-                    
-                    if (searchTerm === '' || 
-                        companyName.includes(searchTerm) || 
-                        companyText.includes(searchTerm)) {
-                        card.style.display = 'block';
-                        visibleCount++;
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-                
-                // Show/hide no results message
-                if (visibleCount === 0 && searchTerm !== '') {
-                    companiesGrid.style.display = 'none';
-                    noResults.classList.remove('hidden');
-                } else {
-                    companiesGrid.style.display = 'grid';
-                    noResults.classList.add('hidden');
-                }
-                
-                updateResultsCount(visibleCount);
-            }
-            
-            // Real-time search
-            searchInput.addEventListener('input', performSearch);
-            
-            // Clear search function
-            window.clearSearch = function() {
-                searchInput.value = '';
-                performSearch();
-                searchInput.focus();
-            };
-            
-            // Initialize count
-            updateResultsCount(companyCards.length);
         });
         
         // Points Calculator
