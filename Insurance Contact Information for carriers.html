@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Insurance Company Directory - North Carolina</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .company-card {
+            transition: box-shadow 0.3s ease-in-out, transform 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .company-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .copy-btn {
+            transition: background-color 0.3s ease;
+        }
+        .card-content {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-900">Comprehensive Insurance Directory</h1>
+            <p class="text-md text-gray-600 mt-2">Key contact, payment, and mobile app information for carriers in North Carolina.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Alamance Farmers Mutual Insurance -->
+            <div class="company-card bg-white p-6 rounded-lg border border-gray-200" id="alamance-info">
+                <div class="card-content">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-900">Alamance Farmers' Mutual</h2>
+                    <div class="space-y-3 text-gray-700">
+                        <p><strong>Website:</strong> <a href="https://alamancefarmers.com" target="_blank" class="text-blue-600 hover:underline">alamancefarmers.com</a></p>
+                        <p><strong>Make a Payment:</strong> <a href="https://alamancefarmers.com/policyholders/" target="_blank" class="text-blue-600 hover:underline">Pay via Portal</a></p>
+                        <p><strong>General Inquiries:</strong> <a href="tel:1-336-226-7872" class="text-blue-600 hover:underline">1-336-226-7872</a></p>
+                        <p><strong>Claims Filing:</strong> Online Form</p>
+                        <div>
+                            <strong>Mobile App:</strong>
+                             <div class="flex space-x-4 mt-1">
+                                <a href="https://apps.apple.com/us/app/afmic-policyholder-portal/id1537256584" target="_blank" class="text-blue-600 hover:underline">App Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.afmic.policyholder" target="_blank" class="text-blue-600 hover:underline">Google Play</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="copyInfo('alamance-info')" class="copy-btn mt-6 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Copy Info</button>
+            </div>
+
+            <!-- Allstate -->
+            <div class="company-card bg-white p-6 rounded-lg border border-gray-200" id="allstate-info">
+                <div class="card-content">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-900">Allstate</h2>
+                    <div class="space-y-3 text-gray-700">
+                        <p><strong>Website:</strong> <a href="https://www.allstate.com" target="_blank" class="text-blue-600 hover:underline">allstate.com</a></p>
+                        <p><strong>Make a Payment:</strong> <a href="https://www.allstate.com/myaccount" target="_blank" class="text-blue-600 hover:underline">Pay Online</a></p>
+                        <p><strong>General Inquiries:</strong> <a href="tel:1-800-255-7828" class="text-blue-600 hover:underline">1-800-255-7828</a></p>
+                        <p><strong>Claims Number:</strong> <a href="tel:1-800-669-2214" class="text-blue-600 hover:underline">1-800-669-2214</a></p>
+                        <div>
+                            <strong>Mobile App:</strong>
+                            <div class="flex space-x-4 mt-1">
+                                <a href="https://apps.apple.com/us/app/allstate-mobile/id376476389" target="_blank" class="text-blue-600 hover:underline">App Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.allstate.view" target="_blank" class="text-blue-600 hover:underline">Google Play</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="copyInfo('allstate-info')" class="copy-btn mt-6 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Copy Info</button>
+            </div>
+
+            <!-- American Modern -->
+            <div class="company-card bg-white p-6 rounded-lg border border-gray-200" id="amig-info">
+                <div class="card-content">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-900">American Modern</h2>
+                    <div class="space-y-3 text-gray-700">
+                        <p><strong>Website:</strong> <a href="https://www.amig.com" target="_blank" class="text-blue-600 hover:underline">amig.com</a></p>
+                        <p><strong>Make a Payment:</strong> <a href="https://policyholders.amig.com/content/munichre/amiggrp/policy-holder/storefront/en/landing-page/make-a-payment.html" target="_blank" class="text-blue-600 hover:underline">Pay Online</a></p>
+                        <p><strong>General Inquiries:</strong> <a href="tel:1-800-543-2644" class="text-blue-600 hover:underline">1-800-543-2644</a></p>
+                        <p><strong>Claims Number:</strong> <a href="tel:1-800-375-2075" class="text-blue-600 hover:underline">1-800-375-2075</a></p>
+                        <div>
+                            <strong>Mobile App:</strong>
+                            <p class="text-gray-600">Web portal available.</p>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="copyInfo('amig-info')" class="copy-btn mt-6 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Copy Info</button>
+            </div>
+
+            <!-- Chubb -->
+            <div class="company-card bg-white p-6 rounded-lg border border-gray-200" id="chubb-info">
+                <div class="card-content">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-900">Chubb</h2>
+                    <div class="space-y-3 text-gray-700">
+                        <p><strong>Website:</strong> <a href="https://www.chubb.com" target="_blank" class="text-blue-600 hover:underline">chubb.com</a></p>
+                        <p><strong>Make a Payment:</strong> <a href="https://www.chubb.com/securePersonal/login?redirect=true" target="_blank" class="text-blue-600 hover:underline">Pay via Portal</a></p>
+                        <p><strong>General Inquiries:</strong> Contact via local agent.</p>
+                        <p><strong>Claims Number:</strong> <a href="tel:1-800-252-4670" class="text-blue-600 hover:underline">1-800-252-4670</a></p>
+                        <div>
+                            <strong>Mobile App:</strong>
+                            <div class="flex space-x-4 mt-1">
+                                <a href="https://apps.apple.com/us/app/chubb-mobile/id1348381518" target="_blank" class="text-blue-600 hover:underline">App Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.chubb.na.prsautocard" target="_blank" class="text-blue-600 hover:underline">Google Play</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="copyInfo('chubb-info')" class="copy-btn mt-6 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Copy Info</button>
+            </div>
+
+            <!-- Dairyland -->
+            <div class="company-card bg-white p-6 rounded-lg border border-gray-200" id="dairyland-info">
+                <div class="card-content">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-900">Dairyland</h2>
+                    <div class="space-y-3 text-gray-700">
+                        <p><strong>Website:</strong> <a href="https://www.dairylandinsurance.com" target="_blank" class="text-blue-600 hover:underline">dairylandinsurance.com</a></p>
+                        <p><strong>Make a Payment:</strong> <a href="https://www.dairylandinsurance.com/make-a-payment" target="_blank" class="text-blue-600 hover:underline">Pay Online</a></p>
+                        <p><strong>General Inquiries:</strong> <a href="tel:1-800-334-0090" class="text-blue-600 hover:underline">1-800-334-0090</a></p>
+                        <p><strong>Claims Number:</strong> <a href="tel:1-800-334-0090" class="text-blue-600 hover:underline">1-800-334-0090</a></p>
+                         <div>
+                            <strong>Mobile App:</strong>
+                            <div class="flex space-x-4 mt-1">
+                                <a href="https://apps.apple.com/us/app/dairyland/id1499324843" target="_blank" class="text-blue-600 hover:underline">App Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.dairyland.mobile" target="_blank" class="text-blue-600 hover:underline">Google Play</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="copyInfo('dairyland-info')" class="copy-btn mt-6 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Copy Info</button>
+            </div>
+
+            <!-- Erie Insurance -->
+            <div class="company-card bg-white p-6 rounded-lg border border-gray-200" id="erie-info">
+                <div class="card-content">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-900">Erie Insurance</h2>
+                    <div class="space-y-3 text-gray-700">
+                        <p><strong>Website:</strong> <a href="https://www.erieinsurance.com" target="_blank" class="text-blue-600 hover:underline">erieinsurance.com</a></p>
+                        <p><strong>Make a Payment:</strong> <a href="https://www.erieinsurance.com/support-center/billing-and-payments" target="_blank" class="text-blue-600 hover:underline">Pay Online</a></p>
+                        <p><strong>General Inquiries:</strong> <a href="tel:1-800-458-0811" class="text-blue-600 hover:underline">1-800-458-0811</a></p>
+                        <p><strong>Claims Number:</strong> <a href="tel:1-800-367-3743" class="text-blue-600 hover:underline">1-800-367-3743</a></p>
+                        <div>
+                            <strong>Mobile App:</strong>
+                            <div class="flex space-x-4 mt-1">
+                                <a href="https://apps.apple.com/us/app/erie-insurance-mobile/id1447206059" target="_blank" class="text-blue-600 hover:underline">App Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.erieinsurance.customermobile" target="_blank" class="text-blue-600 hover:underline">Google Play</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="copyInfo('erie-info')" class="copy-btn mt-6 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Copy Info</button>
+            </div>
+
+            <!-- Foremost Insurance -->
+            <div class="company-card bg-white p-6 rounded-lg border border-gray-200" id="foremost-info">
+                <div class="card-content">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-900">Foremost</h2>
+                    <div class="space-y-3 text-gray-700">
+                        <p><strong>Website:</strong> <a href="https://www.foremost.com" target="_blank" class="text-blue-600 hover:underline">foremost.com</a></p>
+                        <p><strong>Make a Payment:</strong> <a href="https://www.foremost.com/payonline/" target="_blank" class="text-blue-600 hover:underline">Pay Online</a></p>
+                        <p><strong>General Inquiries:</strong> <a href="tel:1-800-527-3905" class="text-blue-600 hover:underline">1-800-527-3905</a></p>
+                        <p><strong>Claims Number:</strong> <a href="tel:1-800-527-3907" class="text-blue-600 hover:underline">1-800-527-3907</a></p>
+                         <div>
+                            <strong>Mobile App:</strong>
+                             <div class="flex space-x-4 mt-1">
+                                <a href="https://apps.apple.com/us/app/foremost-insurance-mobile/id1455533198" target="_blank" class="text-blue-600 hover:underline">App Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.foremost.app" target="_blank" class="text-blue-600 hover:underline">Google Play</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="copyInfo('foremost-info')" class="copy-btn mt-6 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Copy Info</button>
+            </div>
+
+            <!-- GEICO -->
+            <div class="company-card bg-white p-6 rounded-lg border border-gray-200" id="geico-info">
+                <div class="card-content">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-900">GEICO</h2>
+                    <div class="space-y-3 text-gray-700">
+                        <p><strong>Website:</strong> <a href="https://www.geico.com" target="_blank" class="text-blue-600 hover:underline">geico.com</a></p>
+                        <p><strong>Make a Payment:</strong> <a href="https://www.geico.com/information/make-a-payment/" target="_blank" class="text-blue-600 hover:underline">Pay Online</a></p>
+                        <p><strong>General Inquiries:</strong> <a href="tel:1-800-861-8380" class="text-blue-600 hover:underline">1-800-861-8380</a></p>
+                        <p><strong>Claims Number:</strong> <a href="tel:1-800-861-8380" class="text-blue-600 hover:underline">1-800-861-8380</a></p>
+                        <div>
+                            <strong>Mobile App:</strong>
+                            <div class="flex space-x-4 mt-1">
+                                <a href="https://apps.apple.com/us/app/geico-mobile-car-insurance/id331763306" target="_blank" class="text-blue-600 hover:underline">App Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.geico.mobile" target="_blank" class="text-blue-600 hover:underline">Google Play</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="copyInfo('geico-info')" class="copy-btn mt-6 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Copy Info</button>
+            </div>
+
+            <!-- The Hartford -->
+            <div class="company-card bg-white p-6 rounded-lg border border-gray-200" id="hartford-info">
+                <div class="card-content">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-900">The Hartford</h2>
+                    <div class="space-y-3 text-gray-700">
+                        <p><strong>Website:</strong> <a href="https://www.thehartford.com" target="_blank" class="text-blue-600 hover:underline">thehartford.com</a></p>
+                        <p><strong>Make a Payment:</strong> <a href="https://account.thehartford.com/customer/" target="_blank" class="text-blue-600 hover:underline">Pay via Portal</a></p>
+                        <p><strong>General Inquiries:</strong> <a href="tel:1-800-423-6789" class="text-blue-600 hover:underline">1-800-423-6789</a></p>
+                        <p><strong>Claims Number:</strong> <a href="tel:1-800-243-5860" class="text-blue-600 hover:underline">1-800-243-5860</a></p>
+                        <div>
+                            <strong>Mobile App:</strong>
+                            <div class="flex space-x-4 mt-1">
+                                <a href="https://apps.apple.com/us/app/the-hartford-mobile/id1435233346" target="_blank" class="text-blue-600 hover:underline">App Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.thehartford.mobile" target="_blank" class="text-blue-600 hover:underline">Google Play</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="copyInfo('hartford-info')" class="copy-btn mt-6 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Copy Info</button>
+            </div>
+
+            <!-- Liberty Mutual -->
+            <div class="company-card bg-white p-6 rounded-lg border border-gray-200" id="liberty-info">
+                <div class="card-content">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-900">Liberty Mutual</h2>
+                    <div class="space-y-3 text-gray-700">
+                        <p><strong>Website:</strong> <a href="https://www.libertymutual.com" target="_blank" class="text-blue-600 hover:underline">libertymutual.com</a></p>
+                        <p><strong>Make a Payment:</strong> <a href="https://www.libertymutual.com/customer-support/billing-and-payment-options" target="_blank" class="text-blue-600 hover:underline">Pay Online</a></p>
+                        <p><strong>General Inquiries:</strong> <a href="tel:1-800-290-7933" class="text-blue-600 hover:underline">1-800-290-7933</a></p>
+                        <p><strong>Claims Number:</strong> <a href="tel:1-800-225-2467" class="text-blue-600 hover:underline">1-800-225-2467</a></p>
+                        <div>
+                            <strong>Mobile App:</strong>
+                            <div class="flex space-x-4 mt-1">
+                                <a href="https://apps.apple.com/us/app/liberty-mutual-mobile/id453676947" target="_blank" class="text-blue-600 hover:underline">App Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.libertymutual.lm_android" target="_blank" class="text-blue-600 hover:underline">Google Play</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="copyInfo('liberty-info')" class="copy-btn mt-6 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Copy Info</button>
+            </div>
+
+            <!-- National General -->
+            <div class="company-card bg-white p-6 rounded-lg border border-gray-200" id="natgen-info">
+                <div class="card-content">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-900">National General</h2>
+                    <div class="space-y-3 text-gray-700">
+                        <p><strong>Website:</strong> <a href="https://nationalgeneral.com" target="_blank" class="text-blue-600 hover:underline">nationalgeneral.com</a></p>
+                        <p><strong>Make a Payment:</strong> <a href="https://service.nationalgeneral.com/QuickPay/" target="_blank" class="text-blue-600 hover:underline">Quick Pay</a></p>
+                        <p><strong>General Inquiries:</strong> <a href="tel:1-888-293-5108" class="text-blue-600 hover:underline">1-888-293-5108</a></p>
+                        <p><strong>Claims Number:</strong> <a href="tel:1-800-468-3466" class="text-blue-600 hover:underline">1-800-468-3466</a></p>
+                        <div>
+                            <strong>Mobile App:</strong>
+                            <div class="flex space-x-4 mt-1">
+                                <a href="https://apps.apple.com/us/app/natgen-mobile/id1495393910" target="_blank" class="text-blue-600 hover:underline">App Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.nationalgeneral.natgenmobile" target="_blank" class="text-blue-600 hover:underline">Google Play</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="copyInfo('natgen-info')" class="copy-btn mt-6 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Copy Info</button>
+            </div>
+
+            <!-- Nationwide -->
+            <div class="company-card bg-white p-6 rounded-lg border border-gray-200" id="nationwide-info">
+                <div class="card-content">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-900">Nationwide</h2>
+                    <div class="space-y-3 text-gray-700">
+                        <p><strong>Website:</strong> <a href="https://www.nationwide.com" target="_blank" class="text-blue-600 hover:underline">nationwide.com</a></p>
+                        <p><strong>Make a Payment:</strong> <a href="https://www.nationwide.com/personal/contact/pay-bill-details" target="_blank" class="text-blue-600 hover:underline">Pay Online</a></p>
+                        <p><strong>General Inquiries:</strong> <a href="tel:1-877-669-6877" class="text-blue-600 hover:underline">1-877-669-6877</a></p>
+                        <p><strong>Claims Number:</strong> <a href="tel:1-800-421-3535" class="text-blue-600 hover:underline">1-800-421-3535</a></p>
+                        <div>
+                            <strong>Mobile App:</strong>
+                            <div class="flex space-x-4 mt-1">
+                                <a href="https://apps.apple.com/us/app/nationwide-mobile/id311627534" target="_blank" class="text-blue-600 hover:underline">App Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.nationwide.mobile.android.nwmobile" target="_blank" class="text-blue-600 hover:underline">Google Play</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="copyInfo('nationwide-info')" class="copy-btn mt-6 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Copy Info</button>
+            </div>
+
+            <!-- NC Grange Mutual Insurance -->
+            <div class="company-card bg-white p-6 rounded-lg border border-gray-200" id="ncgrange-info">
+                <div class="card-content">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-900">NC Grange Mutual</h2>
+                    <div class="space-y-3 text-gray-700">
+                        <p><strong>Website:</strong> <a href="https://www.ncgrangemutual.com" target="_blank" class="text-blue-600 hover:underline">ncgrangemutual.com</a></p>
+                        <p><strong>Make a Payment:</strong> Contact Agent</p>
+                        <p><strong>General Inquiries:</strong> <a href="tel:1-800-394-1236" class="text-blue-600 hover:underline">1-800-394-1236</a></p>
+                        <p><strong>Claims Number:</strong> <a href="tel:1-800-394-1236" class="text-blue-600 hover:underline">1-800-394-1236</a> (then press 3)</p>
+                         <div>
+                            <strong>Mobile App:</strong>
+                            <p class="text-gray-600">Not available.</p>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="copyInfo('ncgrange-info')" class="copy-btn mt-6 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Copy Info</button>
+            </div>
+
+            <!-- Progressive -->
+            <div class="company-card bg-white p-6 rounded-lg border border-gray-200" id="progressive-info">
+                <div class="card-content">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-900">Progressive</h2>
+                    <div class="space-y-3 text-gray-700">
+                        <p><strong>Website:</strong> <a href="https://www.progressive.com" target="_blank" class="text-blue-600 hover:underline">progressive.com</a></p>
+                        <p><strong>Make a Payment:</strong> <a href="https://account.apps.progressive.com/access/ez-payment/policy-info" target="_blank" class="text-blue-600 hover:underline">Pay Online</a></p>
+                        <p><strong>General Inquiries:</strong> <a href="tel:1-888-671-4405" class="text-blue-600 hover:underline">1-888-671-4405</a></p>
+                        <p><strong>Claims Number:</strong> <a href="tel:1-800-776-4737" class="text-blue-600 hover:underline">1-800-776-4737</a></p>
+                        <div>
+                            <strong>Mobile App:</strong>
+                            <div class="flex space-x-4 mt-1">
+                                <a href="https://apps.apple.com/us/app/progressive/id357563236" target="_blank" class="text-blue-600 hover:underline">App Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.phonevalley.progressive" target="_blank" class="text-blue-600 hover:underline">Google Play</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="copyInfo('progressive-info')" class="copy-btn mt-6 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Copy Info</button>
+            </div>
+
+            <!-- Safeco -->
+            <div class="company-card bg-white p-6 rounded-lg border border-gray-200" id="safeco-info">
+                <div class="card-content">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-900">Safeco</h2>
+                    <div class="space-y-3 text-gray-700">
+                        <p><strong>Website:</strong> <a href="https://www.safeco.com" target="_blank" class="text-blue-600 hover:underline">safeco.com</a></p>
+                        <p><strong>Make a Payment:</strong> <a href="https://www.safeco.com/customer-resources/customer-support/billing-payment" target="_blank" class="text-blue-600 hover:underline">Pay Online</a></p>
+                        <p><strong>General Inquiries:</strong> <a href="tel:1-800-332-3226" class="text-blue-600 hover:underline">1-800-332-3226</a></p>
+                        <p><strong>Claims Number:</strong> <a href="tel:1-800-332-3226" class="text-blue-600 hover:underline">1-800-332-3226</a></p>
+                        <div>
+                            <strong>Mobile App:</strong>
+                            <div class="flex space-x-4 mt-1">
+                                <a href="https://apps.apple.com/us/app/safeco-mobile/id1162648539" target="_blank" class="text-blue-600 hover:underline">App Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.safecoinsurance.consumer" target="_blank" class="text-blue-600 hover:underline">Google Play</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="copyInfo('safeco-info')" class="copy-btn mt-6 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Copy Info</button>
+            </div>
+
+            <!-- State Farm -->
+            <div class="company-card bg-white p-6 rounded-lg border border-gray-200" id="statefarm-info">
+                <div class="card-content">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-900">State Farm</h2>
+                    <div class="space-y-3 text-gray-700">
+                        <p><strong>Website:</strong> <a href="https://www.statefarm.com" target="_blank" class="text-blue-600 hover:underline">statefarm.com</a></p>
+                        <p><strong>Make a Payment:</strong> <a href="https://www.statefarm.com/customer-care/insurance-bill-pay" target="_blank" class="text-blue-600 hover:underline">Pay Online</a></p>
+                        <p><strong>General Inquiries:</strong> <a href="tel:1-800-782-8332" class="text-blue-600 hover:underline">1-800-782-8332</a></p>
+                        <p><strong>Claims Number:</strong> <a href="tel:1-800-732-5246" class="text-blue-600 hover:underline">1-800-732-5246</a></p>
+                        <div>
+                            <strong>Mobile App:</strong>
+                            <div class="flex space-x-4 mt-1">
+                                <a href="https://apps.apple.com/us/app/state-farm/id318211812" target="_blank" class="text-blue-600 hover:underline">App Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.statefarm.pocketagent" target="_blank" class="text-blue-600 hover:underline">Google Play</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="copyInfo('statefarm-info')" class="copy-btn mt-6 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Copy Info</button>
+            </div>
+
+            <!-- Travelers -->
+            <div class="company-card bg-white p-6 rounded-lg border border-gray-200" id="travelers-info">
+                <div class="card-content">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-900">Travelers</h2>
+                    <div class="space-y-3 text-gray-700">
+                        <p><strong>Website:</strong> <a href="https://www.travelers.com" target="_blank" class="text-blue-600 hover:underline">travelers.com</a></p>
+                        <p><strong>Make a Payment:</strong> <a href="https://www.travelers.com/pay-your-bill" target="_blank" class="text-blue-600 hover:underline">Pay Online</a></p>
+                        <p><strong>General Inquiries:</strong> <a href="tel:1-800-842-5075" class="text-blue-600 hover:underline">1-800-842-5075</a></p>
+                        <p><strong>Claims Number:</strong> <a href="tel:1-800-252-4633" class="text-blue-600 hover:underline">1-800-252-4633</a></p>
+                        <div>
+                            <strong>Mobile App:</strong>
+                            <div class="flex space-x-4 mt-1">
+                                <a href="https://apps.apple.com/us/app/travelers-mobile/id44 Travelers Mobile" target="_blank" class="text-blue-600 hover:underline">App Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.travelers.digitalservice" target="_blank" class="text-blue-600 hover:underline">Google Play</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="copyInfo('travelers-info')" class="copy-btn mt-6 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Copy Info</button>
+            </div>
+
+            <!-- Universal Property -->
+            <div class="company-card bg-white p-6 rounded-lg border border-gray-200" id="universal-info">
+                <div class="card-content">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-900">Universal Property</h2>
+                    <div class="space-y-3 text-gray-700">
+                        <p><strong>Website:</strong> <a href="https://universalproperty.com" target="_blank" class="text-blue-600 hover:underline">universalproperty.com</a></p>
+                        <p><strong>Make a Payment:</strong> <a href="https://customer.universalproperty.com/" target="_blank" class="text-blue-600 hover:underline">Pay via Portal</a></p>
+                        <p><strong>General Inquiries:</strong> <a href="tel:1-800-425-9113" class="text-blue-600 hover:underline">1-800-425-9113</a></p>
+                        <p><strong>Claims Number:</strong> <a href="tel:1-800-470-0599" class="text-blue-600 hover:underline">1-800-470-0599</a></p>
+                        <div>
+                            <strong>Mobile App:</strong>
+                            <div class="flex space-x-4 mt-1">
+                                <a href="https://apps.apple.com/us/app/upcic-mobile/id972768393" target="_blank" class="text-blue-600 hover:underline">App Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.universalproperty.android" target="_blank" class="text-blue-600 hover:underline">Google Play</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="copyInfo('universal-info')" class="copy-btn mt-6 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Copy Info</button>
+            </div>
+
+            <!-- USAA -->
+            <div class="company-card bg-white p-6 rounded-lg border border-gray-200" id="usaa-info">
+                <div class="card-content">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-900">USAA</h2>
+                    <div class="space-y-3 text-gray-700">
+                        <p><strong>Website:</strong> <a href="https://www.usaa.com" target="_blank" class="text-blue-600 hover:underline">usaa.com</a></p>
+                        <p><strong>Make a Payment:</strong> <a href="https://www.usaa.com/my/logon" target="_blank" class="text-blue-600 hover:underline">Pay via Portal</a></p>
+                        <p><strong>General Inquiries:</strong> <a href="tel:1-210-531-8722" class="text-blue-600 hover:underline">1-210-531-8722</a></p>
+                        <p><strong>Claims Number:</strong> <a href="tel:1-800-531-8722" class="text-blue-600 hover:underline">1-800-531-8722</a></p>
+                        <div>
+                            <strong>Mobile App:</strong>
+                            <div class="flex space-x-4 mt-1">
+                                <a href="https://apps.apple.com/us/app/usaa-mobile/id322383343" target="_blank" class="text-blue-600 hover:underline">App Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.usaa.mobile.android.usaa" target="_blank" class="text-blue-600 hover:underline">Google Play</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="copyInfo('usaa-info')" class="copy-btn mt-6 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Copy Info</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function copyInfo(elementId) {
+            const infoElement = document.getElementById(elementId);
+            const button = infoElement.querySelector('button');
+            const header = infoElement.querySelector('h2').innerText;
+            let textToCopy = header + '\\n\\n';
+
+            infoElement.querySelectorAll('p, div > strong').forEach(el => {
+                const tempEl = document.createElement('div');
+                tempEl.innerHTML = el.innerHTML.replace(/<br\s*\/?>/gi, ' ');
+                let text = tempEl.innerText || tempEl.textContent;
+                textToCopy += text.trim().replace(/\s+/g, ' ') + '\\n';
+            });
+            
+            textToCopy = textToCopy.replace(/\\n\\n/g, '\\n').replace(/Mobile App:\\n/g, 'Mobile App: ').trim();
+
+            const textArea = document.createElement('textarea');
+            textArea.style.position = 'absolute';
+            textArea.style.left = '-9999px';
+            textArea.value = textToCopy;
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                button.innerText = 'Copied!';
+                setTimeout(() => {
+                    button.innerText = 'Copy Info';
+                }, 2000);
+            } catch (err) {
+                console.error('Failed to copy text: ', err);
+                button.innerText = 'Error';
+                 setTimeout(() => {
+                    button.innerText = 'Copy Info';
+                }, 2000);
+            }
+            document.body.removeChild(textArea);
+        }
+    </script>
+
+</body>
+</html>
