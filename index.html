@@ -318,19 +318,16 @@
             <div class="flex justify-between items-center h-20">
                 <!-- Logo (Left) -->
                 <div class="flex-shrink-0">
-                    <a href="https://billlayneinsurance.com/" class="text-2xl font-bold text-amber-800">Bill Layne Insurance</a>
+                    <a href="https://billlayneinsurance.com/" class="text-xl md:text-2xl font-bold text-amber-800">Bill Layne Insurance</a>
                 </div>
 
-                <!-- Spacer for center alignment -->
-                <div class="flex-1"></div>
-
-                <!-- Desktop Only: Phone (Right) -->
-                <div class="desktop-cta hidden md:flex items-center space-x-4 flex-shrink-0">
-                    <a href="tel:3368351993" class="text-gray-700 font-semibold hover:text-blue-600 transition-colors" style="color: #374151 !important; opacity: 1 !important;">(336) 835-1993</a>
+                <!-- Desktop Only: Phone (Right) - Hidden on mobile -->
+                <div class="hidden md:flex items-center space-x-4 flex-shrink-0">
+                    <a href="tel:3368351993" class="text-gray-700 font-semibold hover:text-blue-600 transition-colors">(336) 835-1993</a>
                 </div>
 
-                <!-- Unified Menu Button (Shows on all screen sizes) -->
-                <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Open menu">
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuToggle" class="mobile-menu-toggle md:ml-4" aria-label="Open menu">
                     <span></span>
                     <span></span>
                     <span></span>
