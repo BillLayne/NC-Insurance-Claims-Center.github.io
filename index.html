@@ -3,108 +3,299 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NC Insurance Claims Guide 2025 | Auto & Home Claims Help | Bill Layne Insurance</title>
+    <title>NC Insurance Claims Center | File Claims with Confidence | Bill Layne Insurance</title>
     <meta name="description" content="File insurance claims in North Carolina with confidence. Get 24/7 claims contacts for all major insurers, NC points calculator, car value finder, and step-by-step guides. Call (336) 835-1993 for help.">
-    <meta name="keywords" content="NC insurance claims, North Carolina auto claims, home insurance claims NC, insurance points calculator, car value finder, Bill Layne Insurance, Elkin NC insurance">
     
-    <!-- Open Graph Meta Tags -->
+    <!-- SEO Meta Tags -->
+    <link rel="canonical" href="https://billlayne.github.io/NC-Insurance-Claims-Center.github.io/">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="NC Insurance Claims Guide | File Claims with Confidence">
+    <meta property="og:title" content="NC Insurance Claims Center - Bill Layne Insurance Agency">
     <meta property="og:description" content="Complete guide to filing auto and home insurance claims in North Carolina. 24/7 claims contacts, points calculator, and expert guidance.">
     <meta property="og:url" content="https://billlayne.github.io/NC-Insurance-Claims-Center.github.io/">
     
-    <!-- Preconnect -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            important: true,
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     
     <style>
-        /* Critical CSS to prevent layout shift */
-        body { margin: 0; font-family: 'Inter', sans-serif; }
-        header { position: fixed; top: 0; width: 100%; background: white; z-index: 50; min-height: 80px; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
-        .hidden { display: none; }
+        /* F-Pattern Optimized Styles */
+        :root {
+            --primary-blue: #2563eb;
+            --primary-blue-dark: #1d4ed8;
+            --accent-green: #10b981;
+            --text-gray: #374151;
+            --text-light: #6b7280;
+            --bg-light: #f8fafc;
+        }
         
-        /* ===== NEW, UNIFIED MOBILE MENU STYLES ===== */
-        .mobile-menu-toggle {
-            display: flex !important;
-            background: none;
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text-gray);
+        }
+        
+        /* F-Pattern Header - Top horizontal bar */
+        .f-header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            transition: all 0.3s ease;
+        }
+        
+        .f-header.scrolled {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* F-Pattern Hero */
+        .f-hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #3b82f6 100%);
+            position: relative;
+            overflow: hidden;
+            padding-top: 180px;
+        }
+        
+        @media (min-width: 768px) {
+            .f-hero {
+                padding-top: 120px;
+            }
+        }
+        
+        .f-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.03"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+        }
+        
+        /* Service Icons Styles */
+        .service-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.25rem;
+            margin: 1.5rem 0 2rem 0;
+            padding: 0;
+        }
+        
+        .service-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.3rem;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+            cursor: pointer;
+            text-decoration: none !important;
+        }
+        
+        a.service-icon {
+            color: inherit;
+        }
+        
+        .service-icon:nth-child(1) { animation-delay: 0.1s; }
+        .service-icon:nth-child(2) { animation-delay: 0.2s; }
+        .service-icon:nth-child(3) { animation-delay: 0.3s; }
+        .service-icon:nth-child(4) { animation-delay: 0.4s; }
+        
+        .service-icon-circle {
+            font-size: 1.75rem;
+            color: white;
+            background: rgba(255, 255, 255, 0.15);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .service-icon:hover .service-icon-circle {
+            transform: scale(1.15);
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+        }
+        
+        .service-icon span {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #cbd5e1;
+            white-space: nowrap;
+            text-align: center;
+            line-height: 0.9;
+        }
+        
+        @media (min-width: 768px) {
+            .service-icons {
+                gap: 3rem;
+                margin: 2rem 0 2.5rem 0;
+            }
+            
+            .service-icon-circle {
+                width: 80px;
+                height: 80px;
+                font-size: 2.5rem;
+            }
+            
+            .service-icon span {
+                font-size: 0.95rem;
+            }
+        }
+        
+        /* F-Pattern Left Sidebar */
+        .f-sidebar {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+        
+        /* Modern Gradient Buttons */
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
             border: none;
             cursor: pointer;
-            padding: 10px;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 1001;
-            -webkit-tap-highlight-color: transparent;
         }
-
-        .mobile-menu-toggle span {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background-color: #333333;
-            margin: 3px 0;
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+            background: linear-gradient(135deg, var(--primary-blue-dark) 0%, #1e40af 100%);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
             transition: all 0.3s ease;
-            border-radius: 2px;
+            text-align: center;
         }
-
-        /* Hamburger Animation */
-        .mobile-menu-toggle.active span:nth-child(1) {
-            transform: rotate(-45deg) translate(-5px, 6px);
-            background-color: #0066ff;
+        
+        .btn-secondary:hover {
+            background: var(--primary-blue);
+            color: white;
+            transform: translateY(-1px);
         }
-
-        .mobile-menu-toggle.active span:nth-child(2) {
-            opacity: 0;
+        
+        /* Trust Badge */
+        .trust-badge {
+            background: white;
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
         }
-
-        .mobile-menu-toggle.active span:nth-child(3) {
-            transform: rotate(45deg) translate(-5px, -6px);
-            background-color: #0066ff;
+        
+        .trust-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
-
-
-        /* Mobile Menu Container */
-        .navbar-menu {
+        
+        /* Service Cards */
+        .service-card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Company Card */
+        .company-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .company-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+        
+        /* Universal Menu */
+        .navigation-menu {
             position: fixed;
             top: 0;
             right: -100%;
             width: 100%;
+            max-width: 350px;
             height: 100vh;
-            background: #ffffff;
-            box-shadow: -4px 0 30px rgba(0, 0, 0, 0.15);
+            background: white;
+            box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
             transition: right 0.3s ease;
             z-index: 1000;
-            display: flex;
-            flex-direction: column;
+            padding: 20px;
         }
         
-        @media (min-width: 481px) {
-            .navbar-menu {
-                width: 320px;
-                right: -320px;
-            }
+        .navigation-menu.active {
+            right: 0;
         }
         
         @media (min-width: 768px) {
-            .navbar-menu {
-                width: 360px;
-                right: -360px;
+            .navigation-menu {
+                max-width: 400px;
+                padding: 30px;
             }
         }
-
-        .navbar-menu.active {
-            right: 0;
+        
+        @media (min-width: 1024px) {
+            .navigation-menu {
+                max-width: 450px;
+                padding: 40px;
+            }
         }
-
-        /* Menu Overlay */
-        .navbar-menu-overlay {
+        
+        .menu-overlay {
             position: fixed;
             top: 0;
             left: 0;
@@ -116,175 +307,96 @@
             transition: all 0.3s ease;
             z-index: 999;
         }
-
-        .navbar-menu.active + .navbar-menu-overlay {
+        
+        .menu-overlay.active {
             opacity: 1;
             visibility: visible;
         }
-
-        /* Menu Content */
-        .navbar-menu-content {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            background: #ffffff;
-            display: flex;
-            flex-direction: column;
-            z-index: 1001;
-            overflow-y: auto;
-        }
-
-        /* Close Button */
-        .navbar-menu-close {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 8px;
-            transition: all 0.3s ease;
-            z-index: 1002;
-        }
-
-        .navbar-menu-close:hover {
-            transform: rotate(90deg);
-        }
-
-        .navbar-menu-close svg {
-            width: 24px;
-            height: 24px;
-            stroke: #333333;
-        }
-
-        /* Navigation Links */
-        .navbar-menu-nav {
-            padding: 80px 30px 30px;
-            flex: 1;
-        }
-
-        .navbar-menu-nav .nav-link {
+        
+        /* Hamburger Animation */
+        .hamburger span {
             display: block;
-            padding: 18px 0;
-            color: #333333;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 500;
-            border-bottom: 1px solid #f0f0f0;
-            transition: all 0.3s ease;
-            position: relative;
+            width: 25px;
+            height: 3px;
+            background: var(--text-gray);
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
         }
-
-        .navbar-menu-nav .nav-link:hover {
-            color: #0066ff;
-            padding-left: 10px;
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
         }
-
-        .navbar-menu-nav .nav-link:hover::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 3px;
-            height: 20px;
-            background: #0066ff;
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
         }
-
-        /* CTA Section */
-        .navbar-menu-cta {
-            padding: 30px;
-            background: #f8f9fa;
-            border-top: 1px solid #e0e0e0;
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
         }
-
-        .navbar-menu-cta .phone-cta {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 15px;
-            background: linear-gradient(135deg, #22c55e, #16a34a);
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
+        
+        /* Form Styles */
+        .form-input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
             font-size: 16px;
-            margin-bottom: 15px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+            background: white;
         }
-
-        .navbar-menu-cta .phone-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
         }
-
-        .navbar-menu-cta .phone-icon {
-            width: 20px;
-            height: 20px;
+        
+        /* Trust Indicators Grid */
+        .trust-indicators-grid {
+            font-size: 0.75rem;
         }
-
-        .navbar-menu-cta .btn--primary {
-            display: block;
-            text-align: center;
-            padding: 15px;
-            background: linear-gradient(135deg, #0066ff, #0052cc);
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
+        
+        .trust-indicator-row {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+            color: #cbd5e1;
         }
-
-        .navbar-menu-cta .btn--primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 102, 255, 0.4);
-        }
-
-        /* Body scroll lock */
-        body.menu-open {
-            overflow: hidden;
-            position: fixed;
-            width: 100%;
-        }
-
-        /* Mobile Display */
-        @media (max-width: 900px) {
-            .mobile-menu-toggle {
+        
+        @media (min-width: 768px) {
+            .trust-indicators-grid {
                 display: flex;
+                justify-content: center;
+                gap: 2rem;
+                font-size: 1rem;
             }
             
-            /* Adjust menu width on smaller screens */
-            @media (max-width: 480px) {
-                .navbar-menu {
-                    width: 100%;
-                }
+            .trust-indicator-row {
+                margin-bottom: 0;
+                gap: 0;
             }
         }
-
-        /* Unified menu - always available */
-        .mobile-menu-toggle {
-            display: flex !important;
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
-        /* Custom animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
         }
         
-        .fade-in {
-            animation: fadeIn 0.6s ease-out;
-        }
-        
-        /* Impact bar animation */
-        .impact-fill {
-            transition: width 0.8s ease-out;
-        }
-        
-        /* FAQ animations */
+        /* FAQ Styles */
         .faq-answer {
             max-height: 0;
             overflow: hidden;
@@ -303,1106 +415,1293 @@
         .faq-question[aria-expanded="true"] .faq-icon {
             transform: rotate(180deg);
         }
-
-        /* Active Nav Link Styling */
-        .nav-link.active {
-            font-weight: 700;
-            color: #2563eb;
+        
+        /* Impact Bar Animation */
+        .impact-fill {
+            transition: width 0.8s ease-out;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .f-sidebar {
+                position: static;
+            }
+            
+            .btn-primary, .btn-secondary {
+                padding: 12px 20px;
+                font-size: 15px;
+            }
         }
     </style>
 </head>
+
 <body class="bg-gray-50">
-    <!-- Header -->
-    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-sm unified-header" style="background-color: rgba(255, 255, 255, 0.98) !important; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-        <div class="container mx-auto px-4">
+    <!-- Menu Overlay -->
+    <div id="menu-overlay" class="menu-overlay"></div>
+    
+    <!-- Header - F-Pattern Top Bar -->
+    <header id="main-header" class="f-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo (Left) -->
+                <!-- Logo -->
                 <div class="flex-shrink-0">
-                    <a href="https://billlayneinsurance.com/" class="text-xl md:text-2xl font-bold text-amber-800">Bill Layne Insurance</a>
+                    <a href="https://billlayneinsurance.com/" class="text-2xl font-bold text-blue-800">
+                        Bill Layne Insurance
+                    </a>
+                    <p class="text-xs text-gray-600 hidden sm:block">NC Claims Center</p>
                 </div>
-
-                <!-- Desktop Only: Phone (Right) - Hidden on mobile -->
-                <div class="hidden md:flex items-center space-x-4 flex-shrink-0">
-                    <a href="tel:3368351993" class="text-gray-700 font-semibold hover:text-blue-600 transition-colors">(336) 835-1993</a>
+                
+                <!-- Right Side: Phone, CTA, and Menu Button -->
+                <div class="flex items-center space-x-4">
+                    <!-- Desktop CTA -->
+                    <div class="hidden md:flex items-center space-x-4">
+                        <a href="tel:3368351993" class="text-gray-700 font-semibold hover:text-blue-600 transition-colors">
+                            <i class="fas fa-phone mr-2"></i>(336) 835-1993
+                        </a>
+                        <a href="#contacts" class="btn-primary">Get Claims Help</a>
+                    </div>
+                    
+                    <!-- Universal Menu Button -->
+                    <button id="menu-toggle-btn" class="hamburger p-2">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </div>
-
-                <!-- Mobile Menu Button -->
-                <button id="mobileMenuToggle" class="mobile-menu-toggle md:ml-4" aria-label="Open menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
             </div>
         </div>
     </header>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="navbar-menu">
-        <div class="navbar-menu-content">
-            <button class="navbar-menu-close" aria-label="Close menu">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    
+    <!-- Universal Menu -->
+    <div id="navigation-menu" class="navigation-menu">
+        <div class="flex justify-between items-center mb-8">
+            <h3 class="text-xl lg:text-2xl font-bold text-gray-800">Navigation</h3>
+            <button id="close-menu" class="text-gray-500 hover:text-gray-700 p-2">
+                <i class="fas fa-times text-xl"></i>
             </button>
-            <nav class="navbar-menu-nav">
-                <a href="https://billlayneinsurance.com/" class="nav-link">Home</a>
-                <a href="https://billlayneinsurance.com/areas-we-serve.html" class="nav-link">Services</a>
-                <a href="https://billlayne.github.io/Auto-Insurance-Center/" class="nav-link">Auto Insurance</a>
-                <a href="https://billlayne.github.io/NC-Home-Insurance.github.io/" class="nav-link">Home Insurance</a>
-                <a href="https://billlayne.github.io/NC-Insurance-Claims-Center.github.io/" class="nav-link">Claims</a>
-                <a href="https://billlayne.github.io/Resources/" class="nav-link">Resources</a>
-                <a href="https://billlayneinsurance.com/blog.html" class="nav-link">Blog</a>
-                <a href="https://billlayneinsurance.com/contact-us.html" class="nav-link">Contact</a>
-                <a href="tel:3368351993" class="nav-link">Call 336-835-1993</a>
-            </nav>
-            <div class="navbar-menu-cta">
-                <a href="tel:3368351993" class="phone-cta">
-                    <svg class="phone-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
-                    <span>Call 336-835-1993</span>
-                </a>
+        </div>
+        <nav class="space-y-4">
+            <a href="https://billlayneinsurance.com/" class="block py-3 px-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium border-b border-gray-200 rounded transition-all">
+                <i class="fas fa-home mr-3 w-5"></i>Home
+            </a>
+            <a href="https://billlayneinsurance.com/areas-we-serve.html" class="block py-3 px-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium border-b border-gray-200 rounded transition-all">
+                <i class="fas fa-th-large mr-3 w-5"></i>Services
+            </a>
+            <a href="https://billlayne.github.io/Auto-Insurance-Center/" class="block py-3 px-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium border-b border-gray-200 rounded transition-all">
+                <i class="fas fa-car mr-3 w-5"></i>Auto Insurance
+            </a>
+            <a href="https://billlayne.github.io/NC-Home-Insurance.github.io/" class="block py-3 px-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium border-b border-gray-200 rounded transition-all">
+                <i class="fas fa-home mr-3 w-5"></i>Home Insurance
+            </a>
+            <a href="https://billlayne.github.io/NC-Insurance-Claims-Center.github.io/" class="block py-3 px-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium border-b border-gray-200 rounded transition-all">
+                <i class="fas fa-file-alt mr-3 w-5"></i>Claims Center
+            </a>
+            <a href="https://billlayne.github.io/Resources/" class="block py-3 px-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium border-b border-gray-200 rounded transition-all">
+                <i class="fas fa-book mr-3 w-5"></i>Resources
+            </a>
+            <a href="https://billlayneinsurance.com/blog.html" class="block py-3 px-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium border-b border-gray-200 rounded transition-all">
+                <i class="fas fa-blog mr-3 w-5"></i>Blog
+            </a>
+            <a href="https://billlayneinsurance.com/contact-us.html" class="block py-3 px-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium border-b border-gray-200 rounded transition-all">
+                <i class="fas fa-envelope mr-3 w-5"></i>Contact Us
+            </a>
+        </nav>
+        <div class="mt-8 space-y-4">
+            <a href="tel:3368351993" class="block w-full text-center bg-green-600 hover:bg-green-700 text-white py-3 px-4 rounded-lg font-semibold transition-colors">
+                <i class="fas fa-phone mr-2"></i>Call (336) 835-1993
+            </a>
+            <a href="#contacts" class="block w-full text-center btn-primary">
+                <i class="fas fa-file-alt mr-2"></i>File a Claim
+            </a>
+        </div>
+        
+        <!-- Desktop-only additional info -->
+        <div class="hidden lg:block mt-8 pt-6 border-t border-gray-200">
+            <div class="text-center">
+                <p class="text-sm text-gray-600 mb-2">
+                    <i class="fas fa-map-marker-alt mr-2"></i>
+                    1283 N Bridge St, Elkin, NC 28621
+                </p>
+                <p class="text-sm text-gray-600">
+                    <i class="fas fa-clock mr-2"></i>
+                    Mon-Fri: 9AM-5PM
+                </p>
             </div>
         </div>
     </div>
-    <div class="navbar-menu-overlay"></div>
-    
-    <!-- Sticky Mobile Call Button -->
-    <a href="tel:3368351993" class="md:hidden fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-        </svg>
-    </a>
-    
-    <!-- Hero Section -->
-    <section class="relative pt-20 pb-16 bg-blue-600 text-white" style="background-image: url('https://github.com/BillLayne/bill-layne-images/blob/main/logos/claims%20hero%20image.png?raw=true'); background-size: cover; background-position: center bottom; background-repeat: no-repeat;">
-        <div class="absolute inset-0 bg-black opacity-40"></div>
-        <div class="container relative mx-auto px-4 py-16">
-            <div class="text-center max-w-4xl mx-auto fade-in">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">
-                    North Carolina Insurance Claims Guide
-                </h1>
-                <p class="text-xl md:text-2xl mb-8 opacity-90 drop-shadow-md">
-                    Your complete resource for insurance claims, points calculations, and vehicle valuations in North Carolina
-                </p>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a href="#auto-claims" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg">
-                        🚗 Auto Claims
-                    </a>
-                    <a href="#home-claims" class="bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition shadow-lg">
-                        🏠 Home Claims
-                    </a>
-                    <a href="#points-calculator" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg">
-                        🧮 Points Calculator
-                    </a>
-                    <a href="#car-value" class="bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition shadow-lg">
-                        💰 Car Value
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Quick Tools Section -->
-    <section class="py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Quick Claims Tools</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <a href="#contacts" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition group">
-                    <div class="text-4xl mb-4">📞</div>
-                    <h3 class="text-xl font-semibold mb-2 group-hover:text-blue-600 transition">Claims Contacts</h3>
-                    <p class="text-gray-600">24/7 phone numbers for all major insurance companies</p>
-                </a>
-                <a href="#points-calculator" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition group">
-                    <div class="text-4xl mb-4">🧮</div>
-                    <h3 class="text-xl font-semibold mb-2 group-hover:text-blue-600 transition">Points Calculator</h3>
-                    <p class="text-gray-600">Calculate NC insurance rate increases from violations</p>
-                </a>
-                <a href="#car-value" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition group">
-                    <div class="text-4xl mb-4">💰</div>
-                    <h3 class="text-xl font-semibold mb-2 group-hover:text-blue-600 transition">Car Value Finder</h3>
-                    <p class="text-gray-600">Get Kelley Blue Book values for total loss claims</p>
-                </a>
-                <a href="#emergency" class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition group">
-                    <div class="text-4xl mb-4">🚨</div>
-                    <h3 class="text-xl font-semibold mb-2 group-hover:text-blue-600 transition">Emergency Info</h3>
-                    <p class="text-gray-600">Important numbers and resources for emergencies</p>
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Auto Claims Section -->
-    <section id="auto-claims" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">🚗 Auto Insurance Claims Process</h2>
-                <p class="text-xl text-gray-600">Follow these steps when filing an auto insurance claim in North Carolina</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-                <div class="bg-white rounded-lg p-6 shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4">1</div>
-                        <h3 class="text-xl font-semibold">Ensure Safety</h3>
-                    </div>
-                    <p class="text-gray-600">Check for injuries and call 911 if needed. Move to a safe location if possible.</p>
-                </div>
-                <div class="bg-white rounded-lg p-6 shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4">2</div>
-                        <h3 class="text-xl font-semibold">Call Police</h3>
-                    </div>
-                    <p class="text-gray-600">Report the accident to police even for minor crashes. Get the report number.</p>
-                </div>
-                <div class="bg-white rounded-lg p-6 shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4">3</div>
-                        <h3 class="text-xl font-semibold">Exchange Information</h3>
-                    </div>
-                    <p class="text-gray-600">Get driver info, insurance details, and witness contact information.</p>
-                </div>
-                <div class="bg-white rounded-lg p-6 shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4">4</div>
-                        <h3 class="text-xl font-semibold">Document Scene</h3>
-                    </div>
-                    <p class="text-gray-600">Take photos of vehicles, damage, scene, and write down what happened.</p>
-                </div>
-                <div class="bg-white rounded-lg p-6 shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4">5</div>
-                        <h3 class="text-xl font-semibold">Contact Insurance</h3>
-                    </div>
-                    <p class="text-gray-600">Call your insurance company to report the claim as soon as possible.</p>
-                </div>
-                <div class="bg-white rounded-lg p-6 shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4">6</div>
-                        <h3 class="text-xl font-semibold">Work with Adjuster</h3>
-                    </div>
-                    <p class="text-gray-600">Schedule inspection and work with adjuster to assess damage and coverage.</p>
-                </div>
-            </div>
-            
-            <div class="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg">
-                <h3 class="text-xl font-semibold mb-2">📋 NC Minimum Insurance Requirements</h3>
-                <p class="text-gray-700">North Carolina requires minimum coverage of 50/100/50 (Bodily Injury per person/per accident, Property Damage)</p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Home Claims Section -->
-    <section id="home-claims" class="py-16">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">🏠 Home Insurance Claims Process</h2>
-                <p class="text-xl text-gray-600">Step-by-step guide for filing home insurance claims in North Carolina</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white rounded-lg p-6 shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-green-100 text-green-600 w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4">1</div>
-                        <h3 class="text-xl font-semibold">Ensure Safety</h3>
-                    </div>
-                    <p class="text-gray-600">Make sure everyone is safe. Don't enter damaged areas until cleared by officials.</p>
-                </div>
-                <div class="bg-white rounded-lg p-6 shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-green-100 text-green-600 w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4">2</div>
-                        <h3 class="text-xl font-semibold">Document Damage</h3>
-                    </div>
-                    <p class="text-gray-600">Take photos and videos of all damage before making any temporary repairs.</p>
-                </div>
-                <div class="bg-white rounded-lg p-6 shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-green-100 text-green-600 w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4">3</div>
-                        <h3 class="text-xl font-semibold">Contact Insurance</h3>
-                    </div>
-                    <p class="text-gray-600">Report the claim to your insurance company immediately.</p>
-                </div>
-                <div class="bg-white rounded-lg p-6 shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-green-100 text-green-600 w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4">4</div>
-                        <h3 class="text-xl font-semibold">Mitigate Damage</h3>
-                    </div>
-                    <p class="text-gray-600">Make reasonable temporary repairs to prevent further damage. Save receipts.</p>
-                </div>
-                <div class="bg-white rounded-lg p-6 shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-green-100 text-green-600 w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4">5</div>
-                        <h3 class="text-xl font-semibold">Work with Adjuster</h3>
-                    </div>
-                    <p class="text-gray-600">Schedule inspection and provide documentation of losses.</p>
-                </div>
-                <div class="bg-white rounded-lg p-6 shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-green-100 text-green-600 w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4">6</div>
-                        <h3 class="text-xl font-semibold">Complete Repairs</h3>
-                    </div>
-                    <p class="text-gray-600">Get estimates, complete repairs, and submit receipts for reimbursement.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Insurance Companies Contact Section -->
-    <section id="contacts" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">📞 Insurance Company Claims Contacts</h2>
-                <p class="text-xl text-gray-600">Search for your insurance company's claims contact information</p>
-            </div>
-            
-            <!-- Search Box -->
-            <div class="max-w-2xl mx-auto mb-12">
-                <div class="relative">
-                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
-                    </div>
-                    <input type="text" 
-                           id="company-search" 
-                           class="block w-full pl-10 pr-3 py-4 text-lg border border-gray-300 rounded-lg leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
-                           placeholder="Search insurance company (e.g., Progressive, Nationwide, Allstate)">
-                </div>
-                <p class="text-sm text-gray-500 mt-2 text-center">Start typing to find claims phone numbers, websites, and mobile apps</p>
-            </div>
-            
-            <!-- Results Counter -->
-            <div class="text-center mb-6">
-                <p id="results-counter" class="text-gray-600">Showing <span id="results-count">20</span> insurance companies</p>
-            </div>
-            
-            <!-- Insurance Companies Grid -->
-            <div id="companies-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <!-- Alamance Farmers Mutual Insurance -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="alamance farmers mutual insurance">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Alamance Farmers' Mutual</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-336-226-7872" class="text-blue-600 hover:underline">336-226-7872</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-336-226-7872" class="text-blue-600 hover:underline">336-226-7872</a></p>
-                        <p><strong>Payment:</strong> <a href="https://alamancefarmers.com/policyholders/" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://alamancefarmers.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/afmic-policyholder-portal/id1537256584" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
-                </div>
 
-                <!-- Allstate -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="allstate">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Allstate</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-669-2214" class="text-blue-600 hover:underline">800-669-2214</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-800-255-7828" class="text-blue-600 hover:underline">800-255-7828</a></p>
-                        <p><strong>Payment:</strong> <a href="https://www.allstate.com/myaccount" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.allstate.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/allstate-mobile/id376476389" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
-                </div>
-
-                <!-- American Modern -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="american modern amig">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">American Modern</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-375-2075" class="text-blue-600 hover:underline">800-375-2075</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-800-543-2644" class="text-blue-600 hover:underline">800-543-2644</a></p>
-                        <p><strong>Payment:</strong> <a href="https://policyholders.amig.com/content/munichre/amiggrp/policy-holder/storefront/en/landing-page/make-a-payment.html" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.amig.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <span class="bg-gray-400 text-white px-3 py-2 rounded text-sm">Web Only</span>
-                    </div>
-                </div>
-
-                <!-- Chubb -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="chubb">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Chubb</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-252-4670" class="text-blue-600 hover:underline">800-252-4670</a></p>
-                        <p><strong>General:</strong> Contact via agent</p>
-                        <p><strong>Payment:</strong> <a href="https://www.chubb.com/securePersonal/login?redirect=true" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.chubb.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/chubb-mobile/id1348381518" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
-                </div>
-
-                <!-- Dairyland -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="dairyland">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Dairyland</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-334-0090" class="text-blue-600 hover:underline">800-334-0090</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-800-334-0090" class="text-blue-600 hover:underline">800-334-0090</a></p>
-                        <p><strong>Payment:</strong> <a href="https://www.dairylandinsurance.com/make-a-payment" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.dairylandinsurance.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/dairyland/id1499324843" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
-                </div>
-
-                <!-- Erie Insurance -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="erie insurance">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Erie Insurance</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-367-3743" class="text-blue-600 hover:underline">800-367-3743</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-800-458-0811" class="text-blue-600 hover:underline">800-458-0811</a></p>
-                        <p><strong>Payment:</strong> <a href="https://www.erieinsurance.com/support-center/billing-and-payments" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.erieinsurance.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/erie-insurance-mobile/id1447206059" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
-                </div>
-
-                <!-- Foremost Insurance -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="foremost insurance">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Foremost</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-527-3907" class="text-blue-600 hover:underline">800-527-3907</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-800-527-3905" class="text-blue-600 hover:underline">800-527-3905</a></p>
-                        <p><strong>Payment:</strong> <a href="https://www.foremost.com/payonline/" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.foremost.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/foremost-insurance-mobile/id1455533198" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
-                </div>
-
-                <!-- GEICO -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="geico">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">GEICO</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-861-8380" class="text-blue-600 hover:underline">800-861-8380</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-800-861-8380" class="text-blue-600 hover:underline">800-861-8380</a></p>
-                        <p><strong>Payment:</strong> <a href="https://www.geico.com/information/make-a-payment/" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.geico.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/geico-mobile-car-insurance/id331763306" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
-                </div>
-
-                <!-- The Hartford -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="hartford insurance">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">The Hartford</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-243-5860" class="text-blue-600 hover:underline">800-243-5860</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-800-423-6789" class="text-blue-600 hover:underline">800-423-6789</a></p>
-                        <p><strong>Payment:</strong> <a href="https://account.thehartford.com/customer/" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.thehartford.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/the-hartford-mobile/id1435233346" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
-                </div>
-
-                <!-- Liberty Mutual -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="liberty mutual">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Liberty Mutual</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-225-2467" class="text-blue-600 hover:underline">800-225-2467</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-800-290-7933" class="text-blue-600 hover:underline">800-290-7933</a></p>
-                        <p><strong>Payment:</strong> <a href="https://www.libertymutual.com/customer-support/billing-and-payment-options" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.libertymutual.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/liberty-mutual-mobile/id453676947" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
-                </div>
-
-                <!-- National General -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="national general natgen">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">National General</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-468-3466" class="text-blue-600 hover:underline">800-468-3466</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-888-293-5108" class="text-blue-600 hover:underline">888-293-5108</a></p>
-                        <p><strong>Payment:</strong> <a href="https://service.nationalgeneral.com/QuickPay/" target="_blank" class="text-blue-600 hover:underline text-sm">Quick Pay</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://nationalgeneral.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/natgen-mobile/id1495393910" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
-                </div>
-
-                <!-- Nationwide -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="nationwide">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Nationwide</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-421-3535" class="text-blue-600 hover:underline">800-421-3535</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-877-669-6877" class="text-blue-600 hover:underline">877-669-6877</a></p>
-                        <p><strong>Payment:</strong> <a href="https://www.nationwide.com/personal/contact/pay-bill-details" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.nationwide.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/nationwide-mobile/id311627534" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
-                </div>
-
-                <!-- NC Grange Mutual Insurance -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="nc grange mutual north carolina">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">NC Grange Mutual</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-394-1236" class="text-blue-600 hover:underline">800-394-1236</a> (press 3)</p>
-                        <p><strong>General:</strong> <a href="tel:1-800-394-1236" class="text-blue-600 hover:underline">800-394-1236</a></p>
-                        <p><strong>Payment:</strong> Contact Agent</p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.ncgrangemutual.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <span class="bg-gray-400 text-white px-3 py-2 rounded text-sm">No App</span>
-                    </div>
-                </div>
-
-                <!-- Progressive -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="progressive">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Progressive</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-776-4737" class="text-blue-600 hover:underline">800-776-4737</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-888-671-4405" class="text-blue-600 hover:underline">888-671-4405</a></p>
-                        <p><strong>Payment:</strong> <a href="https://account.apps.progressive.com/access/ez-payment/policy-info" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.progressive.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/progressive/id357563236" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
-                </div>
-
-                <!-- Safeco -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="safeco">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Safeco</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-332-3226" class="text-blue-600 hover:underline">800-332-3226</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-800-332-3226" class="text-blue-600 hover:underline">800-332-3226</a></p>
-                        <p><strong>Payment:</strong> <a href="https://www.safeco.com/customer-resources/customer-support/billing-payment" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.safeco.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/safeco-mobile/id1162648539" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
-                </div>
-
-                <!-- State Farm -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="state farm">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">State Farm</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-732-5246" class="text-blue-600 hover:underline">800-732-5246</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-800-782-8332" class="text-blue-600 hover:underline">800-782-8332</a></p>
-                        <p><strong>Payment:</strong> <a href="https://www.statefarm.com/customer-care/insurance-bill-pay" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.statefarm.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/state-farm/id318211812" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
-                </div>
-
-                <!-- Travelers -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="travelers">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Travelers</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-252-4633" class="text-blue-600 hover:underline">800-252-4633</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-800-842-5075" class="text-blue-600 hover:underline">800-842-5075</a></p>
-                        <p><strong>Payment:</strong> <a href="https://www.travelers.com/pay-your-bill" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.travelers.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/travelers-mobile/id1448675439" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
-                </div>
-
-                <!-- Universal Property -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="universal property upcic">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Universal Property</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-470-0599" class="text-blue-600 hover:underline">800-470-0599</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-800-425-9113" class="text-blue-600 hover:underline">800-425-9113</a></p>
-                        <p><strong>Payment:</strong> <a href="https://customer.universalproperty.com/" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://universalproperty.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/upcic-mobile/id972768393" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
-                </div>
-
-                <!-- USAA -->
-                <div class="company-card bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition group" data-company="usaa">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">USAA</h3>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
-                    </div>
-                    <div class="space-y-2 text-gray-700 mb-4">
-                        <p><strong>Claims:</strong> <a href="tel:1-800-531-8722" class="text-blue-600 hover:underline">800-531-8722</a></p>
-                        <p><strong>General:</strong> <a href="tel:1-210-531-8722" class="text-blue-600 hover:underline">210-531-8722</a></p>
-                        <p><strong>Payment:</strong> <a href="https://www.usaa.com/my/logon" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://www.usaa.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
-                        <a href="https://apps.apple.com/us/app/usaa-mobile/id322383343" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
-                    </div>
-                </div>
-
-            </div>
-            
-            <!-- No Results Message -->
-            <div id="no-results" class="hidden text-center py-12">
-                <div class="text-6xl mb-4">🔍</div>
-                <h3 class="text-2xl font-semibold mb-2">No insurance companies found</h3>
-                <p class="text-gray-600 mb-4">Try searching for a different company name or check the spelling</p>
-                <button onclick="clearSearch()" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Show All Companies</button>
-            </div>
-        </div>
-    </section>
-    
-    <!-- NC Insurance Points Calculator -->
-    <section id="points-calculator" class="py-16">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">🚨 NC Insurance Points Calculator</h2>
-                <p class="text-xl text-gray-600">Calculate how traffic violations affect your insurance rates</p>
-            </div>
-            
-            <div class="max-w-3xl mx-auto">
-                <div class="bg-white rounded-lg shadow-lg p-8">
-                    <form id="pointsForm">
-                        <div class="mb-6">
-                            <label class="block text-gray-700 font-semibold mb-2">Your Current Annual Premium</label>
-                            <div class="relative">
-                                <span class="absolute left-3 top-3 text-gray-500">$</span>
-                                <input type="number" id="premium" class="w-full pl-8 pr-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="1,500.00" required>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label class="block text-gray-700 font-semibold mb-2">Select Traffic Violation</label>
-                            <select id="violation" class="w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-                                <option value="">Choose a violation...</option>
-                                <optgroup label="Speeding Violations">
-                                    <option value="1">Speeding 10 mph or less (under 55 mph limit) - 1 point</option>
-                                    <option value="2">Speeding 10+ mph (under 55 mph limit) - 2 points</option>
-                                    <option value="3">Speeding 10+ mph (over 55 mph limit) - 3 points</option>
-                                    <option value="4">Speeding over 75 mph (under 70 mph limit) - 4 points</option>
-                                </optgroup>
-                                <optgroup label="Moving Violations">
-                                    <option value="2">Following too closely - 2 points</option>
-                                    <option value="3">Running through stop sign - 3 points</option>
-                                    <option value="3">Running through red light - 3 points</option>
-                                    <option value="4">Reckless driving - 4 points</option>
-                                </optgroup>
-                                <optgroup label="Serious Violations">
-                                    <option value="12">DWI/DUI - 12 points</option>
-                                    <option value="8">Driving with license suspended/revoked - 8 points</option>
-                                    <option value="10">Highway racing - 10 points</option>
-                                </optgroup>
-                            </select>
-                        </div>
-                        
-                        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
-                            Calculate Impact
-                        </button>
-                    </form>
+    <main>
+        <!-- Hero Section - F-Pattern Second Horizontal Bar -->
+        <section class="f-hero pb-8 sm:pb-20 lg:pb-32 text-white relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <div class="animate-fade-in-up">
+                    <!-- Headline -->
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.1] sm:leading-tight mb-4">
+                        NC Insurance Claims Center<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-cyan-200">
+                            File. Track. Resolve.
+                        </span>
+                    </h1>
                     
-                    <div id="results" class="hidden mt-8">
-                        <h3 class="text-2xl font-bold mb-6 text-center">Your Insurance Rate Impact</h3>
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                            <div class="bg-gray-50 p-4 rounded-lg text-center">
-                                <p class="text-gray-600 text-sm">Insurance Points</p>
-                                <p id="points" class="text-3xl font-bold text-gray-800">0</p>
+                    <!-- Service Icons Section -->
+                    <div class="service-icons">
+                        <a href="#contacts" class="service-icon">
+                            <div class="service-icon-circle">
+                                <i class="fas fa-phone-alt"></i>
                             </div>
-                            <div class="bg-red-50 p-4 rounded-lg text-center">
-                                <p class="text-gray-600 text-sm">Rate Increase</p>
-                                <p id="increase" class="text-3xl font-bold text-red-600">0%</p>
+                            <span>Claims Contacts</span>
+                        </a>
+                        <a href="#points-calculator" class="service-icon">
+                            <div class="service-icon-circle">
+                                <i class="fas fa-calculator"></i>
                             </div>
-                            <div class="bg-red-50 p-4 rounded-lg text-center">
-                                <p class="text-gray-600 text-sm">Annual Cost</p>
-                                <p id="cost" class="text-3xl font-bold text-red-600">$0</p>
+                            <span>Points Calculator</span>
+                        </a>
+                        <a href="#car-value" class="service-icon">
+                            <div class="service-icon-circle">
+                                <i class="fas fa-car"></i>
                             </div>
-                            <div class="bg-gray-50 p-4 rounded-lg text-center">
-                                <p class="text-gray-600 text-sm">New Premium</p>
-                                <p id="newPremium" class="text-3xl font-bold text-gray-800">$0</p>
+                            <span>Car Value</span>
+                        </a>
+                        <a href="#emergency" class="service-icon">
+                            <div class="service-icon-circle">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <span>Emergency</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Description -->
+                    <p class="text-base sm:text-xl lg:text-2xl text-blue-100 mb-6 leading-snug sm:leading-relaxed max-w-4xl mx-auto">
+                        Your complete resource for insurance claims, points calculations, and vehicle valuations in North Carolina
+                    </p>
+                    
+                    <!-- Primary CTAs -->
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 justify-center">
+                        <a href="#auto-claims" class="btn-primary text-base sm:text-lg">
+                            <i class="fas fa-car mr-2"></i>Auto Claims Guide
+                        </a>
+                        <a href="#home-claims" class="btn-secondary text-base sm:text-lg">
+                            <i class="fas fa-home mr-2"></i>Home Claims Guide
+                        </a>
+                    </div>
+                    
+                    <!-- Trust Indicators -->
+                    <div class="trust-indicators-grid text-blue-200">
+                        <div class="trust-indicator-row">
+                            <div class="flex items-center justify-center">
+                                <i class="fas fa-clock text-yellow-400 mr-1 text-sm"></i>
+                                <span class="font-semibold">24/7 Claims Support</span>
+                            </div>
+                            <div class="flex items-center justify-center">
+                                <i class="fas fa-shield-alt text-green-400 mr-1 text-sm"></i>
+                                <span>NC Licensed #1740293</span>
+                            </div>
+                        </div>
+                        <div class="trust-indicator-row">
+                            <div class="flex items-center justify-center">
+                                <i class="fas fa-users text-blue-300 mr-1 text-sm"></i>
+                                <span>1,000+ Claims Helped</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- F-Pattern Content Layout -->
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-12 gap-12">
+                    <!-- Left Sidebar - F-Pattern Vertical Emphasis -->
+                    <div class="lg:col-span-4">
+                        <div class="f-sidebar space-y-8">
+                            <!-- Quick Tools Widget -->
+                            <div class="trust-badge">
+                                <h4 class="font-bold text-gray-800 mb-4 text-xl">Quick Claims Tools</h4>
+                                <div class="space-y-3">
+                                    <a href="#points-calculator" class="block p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition">
+                                        <div class="flex items-center">
+                                            <i class="fas fa-calculator text-blue-600 mr-3"></i>
+                                            <div>
+                                                <p class="font-semibold">Points Calculator</p>
+                                                <p class="text-xs text-gray-600">Calculate rate increases</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#car-value" class="block p-3 bg-green-50 rounded-lg hover:bg-green-100 transition">
+                                        <div class="flex items-center">
+                                            <i class="fas fa-dollar-sign text-green-600 mr-3"></i>
+                                            <div>
+                                                <p class="font-semibold">Car Value Finder</p>
+                                                <p class="text-xs text-gray-600">KBB vehicle values</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#contacts" class="block p-3 bg-purple-50 rounded-lg hover:bg-purple-100 transition">
+                                        <div class="flex items-center">
+                                            <i class="fas fa-phone text-purple-600 mr-3"></i>
+                                            <div>
+                                                <p class="font-semibold">Claims Contacts</p>
+                                                <p class="text-xs text-gray-600">All insurers 24/7</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- NC Points Impact Badge -->
+                            <div class="trust-badge text-center">
+                                <div class="text-4xl font-black text-red-600 mb-2">+40%</div>
+                                <p class="text-gray-700 font-semibold">Average Rate Increase<br>from 1 At-Fault Accident</p>
+                                <p class="text-xs text-gray-500 mt-2">NC Insurance Points System</p>
+                            </div>
+                            
+                            <!-- Claims Checklist -->
+                            <div class="trust-badge">
+                                <h4 class="font-bold text-gray-800 mb-3 flex items-center">
+                                    <i class="fas fa-clipboard-check text-blue-600 mr-2"></i>
+                                    Claims Checklist
+                                </h4>
+                                <ul class="text-sm text-gray-600 space-y-2">
+                                    <li>✓ Take photos of damage</li>
+                                    <li>✓ Get police report number</li>
+                                    <li>✓ Exchange insurance info</li>
+                                    <li>✓ Document witness contacts</li>
+                                    <li>✓ Report claim within 24hrs</li>
+                                    <li>✓ Keep all receipts</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Emergency Numbers -->
+                            <div class="trust-badge bg-red-50 border-2 border-red-200">
+                                <h4 class="font-bold text-red-800 mb-4">Emergency Numbers</h4>
+                                <div class="space-y-2">
+                                    <a href="tel:911" class="block">
+                                        <p class="font-bold text-red-600 text-2xl">911</p>
+                                        <p class="text-xs text-gray-600">Medical/Fire/Police</p>
+                                    </a>
+                                    <hr class="border-red-200">
+                                    <a href="tel:9197337952" class="block">
+                                        <p class="font-bold text-gray-800">919-733-7952</p>
+                                        <p class="text-xs text-gray-600">NC Highway Patrol</p>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Need Help Now? -->
+                            <div class="trust-badge text-center">
+                                <h4 class="font-bold text-gray-800 mb-4">Need Claims Help?</h4>
+                                <a href="tel:3368351993" class="btn-primary w-full block mb-3">
+                                    <i class="fas fa-phone mr-2"></i>Call (336) 835-1993
+                                </a>
+                                <p class="text-xs text-gray-600">We'll guide you through<br>the claims process</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Main Content - F-Pattern Right Side -->
+                    <div class="lg:col-span-8">
+                        <!-- Auto Claims Section -->
+                        <div id="auto-claims" class="mb-16">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+                                🚗 Auto Insurance Claims Process
+                            </h2>
+                            <p class="text-xl text-gray-600 mb-8">
+                                Follow these steps when filing an auto insurance claim in North Carolina
+                            </p>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="service-card">
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                            <span class="text-blue-600 font-bold">1</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-xl font-bold text-gray-800 mb-2">Ensure Safety</h3>
+                                            <p class="text-gray-600">Check for injuries and call 911 if needed. Move to a safe location if possible.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="service-card">
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                            <span class="text-blue-600 font-bold">2</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-xl font-bold text-gray-800 mb-2">Call Police</h3>
+                                            <p class="text-gray-600">Report the accident to police even for minor crashes. Get the report number.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="service-card">
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                            <span class="text-blue-600 font-bold">3</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-xl font-bold text-gray-800 mb-2">Exchange Information</h3>
+                                            <p class="text-gray-600">Get driver info, insurance details, and witness contact information.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="service-card">
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                            <span class="text-blue-600 font-bold">4</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-xl font-bold text-gray-800 mb-2">Document Scene</h3>
+                                            <p class="text-gray-600">Take photos of vehicles, damage, scene, and write down what happened.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="service-card">
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                            <span class="text-blue-600 font-bold">5</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-xl font-bold text-gray-800 mb-2">Contact Insurance</h3>
+                                            <p class="text-gray-600">Call your insurance company to report the claim as soon as possible.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="service-card">
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                            <span class="text-blue-600 font-bold">6</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-xl font-bold text-gray-800 mb-2">Work with Adjuster</h3>
+                                            <p class="text-gray-600">Schedule inspection and work with adjuster to assess damage and coverage.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8 bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg">
+                                <h3 class="text-xl font-semibold mb-2">📋 NC Minimum Insurance Requirements</h3>
+                                <p class="text-gray-700">North Carolina requires minimum coverage of 50/100/50 (Bodily Injury per person/per accident, Property Damage)</p>
+                            </div>
+                        </div>
+
+                        <!-- Home Claims Section -->
+                        <div id="home-claims" class="mb-16">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+                                🏠 Home Insurance Claims Process
+                            </h2>
+                            <p class="text-xl text-gray-600 mb-8">
+                                Step-by-step guide for filing home insurance claims in North Carolina
+                            </p>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="service-card">
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                            <span class="text-green-600 font-bold">1</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-xl font-bold text-gray-800 mb-2">Ensure Safety</h3>
+                                            <p class="text-gray-600">Make sure everyone is safe. Don't enter damaged areas until cleared by officials.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="service-card">
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                            <span class="text-green-600 font-bold">2</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-xl font-bold text-gray-800 mb-2">Document Damage</h3>
+                                            <p class="text-gray-600">Take photos and videos of all damage before making any temporary repairs.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="service-card">
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                            <span class="text-green-600 font-bold">3</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-xl font-bold text-gray-800 mb-2">Contact Insurance</h3>
+                                            <p class="text-gray-600">Report the claim to your insurance company immediately.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="service-card">
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                            <span class="text-green-600 font-bold">4</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-xl font-bold text-gray-800 mb-2">Mitigate Damage</h3>
+                                            <p class="text-gray-600">Make reasonable temporary repairs to prevent further damage. Save receipts.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Points Calculator Section -->
+                        <div id="points-calculator" class="mb-16">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-8">
+                                🚨 NC Insurance Points Calculator
+                            </h2>
+                            
+                            <div class="bg-white rounded-xl shadow-lg p-8">
+                                <p class="text-xl text-gray-600 mb-6">
+                                    Calculate how traffic violations affect your insurance rates
+                                </p>
+                                
+                                <form id="pointsForm">
+                                    <div class="mb-6">
+                                        <label class="block text-gray-700 font-semibold mb-2">Your Current Annual Premium</label>
+                                        <div class="relative">
+                                            <span class="absolute left-3 top-3 text-gray-500">$</span>
+                                            <input type="number" id="premium" class="form-input pl-8" placeholder="1,500.00" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mb-6">
+                                        <label class="block text-gray-700 font-semibold mb-2">Select Traffic Violation</label>
+                                        <select id="violation" class="form-input" required>
+                                            <option value="">Choose a violation...</option>
+                                            <optgroup label="Speeding Violations">
+                                                <option value="1">Speeding 10 mph or less (under 55 mph limit) - 1 point</option>
+                                                <option value="2">Speeding 10+ mph (under 55 mph limit) - 2 points</option>
+                                                <option value="3">Speeding 10+ mph (over 55 mph limit) - 3 points</option>
+                                                <option value="4">Speeding over 75 mph (under 70 mph limit) - 4 points</option>
+                                            </optgroup>
+                                            <optgroup label="Moving Violations">
+                                                <option value="2">Following too closely - 2 points</option>
+                                                <option value="3">Running through stop sign - 3 points</option>
+                                                <option value="3">Running through red light - 3 points</option>
+                                                <option value="4">Reckless driving - 4 points</option>
+                                            </optgroup>
+                                            <optgroup label="Serious Violations">
+                                                <option value="12">DWI/DUI - 12 points</option>
+                                                <option value="8">Driving with license suspended/revoked - 8 points</option>
+                                                <option value="10">Highway racing - 10 points</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                    
+                                    <button type="submit" class="btn-primary w-full">
+                                        Calculate Impact
+                                    </button>
+                                </form>
+                                
+                                <div id="results" class="hidden mt-8">
+                                    <h3 class="text-2xl font-bold mb-6 text-center">Your Insurance Rate Impact</h3>
+                                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                                        <div class="bg-gray-50 p-4 rounded-lg text-center">
+                                            <p class="text-gray-600 text-sm">Insurance Points</p>
+                                            <p id="points" class="text-3xl font-bold text-gray-800">0</p>
+                                        </div>
+                                        <div class="bg-red-50 p-4 rounded-lg text-center">
+                                            <p class="text-gray-600 text-sm">Rate Increase</p>
+                                            <p id="increase" class="text-3xl font-bold text-red-600">0%</p>
+                                        </div>
+                                        <div class="bg-red-50 p-4 rounded-lg text-center">
+                                            <p class="text-gray-600 text-sm">Annual Cost</p>
+                                            <p id="cost" class="text-3xl font-bold text-red-600">$0</p>
+                                        </div>
+                                        <div class="bg-gray-50 p-4 rounded-lg text-center">
+                                            <p class="text-gray-600 text-sm">New Premium</p>
+                                            <p id="newPremium" class="text-3xl font-bold text-gray-800">$0</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="bg-gray-100 rounded-lg p-4">
+                                        <p class="text-sm text-gray-600 mb-2">Impact Visualization</p>
+                                        <div class="bg-gray-300 rounded-full h-8 overflow-hidden">
+                                            <div id="impactBar" class="impact-fill bg-red-600 h-full flex items-center justify-center text-white font-semibold" style="width: 0%">
+                                                <span id="impactText">0%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Key Information -->
+                                <div class="mt-8 space-y-4">
+                                    <div class="bg-red-50 border-l-4 border-red-600 p-4 rounded">
+                                        <h4 class="font-semibold mb-1">⚠ Driver Clinics DON'T Help Insurance</h4>
+                                        <p class="text-sm text-gray-700">That 8-hour class? It keeps your license but your insurance stays HIGH for 3 full years!</p>
+                                    </div>
+                                    <div class="bg-green-50 border-l-4 border-green-600 p-4 rounded">
+                                        <h4 class="font-semibold mb-1">🙏 Prayer for Judgment (PJC)</h4>
+                                        <p class="text-sm text-gray-700">Your ONLY way to avoid insurance points! One per household every 3 years. Use it wisely!</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         
-                        <div class="bg-gray-100 rounded-lg p-4">
-                            <p class="text-sm text-gray-600 mb-2">Impact Visualization</p>
-                            <div class="bg-gray-300 rounded-full h-8 overflow-hidden">
-                                <div id="impactBar" class="impact-fill bg-red-600 h-full flex items-center justify-center text-white font-semibold" style="width: 0%">
-                                    <span id="impactText">0%</span>
+                        <!-- Car Value Section -->
+                        <div id="car-value" class="mb-16">
+                            <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-8">
+                                🚗 Find Your Car's True Value
+                            </h2>
+                            
+                            <div class="bg-white rounded-xl shadow-lg p-8">
+                                <p class="text-xl text-gray-600 mb-6">
+                                    Know your car's Kelley Blue Book value before filing a total loss claim
+                                </p>
+                                
+                                <form id="carValueForm">
+                                    <div class="grid md:grid-cols-2 gap-4 mb-6">
+                                        <div>
+                                            <label class="block text-gray-700 font-semibold mb-2">Year</label>
+                                            <select id="year" class="form-input" required>
+                                                <option value="">Select Year</option>
+                                                <option value="2025">2025</option>
+                                                <option value="2024">2024</option>
+                                                <option value="2023">2023</option>
+                                                <option value="2022">2022</option>
+                                                <option value="2021">2021</option>
+                                                <option value="2020">2020</option>
+                                                <option value="2019">2019</option>
+                                                <option value="2018">2018</option>
+                                                <option value="2017">2017</option>
+                                                <option value="2016">2016</option>
+                                                <option value="2015">2015</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label class="block text-gray-700 font-semibold mb-2">Make</label>
+                                            <select id="make" class="form-input" required>
+                                                <option value="">Select Make</option>
+                                                <option value="chevrolet">Chevrolet</option>
+                                                <option value="ford">Ford</option>
+                                                <option value="honda">Honda</option>
+                                                <option value="toyota">Toyota</option>
+                                                <option value="nissan">Nissan</option>
+                                                <option value="jeep">Jeep</option>
+                                                <option value="ram">Ram</option>
+                                                <option value="gmc">GMC</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label class="block text-gray-700 font-semibold mb-2">Model</label>
+                                            <input type="text" id="model" class="form-input" placeholder="e.g. Camry, F-150" required>
+                                        </div>
+                                        <div>
+                                            <label class="block text-gray-700 font-semibold mb-2">ZIP Code</label>
+                                            <input type="text" id="zipcode" class="form-input" placeholder="e.g. 28621" pattern="[0-9]{5}" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <button type="submit" class="btn-primary w-full">
+                                        Get My Vehicle Value
+                                    </button>
+                                </form>
+                                
+                                <div class="grid md:grid-cols-2 gap-6 mt-8">
+                                    <div class="bg-blue-50 p-6 rounded-lg">
+                                        <h4 class="text-xl font-semibold mb-3">🏷️ Dealer Retail Value</h4>
+                                        <p class="text-gray-700 text-sm">The price at a car lot - includes dealer profit, reconditioning, and overhead.</p>
+                                    </div>
+                                    <div class="bg-green-50 p-6 rounded-lg">
+                                        <h4 class="text-xl font-semibold mb-3">⚖️ Insurance ACV</h4>
+                                        <p class="text-gray-700 text-sm">What insurance pays - based on private-party values without dealer profit.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Insurance Companies Contact Section -->
+        <section id="contacts" class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+                        📞 Insurance Company Claims Contacts
+                    </h2>
+                    <p class="text-xl text-gray-600">Search for your insurance company's claims contact information</p>
+                </div>
                 
-                <!-- Key Information -->
-                <div class="mt-12 space-y-4">
-                    <div class="bg-red-50 border-l-4 border-red-600 p-6 rounded-lg">
-                        <h4 class="text-xl font-semibold mb-2">❌ Driver Clinics DON'T Help Insurance</h4>
-                        <p class="text-gray-700">That 8-hour class? It keeps your license but your insurance stays HIGH for 3 full years!</p>
+                <!-- Search Box -->
+                <div class="max-w-2xl mx-auto mb-12">
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                        <input type="text" 
+                               id="company-search" 
+                               class="form-input pl-10" 
+                               placeholder="Search insurance company (e.g., Progressive, Nationwide, Allstate)">
                     </div>
-                    <div class="bg-yellow-50 border-l-4 border-yellow-600 p-6 rounded-lg">
-                        <h4 class="text-xl font-semibold mb-2">⏰ 3-Year Countdown</h4>
-                        <p class="text-gray-700">Insurance companies look back 3 years from your renewal date. Mark your calendar!</p>
+                    <p class="text-sm text-gray-500 mt-2 text-center">Start typing to find claims phone numbers, websites, and mobile apps</p>
+                </div>
+                
+                <!-- Results Counter -->
+                <div class="text-center mb-6">
+                    <p id="results-counter" class="text-gray-600">Showing <span id="results-count">20</span> insurance companies</p>
+                </div>
+                
+                <!-- Insurance Companies Grid -->
+                <div id="companies-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Company cards (keeping all 20 companies from original) -->
+                    <!-- Alamance Farmers Mutual Insurance -->
+                    <div class="company-card" data-company="alamance farmers mutual insurance">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Alamance Farmers' Mutual</h3>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
+                        </div>
+                        <div class="space-y-2 text-gray-700 mb-4">
+                            <p><strong>Claims:</strong> <a href="tel:1-336-226-7872" class="text-blue-600 hover:underline">336-226-7872</a></p>
+                            <p><strong>General:</strong> <a href="tel:1-336-226-7872" class="text-blue-600 hover:underline">336-226-7872</a></p>
+                            <p><strong>Payment:</strong> <a href="https://alamancefarmers.com/policyholders/" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <a href="https://alamancefarmers.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
+                            <a href="https://apps.apple.com/us/app/afmic-policyholder-portal/id1537256584" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
+                        </div>
                     </div>
-                    <div class="bg-green-50 border-l-4 border-green-600 p-6 rounded-lg">
-                        <h4 class="text-xl font-semibold mb-2">🙏 Prayer for Judgment (PJC)</h4>
-                        <p class="text-gray-700">Your ONLY way to avoid insurance points! One per household every 3 years. Use it wisely - second PJC = BOTH violations count!</p>
+
+                    <!-- Allstate -->
+                    <div class="company-card" data-company="allstate">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Allstate</h3>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
+                        </div>
+                        <div class="space-y-2 text-gray-700 mb-4">
+                            <p><strong>Claims:</strong> <a href="tel:1-800-669-2214" class="text-blue-600 hover:underline">800-669-2214</a></p>
+                            <p><strong>General:</strong> <a href="tel:1-800-255-7828" class="text-blue-600 hover:underline">800-255-7828</a></p>
+                            <p><strong>Payment:</strong> <a href="https://www.allstate.com/myaccount" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <a href="https://www.allstate.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
+                            <a href="https://apps.apple.com/us/app/allstate-mobile/id376476389" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
+                        </div>
+                    </div>
+
+                    <!-- American Modern -->
+                    <div class="company-card" data-company="american modern amig">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">American Modern</h3>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
+                        </div>
+                        <div class="space-y-2 text-gray-700 mb-4">
+                            <p><strong>Claims:</strong> <a href="tel:1-800-375-2075" class="text-blue-600 hover:underline">800-375-2075</a></p>
+                            <p><strong>General:</strong> <a href="tel:1-800-543-2644" class="text-blue-600 hover:underline">800-543-2644</a></p>
+                            <p><strong>Payment:</strong> <a href="https://policyholders.amig.com/content/munichre/amiggrp/policy-holder/storefront/en/landing-page/make-a-payment.html" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <a href="https://www.amig.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
+                            <span class="bg-gray-400 text-white px-3 py-2 rounded text-sm">Web Only</span>
+                        </div>
+                    </div>
+
+                    <!-- Chubb -->
+                    <div class="company-card" data-company="chubb">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Chubb</h3>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
+                        </div>
+                        <div class="space-y-2 text-gray-700 mb-4">
+                            <p><strong>Claims:</strong> <a href="tel:1-800-252-4670" class="text-blue-600 hover:underline">800-252-4670</a></p>
+                            <p><strong>General:</strong> Contact via agent</p>
+                            <p><strong>Payment:</strong> <a href="https://www.chubb.com/securePersonal/login?redirect=true" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <a href="https://www.chubb.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
+                            <a href="https://apps.apple.com/us/app/chubb-mobile/id1348381518" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
+                        </div>
+                    </div>
+
+                    <!-- Dairyland -->
+                    <div class="company-card" data-company="dairyland">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Dairyland</h3>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
+                        </div>
+                        <div class="space-y-2 text-gray-700 mb-4">
+                            <p><strong>Claims:</strong> <a href="tel:1-800-334-0090" class="text-blue-600 hover:underline">800-334-0090</a></p>
+                            <p><strong>General:</strong> <a href="tel:1-800-334-0090" class="text-blue-600 hover:underline">800-334-0090</a></p>
+                            <p><strong>Payment:</strong> <a href="https://www.dairylandinsurance.com/make-a-payment" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <a href="https://www.dairylandinsurance.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
+                            <a href="https://apps.apple.com/us/app/dairyland/id1499324843" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
+                        </div>
+                    </div>
+
+                    <!-- Erie Insurance -->
+                    <div class="company-card" data-company="erie insurance">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Erie Insurance</h3>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
+                        </div>
+                        <div class="space-y-2 text-gray-700 mb-4">
+                            <p><strong>Claims:</strong> <a href="tel:1-800-367-3743" class="text-blue-600 hover:underline">800-367-3743</a></p>
+                            <p><strong>General:</strong> <a href="tel:1-800-458-0811" class="text-blue-600 hover:underline">800-458-0811</a></p>
+                            <p><strong>Payment:</strong> <a href="https://www.erieinsurance.com/support-center/billing-and-payments" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <a href="https://www.erieinsurance.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
+                            <a href="https://apps.apple.com/us/app/erie-insurance-mobile/id1447206059" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
+                        </div>
+                    </div>
+
+                    <!-- Foremost Insurance -->
+                    <div class="company-card" data-company="foremost insurance">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Foremost</h3>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
+                        </div>
+                        <div class="space-y-2 text-gray-700 mb-4">
+                            <p><strong>Claims:</strong> <a href="tel:1-800-527-3907" class="text-blue-600 hover:underline">800-527-3907</a></p>
+                            <p><strong>General:</strong> <a href="tel:1-800-527-3905" class="text-blue-600 hover:underline">800-527-3905</a></p>
+                            <p><strong>Payment:</strong> <a href="https://www.foremost.com/payonline/" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <a href="https://www.foremost.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
+                            <a href="https://apps.apple.com/us/app/foremost-insurance-mobile/id1455533198" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
+                        </div>
+                    </div>
+
+                    <!-- GEICO -->
+                    <div class="company-card" data-company="geico">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">GEICO</h3>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
+                        </div>
+                        <div class="space-y-2 text-gray-700 mb-4">
+                            <p><strong>Claims:</strong> <a href="tel:1-800-861-8380" class="text-blue-600 hover:underline">800-861-8380</a></p>
+                            <p><strong>General:</strong> <a href="tel:1-800-861-8380" class="text-blue-600 hover:underline">800-861-8380</a></p>
+                            <p><strong>Payment:</strong> <a href="https://www.geico.com/information/make-a-payment/" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <a href="https://www.geico.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
+                            <a href="https://apps.apple.com/us/app/geico-mobile-car-insurance/id331763306" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
+                        </div>
+                    </div>
+
+                    <!-- The Hartford -->
+                    <div class="company-card" data-company="hartford insurance">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">The Hartford</h3>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
+                        </div>
+                        <div class="space-y-2 text-gray-700 mb-4">
+                            <p><strong>Claims:</strong> <a href="tel:1-800-243-5860" class="text-blue-600 hover:underline">800-243-5860</a></p>
+                            <p><strong>General:</strong> <a href="tel:1-800-423-6789" class="text-blue-600 hover:underline">800-423-6789</a></p>
+                            <p><strong>Payment:</strong> <a href="https://account.thehartford.com/customer/" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <a href="https://www.thehartford.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
+                            <a href="https://apps.apple.com/us/app/the-hartford-mobile/id1435233346" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
+                        </div>
+                    </div>
+
+                    <!-- Liberty Mutual -->
+                    <div class="company-card" data-company="liberty mutual">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Liberty Mutual</h3>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
+                        </div>
+                        <div class="space-y-2 text-gray-700 mb-4">
+                            <p><strong>Claims:</strong> <a href="tel:1-800-225-2467" class="text-blue-600 hover:underline">800-225-2467</a></p>
+                            <p><strong>General:</strong> <a href="tel:1-800-290-7933" class="text-blue-600 hover:underline">800-290-7933</a></p>
+                            <p><strong>Payment:</strong> <a href="https://www.libertymutual.com/customer-support/billing-and-payment-options" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <a href="https://www.libertymutual.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
+                            <a href="https://apps.apple.com/us/app/liberty-mutual-mobile/id453676947" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
+                        </div>
+                    </div>
+
+                    <!-- National General -->
+                    <div class="company-card" data-company="national general natgen">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">National General</h3>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
+                        </div>
+                        <div class="space-y-2 text-gray-700 mb-4">
+                            <p><strong>Claims:</strong> <a href="tel:1-800-468-3466" class="text-blue-600 hover:underline">800-468-3466</a></p>
+                            <p><strong>General:</strong> <a href="tel:1-888-293-5108" class="text-blue-600 hover:underline">888-293-5108</a></p>
+                            <p><strong>Payment:</strong> <a href="https://service.nationalgeneral.com/QuickPay/" target="_blank" class="text-blue-600 hover:underline text-sm">Quick Pay</a></p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <a href="https://nationalgeneral.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
+                            <a href="https://apps.apple.com/us/app/natgen-mobile/id1495393910" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
+                        </div>
+                    </div>
+
+                    <!-- Nationwide -->
+                    <div class="company-card" data-company="nationwide">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Nationwide</h3>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
+                        </div>
+                        <div class="space-y-2 text-gray-700 mb-4">
+                            <p><strong>Claims:</strong> <a href="tel:1-800-421-3535" class="text-blue-600 hover:underline">800-421-3535</a></p>
+                            <p><strong>General:</strong> <a href="tel:1-877-669-6877" class="text-blue-600 hover:underline">877-669-6877</a></p>
+                            <p><strong>Payment:</strong> <a href="https://www.nationwide.com/personal/contact/pay-bill-details" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <a href="https://www.nationwide.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
+                            <a href="https://apps.apple.com/us/app/nationwide-mobile/id311627534" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
+                        </div>
+                    </div>
+
+                    <!-- NC Grange Mutual Insurance -->
+                    <div class="company-card" data-company="nc grange mutual north carolina">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">NC Grange Mutual</h3>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
+                        </div>
+                        <div class="space-y-2 text-gray-700 mb-4">
+                            <p><strong>Claims:</strong> <a href="tel:1-800-394-1236" class="text-blue-600 hover:underline">800-394-1236</a> (press 3)</p>
+                            <p><strong>General:</strong> <a href="tel:1-800-394-1236" class="text-blue-600 hover:underline">800-394-1236</a></p>
+                            <p><strong>Payment:</strong> Contact Agent</p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <a href="https://www.ncgrangemutual.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
+                            <span class="bg-gray-400 text-white px-3 py-2 rounded text-sm">No App</span>
+                        </div>
+                    </div>
+
+                    <!-- Progressive -->
+                    <div class="company-card" data-company="progressive">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Progressive</h3>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
+                        </div>
+                        <div class="space-y-2 text-gray-700 mb-4">
+                            <p><strong>Claims:</strong> <a href="tel:1-800-776-4737" class="text-blue-600 hover:underline">800-776-4737</a></p>
+                            <p><strong>General:</strong> <a href="tel:1-888-671-4405" class="text-blue-600 hover:underline">888-671-4405</a></p>
+                            <p><strong>Payment:</strong> <a href="https://account.apps.progressive.com/access/ez-payment/policy-info" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <a href="https://www.progressive.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
+                            <a href="https://apps.apple.com/us/app/progressive/id357563236" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
+                        </div>
+                    </div>
+
+                    <!-- Safeco -->
+                    <div class="company-card" data-company="safeco">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Safeco</h3>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
+                        </div>
+                        <div class="space-y-2 text-gray-700 mb-4">
+                            <p><strong>Claims:</strong> <a href="tel:1-800-332-3226" class="text-blue-600 hover:underline">800-332-3226</a></p>
+                            <p><strong>General:</strong> <a href="tel:1-800-332-3226" class="text-blue-600 hover:underline">800-332-3226</a></p>
+                            <p><strong>Payment:</strong> <a href="https://www.safeco.com/customer-resources/customer-support/billing-payment" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <a href="https://www.safeco.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
+                            <a href="https://apps.apple.com/us/app/safeco-mobile/id1162648539" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
+                        </div>
+                    </div>
+
+                    <!-- State Farm -->
+                    <div class="company-card" data-company="state farm">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">State Farm</h3>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
+                        </div>
+                        <div class="space-y-2 text-gray-700 mb-4">
+                            <p><strong>Claims:</strong> <a href="tel:1-800-732-5246" class="text-blue-600 hover:underline">800-732-5246</a></p>
+                            <p><strong>General:</strong> <a href="tel:1-800-782-8332" class="text-blue-600 hover:underline">800-782-8332</a></p>
+                            <p><strong>Payment:</strong> <a href="https://www.statefarm.com/customer-care/insurance-bill-pay" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <a href="https://www.statefarm.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
+                            <a href="https://apps.apple.com/us/app/state-farm/id318211812" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
+                        </div>
+                    </div>
+
+                    <!-- Travelers -->
+                    <div class="company-card" data-company="travelers">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Travelers</h3>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
+                        </div>
+                        <div class="space-y-2 text-gray-700 mb-4">
+                            <p><strong>Claims:</strong> <a href="tel:1-800-252-4633" class="text-blue-600 hover:underline">800-252-4633</a></p>
+                            <p><strong>General:</strong> <a href="tel:1-800-842-5075" class="text-blue-600 hover:underline">800-842-5075</a></p>
+                            <p><strong>Payment:</strong> <a href="https://www.travelers.com/pay-your-bill" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <a href="https://www.travelers.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
+                            <a href="https://apps.apple.com/us/app/travelers-mobile/id1448675439" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
+                        </div>
+                    </div>
+
+                    <!-- Universal Property -->
+                    <div class="company-card" data-company="universal property upcic">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">Universal Property</h3>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
+                        </div>
+                        <div class="space-y-2 text-gray-700 mb-4">
+                            <p><strong>Claims:</strong> <a href="tel:1-800-470-0599" class="text-blue-600 hover:underline">800-470-0599</a></p>
+                            <p><strong>General:</strong> <a href="tel:1-800-425-9113" class="text-blue-600 hover:underline">800-425-9113</a></p>
+                            <p><strong>Payment:</strong> <a href="https://customer.universalproperty.com/" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <a href="https://universalproperty.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
+                            <a href="https://apps.apple.com/us/app/upcic-mobile/id972768393" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
+                        </div>
+                    </div>
+
+                    <!-- USAA -->
+                    <div class="company-card" data-company="usaa">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold group-hover:text-blue-600 transition">USAA</h3>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">24/7</span>
+                        </div>
+                        <div class="space-y-2 text-gray-700 mb-4">
+                            <p><strong>Claims:</strong> <a href="tel:1-800-531-8722" class="text-blue-600 hover:underline">800-531-8722</a></p>
+                            <p><strong>General:</strong> <a href="tel:1-210-531-8722" class="text-blue-600 hover:underline">210-531-8722</a></p>
+                            <p><strong>Payment:</strong> <a href="https://www.usaa.com/my/logon" target="_blank" class="text-blue-600 hover:underline text-sm">Online Portal</a></p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <a href="https://www.usaa.com" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-2 rounded hover:bg-blue-700 transition text-sm">Website</a>
+                            <a href="https://apps.apple.com/us/app/usaa-mobile/id322383343" target="_blank" class="bg-gray-600 text-white px-3 py-2 rounded hover:bg-gray-700 transition text-sm">📱</a>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <!-- No Results Message -->
+                <div id="no-results" class="hidden text-center py-12">
+                    <div class="text-6xl mb-4">🔍</div>
+                    <h3 class="text-2xl font-semibold mb-2">No insurance companies found</h3>
+                    <p class="text-gray-600 mb-4">Try searching for a different company name or check the spelling</p>
+                    <button onclick="clearSearch()" class="btn-primary">Show All Companies</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Section -->
+        <section id="emergency" class="py-16 bg-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+                        🚨 Emergency Contacts
+                    </h2>
+                    <p class="text-xl text-gray-600">Important numbers to have ready in case of emergency</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+                    <div class="bg-red-600 text-white rounded-lg p-8 text-center shadow-lg">
+                        <div class="text-5xl mb-4">🚨</div>
+                        <h3 class="text-2xl font-bold mb-2">Emergency Services</h3>
+                        <p class="text-4xl font-bold mb-2">911</p>
+                        <p class="opacity-90">For immediate medical, fire, or police assistance</p>
+                    </div>
+                    <div class="bg-blue-600 text-white rounded-lg p-8 text-center shadow-lg">
+                        <div class="text-5xl mb-4">🚔</div>
+                        <h3 class="text-2xl font-bold mb-2">NC State Highway Patrol</h3>
+                        <p class="text-2xl font-bold mb-2">919-733-7952</p>
+                        <p class="opacity-90">Non-emergency number for accident reports</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- Car Value Finder Section -->
-    <section id="car-value" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">🚗 Find Your Car's True Value</h2>
-                <p class="text-xl text-gray-600">Know your car's Kelley Blue Book value before filing a total loss claim</p>
-            </div>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="bg-white rounded-lg shadow-lg p-8">
-                    <div class="mb-8">
-                        <h3 class="text-2xl font-semibold mb-4">Why Knowing Your Car's Value Matters</h3>
-                        <p class="text-gray-600 mb-4">When your car is totaled, insurance companies offer the Actual Cash Value (ACV) - not the dealer retail price. Use this tool to:</p>
-                        <ul class="space-y-2 text-gray-700">
-                            <li>✅ Get your car's official Kelley Blue Book value instantly</li>
-                            <li>✅ Understand the difference between retail and insurance values</li>
-                            <li>✅ Negotiate confidently with solid data</li>
-                            <li>✅ Ensure you receive a fair settlement</li>
-                        </ul>
-                    </div>
-                    
-                    <form id="carValueForm">
-                        <div class="grid md:grid-cols-2 gap-4 mb-6">
-                            <div>
-                                <label class="block text-gray-700 font-semibold mb-2">Year</label>
-                                <select id="year" class="w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-                                    <option value="">Select Year</option>
-                                    <option value="2025">2025</option>
-                                    <option value="2024">2024</option>
-                                    <option value="2023">2023</option>
-                                    <option value="2022">2022</option>
-                                    <option value="2021">2021</option>
-                                    <option value="2020">2020</option>
-                                    <option value="2019">2019</option>
-                                    <option value="2018">2018</option>
-                                    <option value="2017">2017</option>
-                                    <option value="2016">2016</option>
-                                    <option value="2015">2015</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 font-semibold mb-2">Make</label>
-                                <select id="make" class="w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-                                    <option value="">Select Make</option>
-                                    <option value="chevrolet">Chevrolet</option>
-                                    <option value="ford">Ford</option>
-                                    <option value="honda">Honda</option>
-                                    <option value="toyota">Toyota</option>
-                                    <option value="nissan">Nissan</option>
-                                    <option value="jeep">Jeep</option>
-                                    <option value="ram">Ram</option>
-                                    <option value="gmc">GMC</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 font-semibold mb-2">Model</label>
-                                <input type="text" id="model" class="w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g. Camry, F-150" required>
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 font-semibold mb-2">ZIP Code</label>
-                                <input type="text" id="zipcode" class="w-full px-3 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g. 28621" pattern="[0-9]{5}" required>
-                            </div>
-                        </div>
-                        
-                        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
-                            Get My Vehicle Value
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-16">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+                        ❓ Frequently Asked Questions
+                    </h2>
+                    <p class="text-xl text-gray-600">Common questions about insurance claims in North Carolina</p>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="bg-white rounded-lg shadow-md">
+                        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition" aria-expanded="false">
+                            <span class="font-semibold">What if the other driver doesn't have insurance?</span>
+                            <svg class="faq-icon w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
                         </button>
-                    </form>
-                    
-                    <div class="grid md:grid-cols-2 gap-6 mt-8">
-                        <div class="bg-blue-50 p-6 rounded-lg">
-                            <h4 class="text-xl font-semibold mb-3">🏷️ Dealer Retail Value</h4>
-                            <p class="text-gray-700">The price at a car lot - always higher because it includes:</p>
-                            <ul class="mt-2 space-y-1 text-sm text-gray-600">
-                                <li>• Dealer profit margin</li>
-                                <li>• Reconditioning costs</li>
-                                <li>• Sales commissions</li>
-                                <li>• Warranties & overhead</li>
+                        <div class="faq-answer px-6 pb-4">
+                            <p class="text-gray-600 mb-3">If the at-fault driver is uninsured, you have several options:</p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li><strong>Uninsured Motorist Coverage:</strong> File a claim with your own insurance if you have UM coverage</li>
+                                <li><strong>Collision Coverage:</strong> Use your collision coverage and pay your deductible</li>
+                                <li><strong>Small Claims Court:</strong> Sue the driver directly for damages under $10,000</li>
                             </ul>
-                        </div>
-                        <div class="bg-green-50 p-6 rounded-lg">
-                            <h4 class="text-xl font-semibold mb-3">⚖️ Insurance ACV</h4>
-                            <p class="text-gray-700">What your car was worth before damage - based on:</p>
-                            <ul class="mt-2 space-y-1 text-sm text-gray-600">
-                                <li>• Private-party values</li>
-                                <li>• Recent sales data</li>
-                                <li>• Your car's condition</li>
-                                <li>• NO dealer profit</li>
-                            </ul>
+                            <p class="mt-3 bg-blue-50 p-3 rounded text-sm">💡 NC requires uninsured motorist coverage unless you reject it in writing!</p>
                         </div>
                     </div>
                     
-                    <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 mt-6 rounded">
-                        <p class="text-gray-700"><strong>💡 Pro Tip:</strong> Insurance pays the Actual Cash Value (ACV), not retail. KBB gives you both values so you understand the full picture and can negotiate effectively.</p>
+                    <div class="bg-white rounded-lg shadow-md">
+                        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition" aria-expanded="false">
+                            <span class="font-semibold">Should I accept the first settlement offer?</span>
+                            <svg class="faq-icon w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-4">
+                            <p class="text-gray-600 mb-3">Generally, NO. First offers are typically lower than what you may be entitled to. Consider:</p>
+                            <ul class="space-y-1 text-gray-600">
+                                <li>• Get repair estimates from multiple shops</li>
+                                <li>• Document all medical expenses and lost wages</li>
+                                <li>• Account for future medical needs</li>
+                                <li>• Consider diminished value of your vehicle</li>
+                            </ul>
+                            <p class="mt-3 bg-red-50 p-3 rounded text-sm">⚠️ Once you accept and sign, you cannot ask for more money later!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md">
+                        <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition" aria-expanded="false">
+                            <span class="font-semibold">Will my rates go up if I file a claim?</span>
+                            <svg class="faq-icon w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-4">
+                            <p class="text-gray-600 mb-3">Rate increases depend on several factors:</p>
+                            <ul class="space-y-1 text-gray-600">
+                                <li><strong>At-Fault Accidents:</strong> Yes, typically 40%+ increase</li>
+                                <li><strong>Not-At-Fault:</strong> Usually no increase, but some insurers may still raise rates</li>
+                                <li><strong>Comprehensive Claims:</strong> Minor increase or none</li>
+                                <li><strong>Multiple Claims:</strong> Significant increases regardless of fault</li>
+                            </ul>
+                            <p class="mt-3 bg-yellow-50 p-3 rounded text-sm">💰 Shop around! Different insurers treat claims history differently.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- Emergency Section -->
-    <section id="emergency" class="py-16">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">🚨 Emergency Contacts</h2>
-                <p class="text-xl text-gray-600">Important numbers to have ready in case of emergency</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-                <div class="bg-red-600 text-white rounded-lg p-8 text-center">
-                    <div class="text-5xl mb-4">🚨</div>
-                    <h3 class="text-2xl font-bold mb-2">Emergency Services</h3>
-                    <p class="text-4xl font-bold mb-2">911</p>
-                    <p class="opacity-90">For immediate medical, fire, or police assistance</p>
-                </div>
-                <div class="bg-blue-600 text-white rounded-lg p-8 text-center">
-                    <div class="text-5xl mb-4">🚔</div>
-                    <h3 class="text-2xl font-bold mb-2">NC State Highway Patrol</h3>
-                    <p class="text-2xl font-bold mb-2">919-733-7952</p>
-                    <p class="opacity-90">Non-emergency number for accident reports</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- NC Resources Section -->
-    <section class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">📋 North Carolina Resources</h2>
-                <p class="text-xl text-gray-600">Important NC-specific resources and requirements for insurance claims</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-white rounded-lg p-6 shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">🚔 NC State Highway Patrol Reports</h3>
-                    <p class="text-gray-600 mb-4">Access accident reports online. Reports are typically available 5-7 business days after the incident.</p>
-                    <a href="https://vehicle-search.ncshp.org/accidents" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition inline-block">Get Accident Report</a>
-                </div>
-                <div class="bg-white rounded-lg p-6 shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">📜 NC Insurance Laws</h3>
-                    <p class="text-gray-600 mb-2">North Carolina follows contributory negligence law. Minimum coverage required:</p>
-                    <ul class="text-gray-600 space-y-1">
-                        <li>• $50,000 bodily injury per person</li>
-                        <li>• $100,000 bodily injury per accident</li>
-                        <li>• $50,000 property damage</li>
-                    </ul>
-                </div>
-                <div class="bg-white rounded-lg p-6 shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">⏰ Important Deadlines</h3>
-                    <p class="text-gray-600 mb-2">Key time limits to remember:</p>
-                    <ul class="text-gray-600 space-y-1">
-                        <li>• Report claims promptly (24-48 hours)</li>
-                        <li>• Property damage claims: 3 years</li>
-                        <li>• Personal injury claims: 3 years</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- FAQ Section -->
-    <section id="faq" class="py-16">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">❓ Frequently Asked Questions</h2>
-                <p class="text-xl text-gray-600">Common questions about insurance claims in North Carolina</p>
-            </div>
-            
-            <div class="max-w-3xl mx-auto space-y-4">
-                <div class="bg-white rounded-lg shadow-md">
-                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition" aria-expanded="false">
-                        <span class="font-semibold">What if the other driver doesn't have insurance?</span>
-                        <svg class="faq-icon w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div class="faq-answer px-6 pb-4">
-                        <p class="text-gray-600 mb-3">If the at-fault driver is uninsured, you have several options:</p>
-                        <ul class="space-y-2 text-gray-600">
-                            <li><strong>Uninsured Motorist Coverage:</strong> File a claim with your own insurance if you have UM coverage</li>
-                            <li><strong>Collision Coverage:</strong> Use your collision coverage and pay your deductible</li>
-                            <li><strong>Small Claims Court:</strong> Sue the driver directly for damages under $10,000</li>
-                        </ul>
-                        <p class="mt-3 bg-blue-50 p-3 rounded text-sm">💡 NC requires uninsured motorist coverage unless you reject it in writing!</p>
-                    </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-blue-600 text-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">
+                    Need Help with Your Claim?
+                </h2>
+                <p class="text-xl text-blue-100 mb-8">
+                    Our experienced team can guide you through the entire claims process
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="tel:3368351993" class="btn-secondary text-lg">
+                        <i class="fas fa-phone mr-2"></i>Call (336) 835-1993
+                    </a>
+                    <span class="text-blue-200">or</span>
+                    <a href="https://billlayneinsurance.com/contact-us.html" class="bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-envelope mr-2"></i>Contact Us Online
+                    </a>
                 </div>
                 
-                <div class="bg-white rounded-lg shadow-md">
-                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition" aria-expanded="false">
-                        <span class="font-semibold">Should I accept the first settlement offer?</span>
-                        <svg class="faq-icon w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div class="faq-answer px-6 pb-4">
-                        <p class="text-gray-600 mb-3">Generally, NO. First offers are typically lower than what you may be entitled to. Consider:</p>
-                        <ul class="space-y-1 text-gray-600">
-                            <li>• Get repair estimates from multiple shops</li>
-                            <li>• Document all medical expenses and lost wages</li>
-                            <li>• Account for future medical needs</li>
-                            <li>• Consider diminished value of your vehicle</li>
-                        </ul>
-                        <p class="mt-3 bg-red-50 p-3 rounded text-sm">⚠️ Once you accept and sign, you cannot ask for more money later!</p>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-lg shadow-md">
-                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition" aria-expanded="false">
-                        <span class="font-semibold">Will my rates go up if I file a claim?</span>
-                        <svg class="faq-icon w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div class="faq-answer px-6 pb-4">
-                        <p class="text-gray-600 mb-3">Rate increases depend on several factors:</p>
-                        <ul class="space-y-1 text-gray-600">
-                            <li><strong>At-Fault Accidents:</strong> Yes, typically 40%+ increase</li>
-                            <li><strong>Not-At-Fault:</strong> Usually no increase, but some insurers may still raise rates</li>
-                            <li><strong>Comprehensive Claims:</strong> Minor increase or none</li>
-                            <li><strong>Multiple Claims:</strong> Significant increases regardless of fault</li>
-                        </ul>
-                        <p class="mt-3 bg-yellow-50 p-3 rounded text-sm">💰 Shop around! Different insurers treat claims history differently.</p>
-                    </div>
+                <div class="mt-8 text-blue-200">
+                    <p class="mb-2">
+                        <i class="fas fa-map-marker-alt mr-2"></i>
+                        1283 N Bridge St, Elkin, NC 28621
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope mr-2"></i>
+                        Save@BillLayneInsurance.com
+                    </p>
                 </div>
             </div>
-        </div>
-    </section>
-    
+        </section>
+    </main>
+
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
                 <div>
                     <h3 class="text-xl font-bold mb-4">Bill Layne Insurance</h3>
-                    <p class="text-gray-400">NC Insurance Claims Center - Your guide to filing claims in North Carolina</p>
+                    <p class="text-gray-400 mb-4">Your local independent insurance agency specializing in auto and home insurance claims assistance.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/dollarbillagency/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.google.com/maps/place/Bill+Layne+Insurance+Agency" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white"><i class="fab fa-google"></i></a>
+                        <a href="https://www.yelp.com/biz/bill-layne-insurance-agency-elkin" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white"><i class="fab fa-yelp"></i></a>
+                    </div>
                 </div>
+                
                 <div>
-                    <h4 class="font-semibold mb-4">Contact Info</h4>
-                    <p class="text-gray-400">Phone: <a href="tel:3368351993" class="hover:text-white">(336) 835-1993</a></p>
-                    <p class="text-gray-400">Email: <a href="mailto:Save@BillLayneInsurance.com" class="hover:text-white">Save@BillLayneInsurance.com</a></p>
-                    <p class="text-gray-400">PO Box 827, Elkin, NC 28621</p>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <h4 class="font-semibold mb-4">Claims Resources</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://billlayneinsurance.com" class="hover:text-white">Main Website</a></li>
                         <li><a href="#auto-claims" class="hover:text-white">Auto Claims Guide</a></li>
                         <li><a href="#home-claims" class="hover:text-white">Home Claims Guide</a></li>
                         <li><a href="#points-calculator" class="hover:text-white">Points Calculator</a></li>
+                        <li><a href="#car-value" class="hover:text-white">Car Value Finder</a></li>
                     </ul>
                 </div>
+                
                 <div>
-                    <h4 class="font-semibold mb-4">Hours</h4>
-                    <p class="text-gray-400">Monday - Friday</p>
-                    <p class="text-gray-400">9:00 AM - 5:00 PM</p>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#contacts" class="hover:text-white">Claims Contacts</a></li>
+                        <li><a href="#emergency" class="hover:text-white">Emergency Numbers</a></li>
+                        <li><a href="#faq" class="hover:text-white">FAQ</a></li>
+                        <li><a href="https://billlayneinsurance.com/" class="hover:text-white">Main Website</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i>(336) 835-1993</li>
+                        <li><i class="fas fa-envelope mr-2"></i>Save@BillLayneInsurance.com</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>1283 N Bridge St<br>Elkin, NC 28621</li>
+                        <li><i class="fas fa-clock mr-2"></i>Mon-Fri: 9AM-5PM</li>
+                    </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 Bill Layne Insurance Agency. All rights reserved. | Licensed in North Carolina</p>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Bill Layne Insurance Agency. All rights reserved. | NC License #1740293</p>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="hidden fixed bottom-5 right-5 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-opacity duration-300">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
-    </button>
-    
+    <!-- JavaScript -->
     <script>
-        // Mobile Menu Toggle
-        document.addEventListener('DOMContentLoaded', function () {
-            const mobileMenuButton = document.getElementById('mobileMenuToggle');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const mobileMenuClose = document.querySelector('.navbar-menu-close');
-            const mobileMenuOverlay = document.querySelector('.navbar-menu-overlay');
-
-            if (mobileMenuButton && mobileMenu && mobileMenuClose && mobileMenuOverlay) {
-                mobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('active');
-                    mobileMenuOverlay.classList.toggle('active');
-                    document.body.classList.toggle('menu-open');
-                });
-
-                const closeMenu = () => {
-                    mobileMenu.classList.remove('active');
-                    mobileMenuOverlay.classList.remove('active');
-                    document.body.classList.remove('menu-open');
-                }
-
-                mobileMenuClose.addEventListener('click', closeMenu);
-                mobileMenuOverlay.addEventListener('click', closeMenu);
-            }
-        });
-
-        // Header Scroll Effect
+        // Header scroll effect
         window.addEventListener('scroll', function() {
             const header = document.getElementById('main-header');
             if (window.scrollY > 50) {
-                header.classList.add('header-scrolled');
+                header.classList.add('scrolled');
             } else {
-                header.classList.remove('header-scrolled');
+                header.classList.remove('scrolled');
             }
         });
 
-        // Back to Top Button
-        const backToTopButton = document.getElementById('back-to-top');
+        // Universal menu functionality
+        const menuToggleBtn = document.getElementById('menu-toggle-btn');
+        const navigationMenu = document.getElementById('navigation-menu');
+        const menuOverlay = document.getElementById('menu-overlay');
+        const closeMenuBtn = document.getElementById('close-menu');
 
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.remove('hidden');
-            } else {
-                backToTopButton.classList.add('hidden');
-            }
+        function toggleMenu() {
+            menuToggleBtn.classList.toggle('active');
+            navigationMenu.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+            document.body.style.overflow = navigationMenu.classList.contains('active') ? 'hidden' : '';
+        }
+
+        function closeMenu() {
+            menuToggleBtn.classList.remove('active');
+            navigationMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        menuToggleBtn.addEventListener('click', toggleMenu);
+        closeMenuBtn.addEventListener('click', closeMenu);
+        menuOverlay.addEventListener('click', closeMenu);
+
+        // Close menu when clicking on internal navigation links
+        const menuNavLinks = navigationMenu.querySelectorAll('a[href^="#"], a[href*="NC-Insurance-Claims"]');
+        menuNavLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
         });
 
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // Active Nav Link
-        document.querySelectorAll('.nav-link').forEach(link => {
-            if (link.href === window.location.href) {
-                link.classList.add('active');
-            }
-        });
-
-        // Smooth Scrolling for Anchor Links
+        // Smooth scrolling for internal anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.getElementById('main-header').offsetHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
-        
-        // Enhanced search functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const searchInput = document.getElementById('company-search');
-            const companiesGrid = document.getElementById('companies-grid');
-            const noResults = document.getElementById('no-results');
-            const resultsCount = document.getElementById('results-count');
-            const companyCards = document.querySelectorAll('.company-card');
-            
-            function updateResultsCount(count) {
-                resultsCount.textContent = count;
-            }
-            
-            function performSearch() {
-                const searchTerm = searchInput.value.toLowerCase().trim();
-                let visibleCount = 0;
-                
-                companyCards.forEach(card => {
-                    const companyName = card.getAttribute('data-company').toLowerCase();
-                    const companyText = card.textContent.toLowerCase();
-                    
-                    if (searchTerm === '' || 
-                        companyName.includes(searchTerm) || 
-                        companyText.includes(searchTerm)) {
-                        card.style.display = 'block';
-                        visibleCount++;
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-                
-                // Show/hide no results message
-                if (visibleCount === 0 && searchTerm !== '') {
-                    companiesGrid.style.display = 'none';
-                    noResults.classList.remove('hidden');
-                } else {
-                    companiesGrid.style.display = 'grid';
-                    noResults.classList.add('hidden');
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
                 }
+            });
+        }, observerOptions);
+
+        // Observe all service cards and trust badges
+        document.querySelectorAll('.service-card, .trust-badge, .company-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Company Search Functionality
+        const searchInput = document.getElementById('company-search');
+        const companiesGrid = document.getElementById('companies-grid');
+        const noResults = document.getElementById('no-results');
+        const resultsCount = document.getElementById('results-count');
+        const companyCards = document.querySelectorAll('.company-card');
+        
+        function updateResultsCount(count) {
+            resultsCount.textContent = count;
+        }
+        
+        function performSearch() {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            let visibleCount = 0;
+            
+            companyCards.forEach(card => {
+                const companyName = card.getAttribute('data-company').toLowerCase();
+                const companyText = card.textContent.toLowerCase();
                 
-                updateResultsCount(visibleCount);
+                if (searchTerm === '' || 
+                    companyName.includes(searchTerm) || 
+                    companyText.includes(searchTerm)) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Show/hide no results message
+            if (visibleCount === 0 && searchTerm !== '') {
+                companiesGrid.style.display = 'none';
+                noResults.classList.remove('hidden');
+            } else {
+                companiesGrid.style.display = 'grid';
+                noResults.classList.add('hidden');
             }
             
-            // Real-time search
-            searchInput.addEventListener('input', performSearch);
-            
-            // Clear search function
-            window.clearSearch = function() {
-                searchInput.value = '';
-                performSearch();
-                searchInput.focus();
-            };
-            
-            // Initialize count
-            updateResultsCount(companyCards.length);
-        });
+            updateResultsCount(visibleCount);
+        }
         
+        // Real-time search
+        searchInput.addEventListener('input', performSearch);
+        
+        // Clear search function
+        window.clearSearch = function() {
+            searchInput.value = '';
+            performSearch();
+            searchInput.focus();
+        };
+        
+        // Initialize count
+        updateResultsCount(companyCards.length);
+
         // Points Calculator
         const pointsForm = document.getElementById('pointsForm');
         const results = document.getElementById('results');
@@ -1460,6 +1759,34 @@
                 answer.classList.toggle('open');
             });
         });
+    </script>
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "InsuranceAgency",
+      "name": "Bill Layne Insurance Agency - Claims Center",
+      "url": "https://billlayne.github.io/NC-Insurance-Claims-Center.github.io/",
+      "telephone": "+13368351993",
+      "email": "Save@BillLayneInsurance.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1283 N Bridge St",
+        "addressLocality": "Elkin",
+        "addressRegion": "NC",
+        "postalCode": "28621",
+        "addressCountry": "US"
+      },
+      "areaServed": ["Elkin", "Mount Airy", "Jonesville", "Surry County", "Yadkin County", "Wilkes County"],
+      "serviceType": ["Insurance Claims", "Auto Claims", "Home Claims", "Claims Assistance"],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "bestRating": "5",
+        "ratingCount": "127"
+      }
+    }
     </script>
 </body>
 </html>
